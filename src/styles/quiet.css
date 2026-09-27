@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Quiet register — Swarashastra & Brahmavidya only
+
+   Same design tokens as the rest of the site, used differently: no
+   cards, no tilt, no sheen, no gold buttons. Wider leading, a narrower
+   measure, and considerably more air. The restraint is the argument.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.quiet {
+  --qmeasure: 720px;
+  --qgap: clamp(56px, 7vw, 104px);
+}
+
+/* ── Hero: flat colour, no radial glow, no ornament ────────────── */
+.qhero {
+  background: var(--umber-deep);
+  color: var(--paper);
+  padding-block: clamp(52px, 7vw, 88px) clamp(72px, 9vw, 120px);
+}
+.qhero__inner { max-width: var(--qmeasure); }
+.qhero__mark {
+  width: 40px;
+  height: 40px;
+  color: var(--amber);
+  margin-bottom: 28px;
+  opacity: 0.85;
+}
+.qhero__mark svg { width: 100%; height: 100%; }
+.qhero__title {
+  font-size: clamp(28px, 3.6vw, 46px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -0.032em;
+}
+html[lang='te'] .qhero__title { font-size: clamp(25px, 3.2vw, 40px); line-height: 1.5; }
+.qhero__lede {
+  margin-top: 24px;
+  font-size: clamp(15.5px, 1.2vw, 17.5px);
+  line-height: 1.86;
+  color: rgba(253, 249, 240, 0.72);
+}
+
+/* ── Sections ──────────────────────────────────────────────────── */
+.qsection { padding-block: var(--qgap); }
+.qsection--tint { background: var(--paper-2); }
+.qsection--rule { border-top: 1px solid var(--line); }
+
+.qcol {
+  max-width: var(--qmeasure);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(34px, 4vw, 52px);
+}
+
+.qh2 {
+  font-size: clamp(21px, 2.2vw, 27px);
+  font-weight: 500;
+  color: var(--orange);
+  line-height: 1.34;
+  letter-spacing: -0.026em;
+}
+
+.qbody {
+  margin-top: 18px;
+  font-size: 16.5px;
+  line-height: 1.92;
+  color: var(--ink-2);
+}
+.qbody--lead { font-size: 17.5px; color: var(--ink); }
+
+.qlabel {
+  font-family: var(--f-latin);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  margin-bottom: 12px;
+}
+html[lang='te'] .qlabel {
+  font-family: var(--f-telugu);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12.5px;
+}
+.qlabel--stages { margin-bottom: 22px; }
+
+.qlist { display: grid; gap: 13px; }
+.qlist li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15.5px;
+  line-height: 1.84;
+  color: var(--ink-2);
+}
+.qlist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 8px;
+  height: 1px;
+  background: var(--amber);
+}
+
+/* ── Discipline block ──────────────────────────────────────────── */
+.qdisc__name {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  color: var(--orange);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+html[lang='te'] .qdisc__name { line-height: 1.44; }
+.qdisc__standfirst {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+
+/* An honest limit, set apart but not shouted. */
+.qlimit {
+  margin-top: 30px;
+  padding-left: 22px;
+  border-left: 1px solid var(--line-amber);
+}
+.qlimit p {
+  font-size: 15px;
+  line-height: 1.84;
+  color: var(--ink-2);
+}
+
+/* ── Stages: hairline rules, never boxes ───────────────────────── */
+.qstages { border-top: 1px solid var(--line); }
+.qstage {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.qstage__num {
+  font-family: var(--f-latin);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--amber-ink);
+  padding-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.qstage__name {
+  font-size: 17.5px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.022em;
+}
+.qstage__body p {
+  margin-top: 10px;
+  font-size: 15.5px;
+  line-height: 1.86;
+  color: var(--ink-2);
+}
+
+.qpair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 52px); }
+.qpair .qbody { margin-top: 0; font-size: 15.5px; }
+
+/* ── CTA: a text link, never a button ──────────────────────────── */
+.qcta {
+  display: inline-block;
+  margin-top: 34px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--orange);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line-amber);
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.qcta:hover { color: var(--amber); border-color: var(--amber); }
+.qcta--final { margin-top: 30px; font-size: 16px; }
+
+/* ── Comparison table ──────────────────────────────────────────── */
+.qtable__scroll { overflow-x: auto; }
+.qtable {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.qtable th,
+.qtable td {
+  text-align: left;
+  padding: 15px 18px 15px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.68;
+}
+.qtable thead th {
+  font-family: var(--f-latin);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  border-bottom-color: var(--line-amber);
+}
+html[lang='te'] .qtable thead th {
+  font-family: var(--f-telugu);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+}
+.qtable tbody th {
+  font-weight: 400;
+  color: var(--ink-3);
+  width: 26%;
+}
+.qtable tbody td { color: var(--ink-2); }
+.qtable__b { color: var(--ink) !important; }
+
+/* ── FAQ in the quiet register ─────────────────────────────────── */
+.qfaq .faq__q { font-size: 16.5px; font-weight: 500; }
+.qfaq .faq__a p { line-height: 1.9; padding-right: 40px; }
+
+.qnote {
+  margin-top: 28px;
+  padding-left: 22px;
+  border-left: 1px solid var(--line-amber);
+  font-size: 15px;
+  line-height: 1.84;
+  color: var(--ink-2);
+}
+
+/* ── Byline in the quiet register ──────────────────────────────── */
+.byline--quiet {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top-color: var(--line);
+}
+.byline--quiet .byline__name { color: var(--ink); font-weight: 500; }
+.byline--quiet .byline__photo { box-shadow: none; }
+
+/* ── Mega-menu column: two blocks, not a list ──────────────────── */
+.mega__col--pair .mega__pair { display: grid; gap: 18px; margin-bottom: 4px; }
+.mega__pairItem {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  transition: border-color 0.28s var(--ease), background 0.28s var(--ease);
+}
+.mega__pairItem:hover { border-color: var(--line-amber); background: var(--paper-3); }
+.mega__pairName {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+}
+.mega__pairLine {
+  display: block;
+  margin-top: 5px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .qpair { grid-template-columns: 1fr; }
+  .qstage { grid-template-columns: 44px 1fr; padding: 22px 0; }
+  .qfaq .faq__a p { padding-right: 0; }
+  .qtable { min-width: 480px; }
+}

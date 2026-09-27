@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════════════════════════════
+   About — the practitioner's page
+
+   Editorial rather than modular: a split hero carrying the photograph
+   at size, then one narrow column of prose broken by hairline rules.
+   No cards, no tilt. The homepage founder block is the summary; this
+   is the long form, and it should read like a page rather than a grid.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.about {
+  --ameasure: 700px;
+}
+
+/* ── Split hero ────────────────────────────────────────────────── */
+.ahero {
+  background: var(--umber-deep);
+  color: var(--paper);
+  padding-block: clamp(44px, 6vw, 72px) 0;
+  overflow: hidden;
+}
+.ahero__grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 420px);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: end;
+}
+.ahero__text { padding-bottom: clamp(56px, 7vw, 96px); max-width: 620px; }
+
+.ahero__name {
+  font-size: clamp(32px, 4.6vw, 60px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.038em;
+}
+html[lang='te'] .ahero__name { font-size: clamp(27px, 3.8vw, 48px); line-height: 1.38; }
+
+.ahero__role {
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+html[lang='te'] .ahero__role { text-transform: none; letter-spacing: 0.02em; font-size: 13px; }
+
+.ahero__standfirst {
+  margin-top: 26px;
+  font-size: clamp(16px, 1.3vw, 18.5px);
+  line-height: 1.82;
+  color: rgba(253, 249, 240, 0.76);
+}
+.ahero__place {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-light);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: rgba(253, 249, 240, 0.52);
+}
+
+/* The photograph sits flush to the foot of the hero, so it reads as a
+   plate set into the band rather than a cropped decoration. */
+.ahero__figure { margin: 0; align-self: end; }
+.ahero__photo,
+.ahero__photo img { display: block; width: 100%; height: auto; }
+.ahero__photo {
+  position: relative;
+  border: 1px solid var(--line-amber);
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Sections ──────────────────────────────────────────────────── */
+.asection { padding-block: clamp(52px, 6.5vw, 92px); }
+.asection--tint { background: var(--paper-2); }
+.asection--rule { border-top: 1px solid var(--line); }
+
+.acol {
+  max-width: var(--ameasure);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(30px, 3.5vw, 46px);
+}
+
+.ah2 {
+  font-size: clamp(21px, 2.3vw, 29px);
+  font-weight: 500;
+  color: var(--orange);
+  line-height: 1.3;
+  letter-spacing: -0.028em;
+}
+
+.abody {
+  margin-top: 18px;
+  font-size: 16.5px;
+  line-height: 1.9;
+  color: var(--ink-2);
+}
+.abody--lead { font-size: 18px; color: var(--ink); }
+
+.alabel {
+  font-family: var(--f-latin);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  margin-bottom: 14px;
+}
+html[lang='te'] .alabel {
+  font-family: var(--f-telugu);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12.5px;
+}
+
+/* ── Qualifications ────────────────────────────────────────────── */
+.acreds { display: grid; gap: 11px; }
+.acreds li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+.acreds li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--amber);
+  transform: rotate(45deg);
+}
+
+.anote {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px solid var(--line-amber);
+  border-left-width: 3px;
+  border-radius: 6px;
+  background: rgba(201, 138, 46, 0.07);
+  font-size: 14.5px;
+  line-height: 1.78;
+  color: var(--ink-2);
+}
+.anote__label {
+  display: block;
+  font-family: var(--f-latin);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 7px;
+}
+html[lang='te'] .anote__label {
+  font-family: var(--f-telugu);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12.5px;
+}
+
+/* ── Method ────────────────────────────────────────────────────── */
+.amethod { border-top: 1px solid var(--line); }
+.amethod__item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.amethod__num {
+  font-family: var(--f-latin);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--amber-ink);
+  padding-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.amethod__name {
+  font-size: 17.5px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.022em;
+}
+.amethod__item p {
+  margin-top: 10px;
+  font-size: 15.5px;
+  line-height: 1.86;
+  color: var(--ink-2);
+}
+
+/* ── Boundaries ────────────────────────────────────────────────── */
+.abounds { display: grid; gap: 16px; }
+.abounds li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15.5px;
+  line-height: 1.84;
+  color: var(--ink-2);
+}
+/* A struck-through mark: these are the things that do not happen. */
+.abounds li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 13px;
+  height: 1px;
+  background: var(--orange);
+}
+
+/* ── Teaching links ────────────────────────────────────────────── */
+.alinks { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 24px; }
+
+/* ── Where and how ─────────────────────────────────────────────── */
+.awhere { border-top: 1px solid var(--line); }
+.awhere__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.awhere dt {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+.awhere dd {
+  font-size: 15.5px;
+  line-height: 1.72;
+  color: var(--ink-2);
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .ahero__grid { grid-template-columns: 1fr; gap: 0; }
+  .ahero__text { padding-bottom: 40px; }
+  .ahero__figure { max-width: 360px; }
+}
+
+@media (max-width: 560px) {
+  .amethod__item { grid-template-columns: 42px 1fr; }
+  .awhere__row { grid-template-columns: 1fr; gap: 4px; }
+}
+
+
+/* ── 404 ───────────────────────────────────────────────────────── */
+.nf { padding-block: clamp(80px, 12vw, 160px); }
+.nf__inner { max-width: 620px; }
+.nf__title {
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 600;
+  color: var(--orange);
+  letter-spacing: -0.032em;
+  line-height: 1.16;
+}
+html[lang='te'] .nf__title { line-height: 1.4; }
+.nf__body { margin-top: 20px; font-size: 16.5px; line-height: 1.85; color: var(--ink-2); }
+.nf__links {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 13px;
+}
+.nf__links .link { font-size: 15px; }
