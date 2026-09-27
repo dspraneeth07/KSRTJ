@@ -66,8 +66,10 @@ function Yantra({ reduced }: { reduced: boolean }) {
     if (reduced || !group.current || !inner.current) return;
     const t = state.clock.elapsedTime;
 
-    // Continuous slow rotation, plus a gentle breathing float.
-    inner.current.rotation.z += delta * 0.09;
+    // Continuous slow rotation, clockwise as the viewer sees it. The camera
+    // sits on +Z, so a positive rotation.z would read counter-clockwise —
+    // hence the subtraction.
+    inner.current.rotation.z -= delta * 0.09;
     group.current.position.y = Math.sin(t * 0.5) * 0.07;
 
     // Cursor parallax: the whole yantra leans toward the pointer.

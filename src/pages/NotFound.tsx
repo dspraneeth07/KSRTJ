@@ -24,7 +24,7 @@ const ui = {
   vastu: { en: 'Vastu Shastra', te: 'వాస్తు శాస్త్రం' },
   jyotisha: { en: 'Jyotisha', te: 'జ్యోతిష శాస్త్రం' },
   numerology: { en: 'Numerology', te: 'సంఖ్యా శాస్త్రం' },
-  swara: { en: 'Swarashastra & Brahmavidya', te: 'స్వర శాస్త్రం, బ్రహ్మవిద్య' },
+  swara: { en: 'Spiritual & Vedic Studies', te: 'ఆధ్యాత్మిక & వేద విద్యలు' },
 } satisfies Record<string, Bi>;
 
 const links: { to: string; label: Bi }[] = [
@@ -33,7 +33,7 @@ const links: { to: string; label: Bi }[] = [
   { to: '/services/vastu', label: ui.vastu },
   { to: '/services/jyotisha', label: ui.jyotisha },
   { to: '/services/numerology', label: ui.numerology },
-  { to: '/services/swarashastra', label: ui.swara },
+  { to: '/services/spiritual', label: ui.swara },
 ];
 
 export default function NotFound() {

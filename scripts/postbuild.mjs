@@ -27,7 +27,7 @@ const routes = [
   { path: '/services/vastu', priority: '0.9', changefreq: 'monthly' },
   { path: '/services/jyotisha', priority: '0.9', changefreq: 'monthly' },
   { path: '/services/numerology', priority: '0.9', changefreq: 'monthly' },
-  { path: '/services/swarashastra', priority: '0.7', changefreq: 'yearly' },
+  { path: '/services/spiritual', priority: '0.7', changefreq: 'yearly' },
 ];
 
 const today = new Date().toISOString().slice(0, 10);

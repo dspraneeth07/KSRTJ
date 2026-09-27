@@ -42,7 +42,7 @@ export const numerologyVertical: Vertical = {
     te: 'మాకు మీ పూర్తి జనన తేదీ, ఈ రోజు మీరు రాసే విధంగానే మీ పేరు — జనన ధ్రువీకరణ పత్రంలో ఉన్నదానికి భిన్నంగా ఉంటే, మీరు వాడేదే — అలాగే మీరు నిర్ణయించుకోవాల్సిన నిర్దిష్ట పేరు, సంఖ్య లేదా తేదీ కావాలి. లెక్కలకు కాల్డియన్ విధానం వాడతాం; దీన్ని స్పష్టంగా చెప్తాం, ఎందుకంటే పైథాగరియన్ విలువలు వేరుగా ఉంటాయి — ఇద్దరు సంఖ్యా శాస్త్రవేత్తలు రెండు వేర్వేరు సమాధానాలు ఇవ్వడానికి సాధారణ కారణం అదే. ప్రతి సూచనలోనూ లెక్క చూపిస్తాం; నమ్మకంపై కాక, మీరే సరిచూసుకోగలిగేలా. ఈ పనిలో చాలా భాగం సమయంతో ముడిపడినది: డీలర్ సిమ్ జాబితాను ఒక రోజు, ఆర్టీఏ జాబితాను ఒక వారం ఉంచుతారు; రిజిస్ట్రార్ కంపెనీ పేరును రెండు వారాల్లో తిరస్కరిస్తారు. రాసేటప్పుడు మీ గడువు కూడా చెప్పండి.',
   },
   timingLabel: { en: 'Turnaround', te: 'వ్యవధి' },
-  filterAll: { en: 'All 12', te: 'అన్నీ 12' },
+  filterAll: { en: 'All services', te: 'అన్ని సేవలు' },
   bundlesTitle: {
     en: 'Three decisions that arrive together',
     te: 'కలిసి వచ్చే మూడు నిర్ణయాలు',
@@ -53,8 +53,8 @@ export const numerologyVertical: Vertical = {
   },
   faqTitle: { en: 'Asked before most corrections', te: 'చాలా సవరణలకు ముందు అడిగేవి' },
   feeLede: {
-    en: 'Fees are confirmed in writing before work begins. Where a deadline is short — an RTA list, a registrar filing — say so and we will tell you honestly whether we can meet it.',
-    te: 'పని ప్రారంభించే ముందు రుసుము లిఖితపూర్వకంగా నిర్ధారిస్తాం. గడువు తక్కువగా ఉంటే — ఆర్టీఏ జాబితా, రిజిస్ట్రార్ దాఖలు — అది చెప్పండి; మేము దాన్ని అందుకోగలమా లేదా నిజాయితీగా చెప్తాం.',
+    en: 'Duration and fees are shared according to the requirement, before any work begins.',
+    te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి.',
   },
   ctaTitle: {
     en: 'Deciding on a name, a number or a date right now?',

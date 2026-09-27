@@ -15,7 +15,21 @@ export function Footer() {
               <BrandMark />
             </span>
             <p className="footer__name">{t('brand.name')}</p>
+            <p className="footer__disciplines">{t('footer.disciplines')}</p>
             <p className="footer__blurb">{t('footer.blurb')}</p>
+
+            <dl className="footer__meta">
+              <div>
+                <dt>{t('footer.location')}</dt>
+                <dd>{t('footer.addr')}</dd>
+              </div>
+              <div>
+                <dt>{t('footer.reach')}</dt>
+                <dd>
+                  <a href="tel:+910000000000">{t('utility.call')}</a>
+                </dd>
+              </div>
+            </dl>
           </div>
 
           <nav className="footer__cols" aria-label="Footer">
@@ -41,7 +55,6 @@ export function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p>{t('footer.addr')}</p>
           <p>{t('footer.copy')}</p>
         </div>
       </div>

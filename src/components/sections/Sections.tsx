@@ -1,18 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { useReducedMotion } from '../../hooks/useReducedMotion';
-import {
-  courses,
-  faqs,
-  institutional,
-  pillars,
-  processSteps,
-  signatures,
-  testimonials,
-  trustStats,
-  type TrustStat,
-} from '../../data/content';
+import { courses, faqs, pillars, processSteps, signatures } from '../../data/content';
 import type { StringKey } from '../../i18n/strings';
 import { PillarIcon, YantraOutline } from '../Icons';
 import { Portrait } from '../Portrait';
@@ -46,69 +35,22 @@ function SectionHead({ eyebrow, title, lede, light, align = 'center' }: HeadProp
   );
 }
 
-/* ── trust strip ────────────────────────────────────────────────── */
+/* ── practice statement ────────────────────────────────────────── */
 
-function Counter({ stat }: { stat: TrustStat }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const [value, setValue] = useState(0);
-  const reduced = useReducedMotion();
-
-  useEffect(() => {
-    if (reduced) {
-      setValue(stat.value);
-      return;
-    }
-    const node = ref.current;
-    if (!node || typeof IntersectionObserver === 'undefined') {
-      setValue(stat.value);
-      return;
-    }
-
-    let raf = 0;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (!entries.some((e) => e.isIntersecting)) return;
-        io.disconnect();
-        const start = performance.now();
-        const tick = (now: number) => {
-          const p = Math.min((now - start) / 1300, 1);
-          setValue(Math.round(stat.value * (1 - Math.pow(1 - p, 3))));
-          if (p < 1) raf = requestAnimationFrame(tick);
-        };
-        raf = requestAnimationFrame(tick);
-      },
-      { threshold: 0.6 },
-    );
-    io.observe(node);
-
-    const failsafe = window.setTimeout(() => setValue(stat.value), 2500);
-    return () => {
-      io.disconnect();
-      cancelAnimationFrame(raf);
-      window.clearTimeout(failsafe);
-    };
-  }, [reduced, stat.value]);
-
-  return (
-    <span className="trust__num" ref={ref}>
-      {value.toLocaleString('en-IN')}
-      {stat.suffix}
-    </span>
-  );
-}
-
+/**
+ * This band used to carry four counters — years, consultations, projects,
+ * countries. They were placeholders, and unverifiable numbers are the
+ * fastest way to lose the credibility the rest of the page argues for.
+ * One honest sentence replaces them.
+ */
 export function TrustStrip() {
   const { t } = useLang();
   return (
-    <section className="trust" aria-label="Practice at a glance">
-      <div className="wrap trust__grid">
-        {trustStats.map((stat, i) => (
-          <Reveal className="trust__item" key={stat.id} delay={i * 70} variant="lift">
-            <Counter stat={stat} />
-            <span className="trust__lbl">{t(stat.label)}</span>
-          </Reveal>
-        ))}
-      </div>
+    <section className="statement" aria-label="Experience">
+      <Reveal className="wrap statement__inner" variant="lift">
+        <h2 className="statement__title">{t('trust.title')}</h2>
+        <p className="statement__body">{t('trust.body')}</p>
+      </Reveal>
     </section>
   );
 }
@@ -164,16 +106,8 @@ export function Signature() {
                   <p className="sig__desc">{t(s.desc)}</p>
                   <dl className="sig__meta">
                     <div>
-                      <dt>{t('meta.duration')}</dt>
-                      <dd>{t(s.duration)}</dd>
-                    </div>
-                    <div>
                       <dt>{t('meta.mode')}</dt>
                       <dd>{t(s.mode)}</dd>
-                    </div>
-                    <div>
-                      <dt>{t('meta.output')}</dt>
-                      <dd>{t(s.output)}</dd>
                     </div>
                   </dl>
                 </article>
@@ -235,10 +169,10 @@ export function Founder() {
           <p className="founder__role">{t('founder.role')}</p>
           <p className="founder__text">{t('founder.p1')}</p>
           <p className="founder__text">{t('founder.p2')}</p>
+          <h3 className="founder__credLabel">{t('founder.credLabel')}</h3>
           <ul className="founder__creds">
             <li>{t('founder.cred1')}</li>
             <li>{t('founder.cred2')}</li>
-            <li>{t('founder.cred3')}</li>
           </ul>
           <Link className="link" to="/about">
             {t('cta.readFull')}
@@ -249,7 +183,7 @@ export function Founder() {
   );
 }
 
-/* ── institutional ──────────────────────────────────────────────── */
+/* ── institutional ─────────────────────────────────────────────── */
 
 export function Institutional() {
   const { t } = useLang();
@@ -257,18 +191,6 @@ export function Institutional() {
     <section className="section section--paper2" id="institutional">
       <div className="wrap">
         <SectionHead eyebrow="inst.eyebrow" title="inst.title" lede="inst.lede" />
-        <div className="inst">
-          {institutional.map((item, i) => (
-            <Reveal key={item.id} delay={i * 80}>
-              <Tilt className="inst__tilt" max={6} lift={14}>
-                <article className="inst__card">
-                  <h3 className="inst__name">{t(item.name)}</h3>
-                  <p className="inst__desc">{t(item.desc)}</p>
-                </article>
-              </Tilt>
-            </Reveal>
-          ))}
-        </div>
         <Reveal className="inst__cta" variant="lift">
           <p>{t('inst.ctaText')}</p>
           <a className="btn btn--ink" href="#book">
@@ -298,39 +220,23 @@ export function Courses() {
                   <dl className="course__meta">
                     <div>
                       <dt>{t('meta.duration')}</dt>
-                      <dd>{t(course.duration)}</dd>
+                      <dd>{t('courses.dur')}</dd>
                     </div>
                     <div>
                       <dt>{t('meta.medium')}</dt>
                       <dd>{t('medium.both')}</dd>
                     </div>
+                    <div>
+                      <dt>{t('meta.mode')}</dt>
+                      <dd>{t('courses.mode')}</dd>
+                    </div>
+                    <div>
+                      <dt>{t('courses.certLabel')}</dt>
+                      <dd>{t('courses.cert')}</dd>
+                    </div>
                   </dl>
                 </article>
               </Tilt>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── testimonials ───────────────────────────────────────────────── */
-
-export function Testimonials() {
-  const { t } = useLang();
-  return (
-    <section className="section section--paper2" id="testimonials">
-      <div className="wrap">
-        <SectionHead eyebrow="test.eyebrow" title="test.title" />
-        <div className="quotes">
-          {testimonials.map((q, i) => (
-            <Reveal as="figure" className="quote" key={q.id} delay={i * 90}>
-              <blockquote>{t(q.text)}</blockquote>
-              <figcaption>
-                <span className="quote__who">{t(q.who)}</span>
-                <span className="quote__what">{t(q.what)}</span>
-              </figcaption>
             </Reveal>
           ))}
         </div>

@@ -45,7 +45,7 @@ export const jyotishaVertical: Vertical = {
     te: 'మాకు మూడు వివరాలు కావాలి: జనన తేదీ, నమోదైనంత ఖచ్చితమైన జనన సమయం, జనన స్థలం. మీరు రాకముందే కుండలి గణించి, రెండో అయనాంశతో సరిపోల్చి, మీ ప్రశ్నకు సంబంధించిన వర్గ కుండలులు ముందుగానే సిద్ధం చేస్తాం — మీ సమావేశ సమయంలో లెక్కలకు వెచ్చించిన సమయానికి మీకు రుసుము ఉండదు. జనన సమయం మీద సందేహం ఉంటే, ధ్రువీకరించిన జీవిత సంఘటనల ఆధారంగా ముందుగా సవరించి, ఎంత నిశ్చయతకు చేరామో చెప్తాం. కింది మొదటి సేవ మొత్తం జాతకాన్ని చదువుతుంది; మిగిలినవి ఒక్కో అంశంపై లోతైన పరిశీలన — వాటిని తీసుకునే చాలామంది ఆ మొదటి పరిశీలన ఇప్పటికే చేయించుకుని ఉంటారు. సంప్రదింపులు తెలుగులో లేదా ఆంగ్లంలో, ఆన్‌లైన్ లేదా ప్రత్యక్షంగా; ప్రతి ఒక్కటీ లిఖిత రూపంలో ముగుస్తుంది.',
   },
   timingLabel: { en: 'Session', te: 'సమావేశ వ్యవధి' },
-  filterAll: { en: 'All 19', te: 'అన్నీ 19' },
+  filterAll: { en: 'All services', te: 'అన్ని సేవలు' },
   bundlesTitle: {
     en: 'Three sequences that answer the whole question',
     te: 'పూర్తి ప్రశ్నకు సమాధానమిచ్చే మూడు క్రమాలు',
@@ -56,8 +56,8 @@ export const jyotishaVertical: Vertical = {
   },
   faqTitle: { en: 'Asked before most readings', te: 'చాలా పరిశీలనలకు ముందు అడిగేవి' },
   feeLede: {
-    en: 'Fees are confirmed in writing before the sitting. Every consultation includes the written summary; the recording is available on request.',
-    te: 'సమావేశానికి ముందే రుసుము లిఖితపూర్వకంగా నిర్ధారిస్తాం. ప్రతి సంప్రదింపులో లిఖిత సారాంశం ఉంటుంది; రికార్డింగ్ కోరితే ఇస్తాం.',
+    en: 'Duration and fees are shared according to the requirement, before the sitting.',
+    te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి సమావేశానికి ముందే తెలియజేయబడతాయి.',
   },
   ctaTitle: {
     en: 'Not sure whether you need the whole chart or one area?',

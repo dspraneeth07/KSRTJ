@@ -50,7 +50,7 @@ function VerticalMegaColumn({
       ))}
 
       <Link className="mega__all" to={vertical.path} onClick={onNavigate}>
-        {t(vertical.countKey)} →
+        {t('mega.seeAll')} →
       </Link>
     </section>
   );
@@ -88,19 +88,15 @@ function SwaraMegaColumn({ onNavigate }: { onNavigate: () => void }) {
         ))}
       </div>
 
-      <p className="mega__note">{t('mega.swaraNote')}</p>
-
       <h3 className="mega__title mega__title--sub">{t('mega.training')}</h3>
       <ul className="mega__list">
-        <li>
-          <a href="/#courses" onClick={onNavigate}>{t('s.course.1')}</a>
-        </li>
-        <li>
-          <a href="/#courses" onClick={onNavigate}>{t('s.course.2')}</a>
-        </li>
-        <li>
-          <a href="/#courses" onClick={onNavigate}>{t('s.course.3')}</a>
-        </li>
+        {(['s.course.1', 's.course.2', 's.course.3', 's.course.4'] as const).map((k) => (
+          <li key={k}>
+            <a href="/#courses" onClick={onNavigate}>
+              {t(k)}
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );
@@ -218,7 +214,6 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            {col.note && <p className="mega__note">{t(col.note)}</p>}
             {col.extraTitle && col.extraItems && (
               <>
                 <h3 className="mega__title mega__title--sub">{t(col.extraTitle)}</h3>

@@ -22,8 +22,8 @@ export const about = {
 
   eyebrow: { en: 'The practice', te: 'ఆచరణ' },
   standfirst: {
-    en: 'Practising Vastu Shastra, Jyotisha and Numerology as one discipline rather than three, and teaching all three, from Wanaparthy in Telangana.',
-    te: 'వాస్తు శాస్త్రం, జ్యోతిషం, సంఖ్యా శాస్త్రం — మూడుగా కాక ఒకే శాస్త్రంగా ఆచరణ; మూడింటినీ బోధన. తెలంగాణలోని వనపర్తి నుండి.',
+    en: 'Studying, practising and teaching Vastu Shastra, Jyotisha, Numerology and the related spiritual and Vedic disciplines, from Wanaparthy in Telangana.',
+    te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం, సంఖ్యా శాస్త్రం మరియు సంబంధిత ఆధ్యాత్మిక–వేద విద్యల అధ్యయనం, ఆచరణ మరియు బోధన. తెలంగాణలోని వనపర్తి నుండి.',
   },
   place: { en: 'KDR Nagar · Wanaparthy · Telangana', te: 'కేడీఆర్ నగర్ · వనపర్తి · తెలంగాణ' },
 
@@ -32,31 +32,27 @@ export const about = {
     label: { en: 'Why the work is not divided', te: 'ఈ పని ఎందుకు విభజించబడలేదు' },
     paras: [
       {
-        en: 'Most people who consult on these subjects specialise in one of them. That is the sensible commercial arrangement, and it is also the reason so much advice contradicts itself. A Vastu consultant who has never seen the owner’s chart, an astrologer who has never seen the house, and a numerologist who has spoken to neither will each give an answer that is defensible on its own and close to useless alongside the other two.',
-        te: 'ఈ విషయాల్లో సలహా ఇచ్చే చాలామంది ఏదో ఒకదానిలోనే ప్రత్యేకత సాధిస్తారు. వ్యాపార పరంగా అది సహజమైన ఏర్పాటే; అలాగే చాలా సలహాలు పరస్పరం విరుద్ధంగా ఉండటానికి కారణమూ అదే. యజమాని జాతకం చూడని వాస్తు సలహాదారు, ఇల్లు చూడని జ్యోతిష్కుడు, ఇద్దరితోనూ మాట్లాడని సంఖ్యా శాస్త్రవేత్త — ముగ్గురూ విడిగా సమర్థించుకోగల సమాధానాలే ఇస్తారు; కానీ మూడూ కలిపి చూస్తే అవి దాదాపు నిరుపయోగం.',
+        en: 'These subjects are usually taken up one at a time. The questions people actually bring, though, do not arrive divided by discipline — a house, a marriage and a decision about work often turn up in one conversation, and sometimes in a single sentence.',
+        te: 'ఈ విషయాలను సాధారణంగా ఒక్కొక్కటిగా చేపడతారు. కానీ ప్రజలు నిజంగా తెచ్చే ప్రశ్నలు శాస్త్రాల వారీగా విడిపోయి రావు — ఇల్లు, వివాహం, వృత్తి నిర్ణయం తరచుగా ఒకే సంభాషణలో, కొన్నిసార్లు ఒకే వాక్యంలో వస్తాయి.',
       },
       {
-        en: 'This practice was built the other way round. The questions clients actually bring do not arrive divided by discipline — a house, a marriage and a business decision usually turn up as one problem, in one conversation, and often in a single sentence. Holding the three sciences in the same room is what makes it possible to reconcile the findings rather than stack them.',
-        te: 'ఈ సంస్థ దానికి వ్యతిరేక దిశలో నిర్మించబడింది. ఖాతాదారులు నిజంగా తెచ్చే ప్రశ్నలు శాస్త్రాల వారీగా విడిపోయి రావు — ఇల్లు, వివాహం, వ్యాపార నిర్ణయం సాధారణంగా ఒకే సమస్యగా, ఒకే సంభాషణలో, తరచుగా ఒకే వాక్యంలో వస్తాయి. మూడు శాస్త్రాలనూ ఒకే చోట ఉంచడం వల్లనే ఫలితాలను పోగు చేయకుండా సమన్వయం చేయడం సాధ్యమవుతుంది.',
+        en: 'That is why all four fields are studied and applied alongside one another here, and why the same person teaches them. Where a question genuinely calls for more than one discipline, it can be examined together rather than in separate appointments.',
+        te: 'అందుకే ఇక్కడ నాలుగు విభాగాలనూ పక్కపక్కనే అధ్యయనం చేసి ఆచరిస్తారు; వాటిని బోధించేది కూడా ఒకే వ్యక్తి. ఒక ప్రశ్నకు నిజంగా ఒకటి కంటే ఎక్కువ శాస్త్రం అవసరమైనప్పుడు, వేర్వేరు సమావేశాలుగా కాక కలిపి పరిశీలించవచ్చు.',
       },
       {
-        en: 'What that requires, in practice, is a slower kind of work. Charts are calculated before the sitting rather than during it. True north is taken on site with an instrument rather than read off a builder’s drawing. Findings are graded by severity, so a client knows what is actually affecting them and what is merely imperfect on paper. And where the shastra is silent, or the evidence is thin, that is said plainly instead of filled in.',
-        te: 'ఆచరణలో దీనికి కావలసింది నెమ్మదైన పని. కుండలిని సమావేశ సమయంలో కాక, అంతకుముందే గణిస్తాం. నిజ ఉత్తర దిక్కును బిల్డర్ ప్రణాళిక నుండి చదవకుండా, స్థలంలోనే పరికరంతో నిర్ధారిస్తాం. ఫలితాలను తీవ్రత ప్రకారం విభజిస్తాం — నిజంగా ప్రభావం చూపేది ఏది, కాగితంపై మాత్రమే లోపమైనది ఏది అని ఖాతాదారుకు తెలుస్తుంది. శాస్త్రం మౌనంగా ఉన్న చోట, ఆధారం బలహీనంగా ఉన్న చోట — ఖాళీని పూరించకుండా అది స్పష్టంగా చెప్తాం.',
+        en: 'Practice and teaching are treated as two halves of the same work. What is used in a consultation is what is taught in the courses, and the courses are taught from the primary texts rather than from summaries.',
+        te: 'ఆచరణ, బోధన — ఈ రెంటినీ ఒకే పనిలోని రెండు భాగాలుగా చూస్తారు. సంప్రదింపులో ఉపయోగించేదే కోర్సుల్లో బోధిస్తారు; కోర్సులను సంక్షిప్త నోట్సుతో కాక మూల గ్రంథాల ఆధారంగా బోధిస్తారు.',
       },
     ],
   },
 
   /* ── Training ─────────────────────────────────────────────────── */
   training: {
-    label: { en: 'Training and lineage', te: 'శిక్షణ, గురు పరంపర' },
+    label: { en: 'Study and practice', te: 'అధ్యయనం, ఆచరణ' },
     paras: [
       {
-        en: 'Trained in the Sthapatya and Jyotisha traditions under [Guru’s name] over [n] years, and in independent practice since [year].',
-        te: '[గురువు పేరు] వద్ద [n] సంవత్సరాలు స్థాపత్య, జ్యోతిష సంప్రదాయాలలో శిక్షణ; [సంవత్సరం] నుండి స్వతంత్ర ఆచరణలో.',
-      },
-      {
-        en: '[To be supplied: the lineage this training belongs to, the principal texts studied within it, and how the study was structured — two or three sentences is enough, and specifics matter more than length.]',
-        te: '[అందించవలసినది: ఈ శిక్షణ ఏ పరంపరకు చెందినది, అందులో అధ్యయనం చేసిన ప్రధాన గ్రంథాలు, అధ్యయనం ఎలా సాగింది — రెండు మూడు వాక్యాలు చాలు; పొడవు కంటే నిర్దిష్టతే ముఖ్యం.]',
+        en: 'Continuous study of the Sthapatya and Jyotisha traditions and of Numerology, alongside the spiritual and Vedic disciplines, applied in practice and taught to those who wish to learn them.',
+        te: 'స్థాపత్య, జ్యోతిష సంప్రదాయాలు మరియు సంఖ్యా శాస్త్రంపై నిరంతర అధ్యయనం; వాటితో పాటు ఆధ్యాత్మిక–వేద విద్యలు. వీటిని ఆచరణలో ఉపయోగిస్తూ, నేర్చుకోవాలనుకునేవారికి బోధిస్తారు.',
       },
     ],
   },
@@ -65,8 +61,8 @@ export const about = {
   qualifications: {
     label: { en: 'Qualifications', te: 'అర్హతలు' },
     note: {
-      en: 'A qualification is listed here only with the institution and the year that awarded it. Where either is missing, the line stays out — an unverifiable credential costs more on a page like this one than an absent credential does.',
-      te: 'ఏ అర్హతనైనా — దాన్ని ఇచ్చిన సంస్థ, సంవత్సరంతో సహా మాత్రమే ఇక్కడ చేరుస్తాం. ఆ రెండింటిలో ఏది లేకపోయినా ఆ పంక్తిని తొలగిస్తాం — ఈ పేజీలో ధ్రువీకరించలేని అర్హత వల్ల, అసలు అర్హత లేకపోవడం కంటే ఎక్కువ నష్టం.',
+      en: 'Only qualifications actually held are listed. Courses taught here carry a Course Completion Certificate; they are not university degrees or government-recognised qualifications, and are not presented as such.',
+      te: 'నిజంగా ఉన్న అర్హతలను మాత్రమే ఇక్కడ చేర్చాం. ఇక్కడ బోధించే కోర్సులకు Course Completion Certificate ఇవ్వబడుతుంది; ఇవి విశ్వవిద్యాలయ పట్టాలు కావు, ప్రభుత్వ గుర్తింపు పొందిన అర్హతలు కావు — అలా చెప్పబడవు కూడా.',
     },
   },
 
@@ -121,17 +117,17 @@ export const about = {
     ],
   },
 
-  /* ── The record ───────────────────────────────────────────────── */
+  /* ── Teaching and practice together ─────────────────────────── */
   record: {
-    label: { en: 'The record', te: 'రికార్డు' },
+    label: { en: 'Practice and teaching', te: 'ఆచరణ మరియు బోధన' },
     paras: [
       {
-        en: 'Every chart, every site plan and every report issued since [year] is retained.',
-        te: '[సంవత్సరం] నుండి ఇచ్చిన ప్రతి కుండలి, ప్రతి స్థల ప్రణాళిక, ప్రతి నివేదిక భద్రపరచబడింది.',
+        en: 'This centre exists to do two things: to apply these disciplines to the questions people bring, and to teach them to anyone who wishes to study them properly.',
+        te: 'ఈ కేంద్రం రెండు పనుల కోసం ఉంది: ప్రజలు తెచ్చే ప్రశ్నలకు ఈ శాస్త్రాలను వర్తింపజేయడం; వాటిని క్రమబద్ధంగా నేర్చుకోవాలనుకునే ఎవరికైనా బోధించడం.',
       },
       {
-        en: 'This is unusual, and it is deliberate. A practice that keeps no record can only recall the predictions that landed. A practice that keeps one can be asked about the others — and has to answer. It is also what makes it possible to tell a client honestly that a particular reading is less certain than it sounds, because the failures are on file alongside the successes.',
-        te: 'ఇది అరుదైన పద్ధతి, ఉద్దేశపూర్వకమైనది కూడా. రికార్డు ఉంచని సంస్థ, ఫలించిన అంచనాలను మాత్రమే గుర్తుంచుకోగలదు. రికార్డు ఉంచిన సంస్థను మిగిలిన వాటి గురించి కూడా అడగవచ్చు — దానికి సమాధానం చెప్పక తప్పదు. ఒక పరిశీలన అనిపించినంత నిశ్చయమైనది కాదని ఖాతాదారుకు నిజాయితీగా చెప్పగలగడానికి కారణమూ ఇదే; ఎందుకంటే విజయాలతో పాటు వైఫల్యాలూ ఫైల్‌లో ఉంటాయి.',
+        en: 'Both are conducted personally, which sets a natural limit on how many can be taken on at once. Consultations and classes are arranged by conversation rather than through a booking calendar.',
+        te: 'ఈ రెండూ వ్యక్తిగతంగానే నిర్వహిస్తారు; అందువల్ల ఒకేసారి ఎన్ని చేపట్టగలమో దానికి సహజమైన పరిమితి ఉంటుంది. సంప్రదింపులు, తరగతులు బుకింగ్ క్యాలెండర్ ద్వారా కాక సంభాషణ ద్వారా ఏర్పాటు చేయబడతాయి.',
       },
     ],
   },
@@ -166,16 +162,16 @@ export const about = {
     label: { en: 'Teaching', te: 'బోధన' },
     paras: [
       {
-        en: 'Foundational courses in Vastu Shastra, Jyotisha and Numerology are taught in small batches, in Telugu and English, from primary texts rather than summaries. Students have included practising architects and interior designers as well as those intending to consult professionally.',
-        te: 'వాస్తు శాస్త్రం, జ్యోతిషం, సంఖ్యా శాస్త్రాలలో మౌలిక కోర్సులు — చిన్న బ్యాచ్‌లలో, తెలుగు, ఆంగ్లంలో, సంక్షిప్త నోట్సుతో కాక మూల గ్రంథాలతో బోధన. వృత్తిపరంగా సలహా ఇవ్వాలనుకునేవారితో పాటు ఆచరణలో ఉన్న ఆర్కిటెక్టులు, ఇంటీరియర్ డిజైనర్లు కూడా విద్యార్థులుగా ఉన్నారు.',
+        en: 'Foundational programmes in Vastu Shastra, Jyotisha, Numerology and the spiritual and Vedic disciplines are taught in small batches, in Telugu and English, from the primary texts. The duration depends on the course, and each concludes with a Course Completion Certificate.',
+        te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం, సంఖ్యా శాస్త్రం మరియు ఆధ్యాత్మిక–వేద విద్యలలో మౌలిక కార్యక్రమాలు — చిన్న బ్యాచ్‌లలో, తెలుగు, ఆంగ్లంలో, మూల గ్రంథాల ఆధారంగా బోధన. వ్యవధి కోర్సును బట్టి ఉంటుంది; ప్రతి దానికీ Course Completion Certificate ఇవ్వబడుతుంది.',
       },
       {
-        en: 'Swarashastra and Brahmavidya are taught separately, by assessment, and are not offered as courses at all.',
-        te: 'స్వర శాస్త్రం, బ్రహ్మవిద్యలను విడిగా, పరిశీలన అనంతరం మాత్రమే బోధిస్తారు; అవి కోర్సులుగా అసలు ఇవ్వబడవు.',
+        en: 'Classes are held online or in person, and individual guidance is available where a group course does not suit.',
+        te: 'తరగతులు ఆన్‌లైన్ లేదా ప్రత్యక్షంగా జరుగుతాయి; బృంద కోర్సు సరిపోని చోట వ్యక్తిగత మార్గదర్శనం అందుబాటులో ఉంటుంది.',
       },
     ],
     courseLink: { en: 'See the three courses', te: 'మూడు కోర్సులు చూడండి' },
-    swaraLink: { en: 'Swarashastra & Brahmavidya', te: 'స్వర శాస్త్రం, బ్రహ్మవిద్య' },
+    swaraLink: { en: 'Spiritual & Vedic Studies', te: 'ఆధ్యాత్మిక & వేద విద్యలు' },
   },
 
   /* ── Where ────────────────────────────────────────────────────── */
@@ -191,34 +187,34 @@ export const about = {
         id: 'visits',
         k: { en: 'Site visits', te: 'స్థల సందర్శనలు' },
         v: {
-          en: 'Across Telangana and Andhra Pradesh; elsewhere in India by arrangement, with travel at actuals',
-          te: 'తెలంగాణ, ఆంధ్రప్రదేశ్ అంతటా; భారతదేశంలో ఇతర ప్రాంతాలకు ముందస్తు ఏర్పాటుతో, ప్రయాణ ఖర్చు వాస్తవ ప్రాతిపదికన',
+          en: 'By arrangement, with travel charged at actuals',
+          te: 'ముందస్తు ఏర్పాటుతో; ప్రయాణ ఖర్చు వాస్తవ ప్రాతిపదికన',
         },
       },
       {
         id: 'online',
         k: { en: 'Online', te: 'ఆన్‌లైన్' },
         v: {
-          en: 'For clients across India and abroad, at no difference in method',
-          te: 'భారతదేశం, విదేశాల్లోని ఖాతాదారులకు — పద్ధతిలో ఎలాంటి తేడా లేకుండా',
+          en: 'Consultations and classes, at no difference in method',
+          te: 'సంప్రదింపులు, తరగతులు — పద్ధతిలో ఎలాంటి తేడా లేకుండా',
         },
       },
       {
         id: 'languages',
         k: { en: 'Languages', te: 'భాషలు' },
         v: {
-          en: 'Telugu and English. The sitting and the written report may be in different languages',
-          te: 'తెలుగు, ఆంగ్లం. సమావేశం ఒక భాషలో, లిఖిత నివేదిక మరో భాషలో కూడా తీసుకోవచ్చు',
+          en: 'Telugu and English, for both consultations and classes',
+          te: 'తెలుగు, ఆంగ్లం — సంప్రదింపులకు, తరగతులకు రెండింటికీ',
         },
       },
     ],
   },
 
   cta: {
-    title: { en: 'Consultations are conducted personally.', te: 'సంప్రదింపులు వ్యక్తిగతంగానే నిర్వహిస్తారు.' },
+    title: { en: 'Get in touch.', te: 'సంప్రదించండి.' },
     lede: {
-      en: 'Not by an associate, and not by a team. That sets a limit on how many are possible in a week, which is the reason slots are confirmed by a person rather than a calendar.',
-      te: 'సహాయకుల ద్వారా కాదు, బృందం ద్వారా కాదు. అందువల్ల వారానికి ఎన్ని సాధ్యమో దానికి ఒక పరిమితి ఉంటుంది — సమయాన్ని క్యాలెండర్ కాక ఒక వ్యక్తి నిర్ధారించడానికి కారణం అదే.',
+      en: 'For a consultation or to ask about the courses, message on WhatsApp with a short note about what you are looking for.',
+      te: 'సంప్రదింపు కోసం లేదా కోర్సుల గురించి తెలుసుకోవడానికి — మీరు ఏమి కోరుకుంటున్నారో క్లుప్తంగా రాసి వాట్సాప్‌లో సంప్రదించండి.',
     },
   },
 };

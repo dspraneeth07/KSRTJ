@@ -1,0 +1,29 @@
+# Netlify headers.
+#
+# These live here rather than in netlify.toml on purpose: this file is copied
+# into dist/, so the headers apply however the site is deployed — git build,
+# `netlify deploy --dir=dist`, or dragging the dist folder onto the dashboard.
+# netlify.toml is not inside dist, so its headers would be silently lost on the
+# last two. Keep this as the single source; netlify.toml holds build config only.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+
+# Vite fingerprints everything in /assets, so it can never go stale.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# The shell must revalidate or a deploy never reaches anyone holding an old copy.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

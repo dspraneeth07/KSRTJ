@@ -64,14 +64,9 @@ html[lang='te'] .ahero__role { text-transform: none; letter-spacing: 0.02em; fon
 .ahero__figure { margin: 0; align-self: end; }
 .ahero__photo,
 .ahero__photo img { display: block; width: 100%; height: auto; }
-.ahero__photo {
-  position: relative;
-  border: 1px solid var(--line-amber);
-  border-bottom: 0;
-  border-radius: 6px 6px 0 0;
-  overflow: hidden;
-  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.3);
-}
+/* The band is already the dark ground this composite was made for, so it
+   needs no frame here — the figure simply stands in it. */
+.ahero__photo { position: relative; }
 
 /* ── Sections ──────────────────────────────────────────────────── */
 .asection { padding-block: clamp(52px, 6.5vw, 92px); }

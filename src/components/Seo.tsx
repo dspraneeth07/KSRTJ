@@ -28,62 +28,62 @@ const BRAND = 'Sanātana Vidyā Kendra';
 const pages: Record<string, Entry> = {
   '/': {
     title: {
-      en: `${BRAND} — Vastu, Jyotisha & Numerology, Wanaparthy`,
-      te: `${BRAND} — వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రం, వనపర్తి`,
+      en: `${BRAND} — Vastu, Jyotisha, Numerology & Vedic Studies`,
+      te: `${BRAND} — వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రం, వేద విద్యలు`,
     },
     description: {
-      en: 'Vastu Shastra, Jyotisha, Numerology, Swarashastra and Brahmavidya practised as one discipline. Consultations for individuals, builders, corporates and institutions, in Telugu and English, from Wanaparthy, Telangana.',
-      te: 'వాస్తు శాస్త్రం, జ్యోతిషం, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం, బ్రహ్మవిద్య — ఒకే శాస్త్రంగా ఆచరణ. వ్యక్తులకు, బిల్డర్లకు, సంస్థలకు తెలుగు, ఆంగ్లంలో సంప్రదింపులు. వనపర్తి, తెలంగాణ.',
+      en: 'A centre for the study, practice and teaching of Vastu Shastra, Jyotisha, Numerology and the spiritual and Vedic disciplines. Consultations and courses in Telugu and English, from Wanaparthy, Telangana.',
+      te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం, సంఖ్యా శాస్త్రం మరియు ఆధ్యాత్మిక–వేద విద్యల అధ్యయనం, ఆచరణ, బోధన కోసం ఒక కేంద్రం. తెలుగు, ఆంగ్లంలో సంప్రదింపులు, కోర్సులు. వనపర్తి, తెలంగాణ.',
     },
   },
   '/about': {
     title: {
-      en: `Shri K. Shrinivas Reddy — Founder & Principal Consultant · ${BRAND}`,
-      te: `శ్రీ కె. శ్రీనివాస్ రెడ్డి — స్థాపకులు, ప్రధాన సలహాదారు · ${BRAND}`,
+      en: `Sri K. Sreenivasa Reddy — Founder & Principal Guide · ${BRAND}`,
+      te: `శ్రీ కె. శ్రీనివాస్ రెడ్డి — స్థాపకులు & ప్రధాన మార్గదర్శకులు · ${BRAND}`,
     },
     description: {
-      en: 'Shri K. Shrinivas Reddy practises Vastu Shastra, Jyotisha and Numerology as one discipline from Wanaparthy, Telangana. Training, method, the record kept, and what this practice does not do.',
-      te: 'శ్రీ కె. శ్రీనివాస్ రెడ్డి వనపర్తి, తెలంగాణ నుండి వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రాలను ఒకే శాస్త్రంగా ఆచరిస్తారు. శిక్షణ, పద్ధతి, భద్రపరిచిన రికార్డు, ఈ సంస్థ చేయనివి.',
+      en: 'Sri K. Sreenivasa Reddy studies, practises and teaches Vastu Shastra, Jyotisha, Numerology and the spiritual and Vedic disciplines, from Wanaparthy, Telangana.',
+      te: 'శ్రీ కె. శ్రీనివాస్ రెడ్డి వనపర్తి, తెలంగాణ నుండి వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రాలను మరియు ఆధ్యాత్మిక–వేద విద్యలను అధ్యయనం చేస్తూ, ఆచరిస్తూ, బోధిస్తారు.',
     },
   },
   '/services/vastu': {
     title: {
-      en: `Vastu Shastra Consultation — 15 services · ${BRAND}`,
-      te: `వాస్తు శాస్త్ర సంప్రదింపు — 15 సేవలు · ${BRAND}`,
+      en: `Vastu Shastra — consultation and training · ${BRAND}`,
+      te: `వాస్తు శాస్త్రం — సంప్రదింపు, శిక్షణ · ${BRAND}`,
     },
     description: {
-      en: 'Plot Vastu, house and flat Vastu, main entrance, Ayadi Ganitham, commercial and industrial audits, dosha identification and remedies. Measured drawings, instrument-verified north, remedies ranked by cost.',
-      te: 'స్థల వాస్తు, ఇల్లు–ఫ్లాట్ వాస్తు, ముఖ ద్వారం, ఆయాది గణితం, వాణిజ్య–పారిశ్రామిక తనిఖీ, దోష నిర్ధారణ, పరిహారాలు. కొలిచిన ప్రణాళికలు, పరికరంతో ఉత్తర నిర్ధారణ, ఖర్చు క్రమంలో పరిహారాలు.',
+      en: 'Plot Vastu, house and flat Vastu, main entrance, room zoning, Ayadi Ganitham, commercial premises, dosha identification and remedies — examination and guidance in Telugu and English.',
+      te: 'స్థల వాస్తు, ఇల్లు–ఫ్లాట్ వాస్తు, ముఖ ద్వారం, గదుల స్థాన నిర్ణయం, ఆయాది గణితం, వాణిజ్య ప్రదేశాలు, దోష నిర్ధారణ, పరిహారాలు — తెలుగు, ఆంగ్లంలో పరిశీలన, మార్గదర్శనం.',
     },
   },
   '/services/jyotisha': {
     title: {
-      en: `Jyotisha Consultation — 19 services · ${BRAND}`,
-      te: `జ్యోతిష సంప్రదింపు — 19 సేవలు · ${BRAND}`,
+      en: `Jyotisha — consultation and training · ${BRAND}`,
+      te: `జ్యోతిష శాస్త్రం — సంప్రదింపు, శిక్షణ · ${BRAND}`,
     },
     description: {
-      en: 'Birth chart analysis, career, marriage and Guna Milan, dasha–bhukti and gochara, life-event timing, Prashna, Muhurtham and naming. Charts calculated in advance and cross-checked against a second ayanamsa.',
-      te: 'జన్మ జాతక విశ్లేషణ, వృత్తి, వివాహం, గుణ మిలన్, దశ–భుక్తి, గోచారం, కాల నిర్ణయం, ప్రశ్న, ముహూర్తం, నామకరణం. కుండలి ముందుగానే గణించి, రెండో అయనాంశతో సరిపోల్చుతాం.',
+      en: 'Birth chart analysis, career, marriage and Guna Milan, dasha–bhukti and gochara, life-event timing, Prashna Jyotisham, Muhurtham and naming guidance.',
+      te: 'జన్మ జాతక విశ్లేషణ, వృత్తి, వివాహం, గుణ మిలన్, దశ–భుక్తి, గోచారం, కాల నిర్ణయం, ప్రశ్న జ్యోతిషం, ముహూర్తం, నామకరణ మార్గదర్శనం.',
     },
   },
   '/services/numerology': {
     title: {
-      en: `Numerology Consultation — 12 services · ${BRAND}`,
-      te: `సంఖ్యా శాస్త్ర సంప్రదింపు — 12 సేవలు · ${BRAND}`,
+      en: `Numerology — consultation and training · ${BRAND}`,
+      te: `సంఖ్యా శాస్త్రం — సంప్రదింపు, శిక్షణ · ${BRAND}`,
     },
     description: {
-      en: 'Name and spelling correction, child naming, business, company and brand names, mobile, vehicle and house number compatibility, auspicious dates and signature analysis. Chaldean system, arithmetic shown.',
-      te: 'పేరు–స్పెల్లింగ్ సవరణ, శిశు నామకరణం, వ్యాపార–కంపెనీ–బ్రాండ్ నామాలు, మొబైల్–వాహన–ఇంటి సంఖ్య అనుకూలత, శుభ తేదీలు, సంతక విశ్లేషణ. కాల్డియన్ విధానం, లెక్కతో సహా.',
+      en: 'Birth, destiny and name numbers, name and spelling correction, child naming, business and brand names, mobile, vehicle and house number compatibility, and auspicious dates.',
+      te: 'జన్మ, భాగ్య, నామ సంఖ్యలు; పేరు–స్పెల్లింగ్ సవరణ, శిశు నామకరణం, వ్యాపార–బ్రాండ్ నామాలు, మొబైల్–వాహన–ఇంటి సంఖ్య అనుకూలత, శుభ తేదీలు.',
     },
   },
-  '/services/swarashastra': {
+  '/services/spiritual': {
     title: {
-      en: `Swarashastra & Brahmavidya — guidance, not consultation · ${BRAND}`,
-      te: `స్వర శాస్త్రం, బ్రహ్మవిద్య — సంప్రదింపు కాదు, మార్గదర్శనం · ${BRAND}`,
+      en: `Spiritual & Vedic Studies · ${BRAND}`,
+      te: `ఆధ్యాత్మిక & వేద విద్యలు · ${BRAND}`,
     },
     description: {
-      en: 'Teacher-guided study in Swarashastra and Brahmavidya. No booking, no deliverable and no fixed end — admission follows a readiness conversation that carries no fee.',
-      te: 'స్వర శాస్త్రం, బ్రహ్మవిద్యలలో గురు మార్గదర్శనంలో అధ్యయనం. నమోదు ఉండదు, నివేదిక ఉండదు, నిర్దిష్ట ముగింపు ఉండదు — రుసుము లేని సన్నద్ధత సంభాషణ తర్వాతే ప్రవేశం.',
+      en: 'Guidance for the systematic study of mantra, meditation, swara sadhana and subjects relating to self-knowledge, in Telugu and English.',
+      te: 'మంత్రం, ధ్యానం, స్వర సాధన మరియు ఆత్మజ్ఞాన సంబంధిత అంశాల క్రమబద్ధ అధ్యయనానికి మార్గదర్శనం — తెలుగు, ఆంగ్లంలో.',
     },
   },
 };

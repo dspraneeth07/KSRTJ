@@ -29,11 +29,8 @@ const ui = {
   bundlesEyebrow: { en: 'Combined engagements', te: 'కలిపిన సేవలు' },
   includes: { en: 'Includes', te: 'ఇందులో ఉన్నవి' },
   faqEyebrow: { en: 'Questions', te: 'ప్రశ్నలు' },
-  priceEyebrow: { en: 'Reference', te: 'సూచిక' },
-  priceTitle: { en: 'Services, modes and timing', te: 'సేవలు, విధానాలు, వ్యవధి' },
-  thService: { en: 'Service', te: 'సేవ' },
-  thMode: { en: 'Mode', te: 'విధానం' },
-  thFee: { en: 'Fee', te: 'రుసుము' },
+  priceEyebrow: { en: 'Terms', te: 'నిబంధనలు' },
+  priceTitle: { en: 'Duration and fees', te: 'వ్యవధి మరియు రుసుము' },
   ctaEyebrow: { en: 'Begin', te: 'ప్రారంభం' },
   book: { en: 'Book a consultation', te: 'సంప్రదింపు నమోదు' },
   ask: { en: 'Ask on WhatsApp', te: 'వాట్సాప్‌లో అడగండి' },
@@ -48,12 +45,10 @@ const ui = {
 
 function ServiceRow({
   service,
-  timingLabel,
   open,
   onToggle,
 }: {
   service: Service;
-  timingLabel: Bi;
   open: boolean;
   onToggle: () => void;
 }) {
@@ -99,10 +94,6 @@ function ServiceRow({
               <div>
                 <dt>{b(ui.mode)}</dt>
                 <dd>{b(modeLabels[service.mode])}</dd>
-              </div>
-              <div>
-                <dt>{b(timingLabel)}</dt>
-                <dd>{b(service.timing)}</dd>
               </div>
             </dl>
           </div>
@@ -263,7 +254,6 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
                   <Reveal key={service.id} delay={i * 50} variant="lift">
                     <ServiceRow
                       service={service}
-                      timingLabel={vertical.timingLabel}
                       open={open.has(service.id)}
                       onToggle={() => toggle(service.id)}
                     />
@@ -344,44 +334,13 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
         </div>
       </section>
 
-      {/* ── Fee reference ──────────────────────────────────────── */}
+      {/* ── Terms ─────────────────────────────────────────────── */}
       <section className="section" id="fees">
         <div className="wrap">
           <Reveal as="header" className="secthead" variant="lift">
             <p className="eyebrow">{b(ui.priceEyebrow)}</p>
             <h2 className="secthead__title">{b(ui.priceTitle)}</h2>
             <p className="secthead__lede">{b(vertical.feeLede)}</p>
-          </Reveal>
-
-          <Reveal className="ftable__scroll" variant="lift">
-            <table className="ftable">
-              <thead>
-                <tr>
-                  <th scope="col" className="ftable__idx">
-                    #
-                  </th>
-                  <th scope="col">{b(ui.thService)}</th>
-                  <th scope="col">{b(ui.thMode)}</th>
-                  <th scope="col">{b(vertical.timingLabel)}</th>
-                  <th scope="col" className="ftable__fee">
-                    {b(ui.thFee)}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[...vertical.services]
-                  .sort((a, z) => a.index - z.index)
-                  .map((service) => (
-                    <tr key={service.id}>
-                      <td className="ftable__idx">{String(service.index).padStart(2, '0')}</td>
-                      <th scope="row">{b(service.name)}</th>
-                      <td>{b(modeLabels[service.mode])}</td>
-                      <td>{b(service.timing)}</td>
-                      <td className="ftable__fee">{service.fee}</td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
           </Reveal>
         </div>
       </section>

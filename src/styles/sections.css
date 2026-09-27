@@ -433,10 +433,15 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line-amber);
-  border-radius: 8px;
-  background: linear-gradient(165deg, var(--paper-2), #F0E4CB);
-  box-shadow: var(--shadow-flat);
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: var(--shadow-flat);
+  /* The composite fades to transparent at its edges, so the frame supplies
+     the dark ground it was designed against — the hero's own gradient. */
+  background:
+    radial-gradient(120% 90% at 78% 12%, rgba(201, 138, 46, 0.18) 0%, transparent 58%),
+    radial-gradient(95% 78% at 6% 96%, rgba(181, 69, 27, 0.42) 0%, transparent 62%),
+    var(--umber-deep);
 }
 .tilt:hover .founder__frame { box-shadow: var(--shadow-lift); }
 .founder__frame { margin: 0; }
@@ -448,18 +453,10 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   width: 100%;
   height: 100%;
 }
-.founder__photo img { object-fit: cover; object-position: 50% 22%; }
+.founder__photo img { object-fit: cover; object-position: 50% 50%; }
 
-/* A passe-partout hairline sitting over the print, as a framed photograph
-   would have. Kept off the image itself so it survives the tilt. */
-.founder__frame::after {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(253, 249, 240, 0.3);
-  pointer-events: none;
-  z-index: 2;
-}
+/* No passe-partout: the supplied composite has its own framing, and a
+   second border inside the first reads as clutter. */
 .founder__role {
   margin-top: 10px;
   font-size: 12.5px;
@@ -530,7 +527,8 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
 .inst__cta p { font-size: 15.5px; color: var(--ink-2); }
 
 /* ── Courses ───────────────────────────────────────────────────── */
-.courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* Four programmes read better two-up than as a row of three with an orphan. */
+.courses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .course {
   display: flex;
   flex-direction: column;
@@ -797,13 +795,24 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   overflow: hidden;
   border: 1px solid var(--line-amber);
   box-shadow: var(--shadow-flat);
+  background:
+    radial-gradient(85% 85% at 50% 20%, rgba(201, 138, 46, 0.26) 0%, transparent 62%),
+    var(--umber-deep);
 }
+/* The composite is a three-quarter portrait with a wide decorative margin,
+   so `object-fit: cover` into a 78px circle renders the whole figure at a
+   size where the face is unreadable. The image is instead oversized inside
+   the circle and offset so the head fills it. */
+.byline__photo { position: relative; }
 .byline__photo img {
+  position: absolute;
+  left: 50%;
+  top: 0;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 30%;
+  width: auto;
+  height: 250%;
+  max-width: none;
+  transform: translate(-50%, -6%);
 }
 .byline__text { display: grid; gap: 2px; }
 .byline__name {
@@ -835,3 +844,78 @@ html[lang='te'] .byline__role {
   .byline { gap: 14px; }
   .byline__photo { width: 62px; height: 62px; }
 }
+
+
+/* ── Practice statement (replaces the old counter strip) ─────────── */
+.statement {
+  background: var(--paper-3);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-flat);
+  position: relative;
+  z-index: 3;
+  padding-block: clamp(40px, 5vw, 64px);
+}
+.statement__inner { max-width: 680px; text-align: center; }
+.statement__title {
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 500;
+  color: var(--orange);
+  letter-spacing: -0.024em;
+}
+.statement__body {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+/* ── Founder qualifications label ────────────────────────────────── */
+.founder__credLabel {
+  font-family: var(--f-latin);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+html[lang='te'] .founder__credLabel {
+  font-family: var(--f-telugu);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12.5px;
+}
+.founder__creds { margin-top: 12px; padding-top: 0; border-top: 0; }
+
+/* ── Footer identity block ───────────────────────────────────────── */
+.footer__disciplines {
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--amber);
+}
+.footer__meta {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-light);
+  display: grid;
+  gap: 12px;
+}
+.footer__meta dt {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(253, 249, 240, 0.4);
+  margin-bottom: 3px;
+}
+html[lang='te'] .footer__meta dt {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+}
+.footer__meta dd { font-size: 13px; line-height: 1.6; color: rgba(253, 249, 240, 0.6); }
+.footer__meta a { transition: color 0.25s var(--ease); }
+.footer__meta a:hover { color: var(--amber-soft); }

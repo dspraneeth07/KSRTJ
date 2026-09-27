@@ -8,7 +8,6 @@ import {
   Pillars,
   Process,
   Signature,
-  Testimonials,
   TrustStrip,
 } from '../components/sections/Sections';
 
@@ -23,7 +22,6 @@ export default function HomePage() {
       <Founder />
       <Institutional />
       <Courses />
-      <Testimonials />
       <Faq />
       <ClosingCta />
     </>

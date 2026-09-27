@@ -830,7 +830,7 @@ export const vastuVertical: Vertical = {
     te: 'మేము కొలిచిన ప్రణాళికలు, పరికరంతో తీసుకున్న నిజ ఉత్తర దిక్కు ఆధారంగానే పని చేస్తాం — బిల్డర్ లేఅవుట్‌లో ముద్రించిన ఉత్తరం ఆధారంగా కాదు; అది సరిగా ఉండటం కంటే తప్పుగా ఉండటమే ఎక్కువ. నిర్ధారణలను తీవ్రత ప్రకారం విభజిస్తాం — నిజంగా ఇప్పుడు ప్రభావం చూపేది ఏది, కాగితంపై మాత్రమే లోపమైనది ఏది అని మీకు తెలుస్తుంది. పరిహారాలను ఖర్చు క్రమంలో ఇస్తాం; కూల్చివేత ఆ జాబితాలో చివరిది — అసలు ఉంటే. కింద పదిహేను సేవలు ఉన్నాయి; చాలామందికి వాటిలో రెండు మూడు చాలు, అందుకే వడపోత ఇచ్చాం.',
   },
   timingLabel: { en: 'Turnaround', te: 'వ్యవధి' },
-  filterAll: { en: 'All 15', te: 'అన్నీ 15' },
+  filterAll: { en: 'All services', te: 'అన్ని సేవలు' },
   bundlesTitle: {
     en: 'Three sequences that work better together',
     te: 'కలిపి చేస్తే మెరుగ్గా పనిచేసే మూడు క్రమాలు',
@@ -841,8 +841,8 @@ export const vastuVertical: Vertical = {
   },
   faqTitle: { en: 'Asked before most consultations', te: 'చాలా సంప్రదింపులకు ముందు అడిగేవి' },
   feeLede: {
-    en: 'Fees are confirmed in writing after the scope is agreed. Site visits outside Wanaparthy district carry travel at actuals.',
-    te: 'పరిధి ఖరారైన తర్వాత రుసుము లిఖితపూర్వకంగా నిర్ధారిస్తాం. వనపర్తి జిల్లా వెలుపల స్థల సందర్శనలకు ప్రయాణ ఖర్చు వాస్తవ ప్రాతిపదికన.',
+    en: 'Duration and fees are shared according to the requirement, before any work begins. Travel is charged at actuals for site visits outside Wanaparthy district.',
+    te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి. వనపర్తి జిల్లా వెలుపల స్థల సందర్శనలకు ప్రయాణ ఖర్చు వాస్తవ ప్రాతిపదికన.',
   },
   ctaTitle: { en: 'Not sure which of the fifteen you need?', te: 'పదిహేనింటిలో ఏది కావాలో స్పష్టత లేదా?' },
   ctaLede: {

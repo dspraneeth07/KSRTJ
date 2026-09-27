@@ -82,7 +82,6 @@ export default function AboutPage() {
             <ul className="acreds">
               <li>{t('founder.cred1')}</li>
               <li>{t('founder.cred2')}</li>
-              <li>{t('founder.cred3')}</li>
             </ul>
             <p className="anote">
               <span className="anote__label">{b(ui.note)}</span>
@@ -162,7 +161,7 @@ export default function AboutPage() {
               <Link className="link" to="/#courses">
                 {b(about.teaching.courseLink)}
               </Link>
-              <Link className="link" to="/services/swarashastra">
+              <Link className="link" to="/services/spiritual">
                 {b(about.teaching.swaraLink)}
               </Link>
             </p>
