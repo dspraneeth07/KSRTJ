@@ -293,14 +293,14 @@ export const numerologyVertical: Vertical = {
           'The registered legal name in full, including “Private Limited”, “LLP”, “Foundation” or “Trust” — the statutory suffix is part of the string and changes the value',
           'How the name behaves once it is abbreviated into an acronym, which is what a school or hospital will actually be called locally within a year',
           'Incorporation and registration dates where those are still movable, since the entity acquires its own destiny number from the date it is registered',
-          'Availability against the MCA register and the trademark record before a name reaches the shortlist — a numerically ideal name the registrar rejects has cost you a month',
+          'Where appropriate, available registration and trademark information is examined before a name reaches the shortlist — a numerically ideal name the registrar later rejects has cost you a month',
         ],
         te: [
           'ప్రతి ప్రమోటర్ లేదా డైరెక్టర్ సంఖ్యలు; ప్రతిపాదిత పేరు కేవలం అత్యంత సీనియర్ వ్యక్తితో కాక, మొత్తం బృందంతో ఎలా సరిపోతుంది',
           '“ప్రైవేట్ లిమిటెడ్”, “ఎల్‌ఎల్‌పీ”, “ఫౌండేషన్”, “ట్రస్ట్”తో సహా పూర్తి చట్టబద్ధ నామం — ఈ చట్టపరమైన ప్రత్యయం కూడా పేరులో భాగమే, విలువను మారుస్తుంది',
           'పేరు సంక్షిప్త రూపంలోకి మారినప్పుడు ఎలా ఉంటుంది — ఒక ఏడాదిలో పాఠశాలను, ఆసుపత్రిని స్థానికంగా పిలిచేది ఆ సంక్షిప్త రూపంతోనే',
           'ఇంకా మార్చగలిగితే స్థాపన, నమోదు తేదీలు — నమోదైన తేదీ నుండి సంస్థకు దాని సొంత భాగ్య సంఖ్య వస్తుంది కాబట్టి',
-          'జాబితాలోకి రాకముందే ఎంసీఏ రిజిస్టర్, ట్రేడ్‌మార్క్ రికార్డుతో లభ్యత పరిశీలన — సంఖ్యాపరంగా ఉత్తమమైనా రిజిస్ట్రార్ తిరస్కరిస్తే ఒక నెల నష్టం',
+          'అవసరమైన సందర్భంలో అందుబాటులో ఉన్న రిజిస్ట్రేషన్, ట్రేడ్‌మార్క్ సమాచారంతో లభ్యత పరిశీలన — సంఖ్యాపరంగా ఉత్తమమైనా రిజిస్ట్రార్ తర్వాత తిరస్కరిస్తే ఒక నెల నష్టం',
         ],
       },
       who: {
@@ -309,7 +309,7 @@ export const numerologyVertical: Vertical = {
       },
       receive: {
         en: 'A shortlist already cleared against the registry, the value calculation for each with the statutory suffix included, and a recommended incorporation date window.',
-        te: 'రిజిస్టర్‌తో సరిపోల్చి ఇచ్చిన పేర్ల జాబితా, చట్టపరమైన ప్రత్యయంతో సహా ప్రతి దాని విలువ లెక్క, సూచించిన స్థాపన తేదీ కాలం.',
+        te: 'చట్టపరమైన ప్రత్యయంతో సహా ప్రతి దాని విలువ లెక్కతో కూడిన పేర్ల జాబితా, సూచించిన స్థాపన తేదీ కాలం.',
       },
       cta: {
         en: 'Bring your top three names before you file with the registrar.',
@@ -335,14 +335,14 @@ export const numerologyVertical: Vertical = {
           'The brand’s value read against the promoter’s numbers and, where the two differ, against the registered entity’s',
           'Whether the brand should agree with the parent company’s number or deliberately differ — a house of several brands does not want them all carrying the same value',
           'The brand as consumers will actually write it: with or without the prefix, in an app store listing, on the packaging, typed into a search box',
-          'Trademark class availability, because a brand name that cannot be registered in your class is not a brand name',
+          'Trademark class availability so far as it can be checked — a brand name that cannot be registered in your class is not a brand name',
           'Sub-brand and product-line naming, so a range can extend later without each addition needing a fresh consultation',
         ],
         te: [
           'ప్రమోటర్ సంఖ్యలతో బ్రాండ్ విలువ పోలిక; రెండూ వేరైతే నమోదిత సంస్థ సంఖ్యతో కూడా',
           'బ్రాండ్ మాతృ సంస్థ సంఖ్యతో సరిపోవాలా, ఉద్దేశపూర్వకంగా వేరుగా ఉండాలా — అనేక బ్రాండ్లున్న సంస్థకు అన్నీ ఒకే విలువ మోయడం అవసరం లేదు',
           'వినియోగదారులు నిజంగా ఎలా రాస్తారో ఆ రూపంలో బ్రాండ్: ఉపసర్గతో లేదా లేకుండా, యాప్ స్టోర్‌లో, ప్యాకేజింగ్ మీద, సెర్చ్ బాక్స్‌లో',
-          'ట్రేడ్‌మార్క్ తరగతిలో లభ్యత — మీ తరగతిలో నమోదు కాని పేరు అసలు బ్రాండ్ పేరే కాదు',
+          'పరిశీలించగలిగినంత వరకు ట్రేడ్‌మార్క్ తరగతిలో లభ్యత — మీ తరగతిలో నమోదు కాని పేరు అసలు బ్రాండ్ పేరే కాదు',
           'ఉప–బ్రాండ్, ఉత్పత్తి శ్రేణి నామకరణం — తర్వాత శ్రేణి విస్తరించినప్పుడు ప్రతి కొత్త దానికీ మళ్లీ సంప్రదింపు అవసరం లేకుండా',
         ],
       },
@@ -543,7 +543,7 @@ export const numerologyVertical: Vertical = {
       id: 'dateselection',
       index: 10,
       cluster: 'checks',
-      name: { en: 'Auspicious Date Selection', te: 'శుభ తేదీ ఎంపిక' },
+      name: { en: 'Date Selection by Number', te: 'సంఖ్య ఆధారంగా తేదీ ఎంపిక' },
       definition: {
         en: 'Choosing a date whose numeric value agrees with the people involved and with the purpose — a marriage, a launch, a registration, a griha pravesh or a signing.',
         te: 'సంబంధిత వ్యక్తులతో, కార్య ప్రయోజనంతో సంఖ్యాపరంగా సరిపోయే తేదీ ఎంపిక — వివాహం, ప్రారంభోత్సవం, రిజిస్ట్రేషన్, గృహ ప్రవేశం లేదా ఒప్పంద సంతకం.',

@@ -17,7 +17,7 @@ import { Portrait } from '../components/Portrait';
 
 const ui = {
   home: { en: 'Home', te: 'ముఖపేజీ' },
-  book: { en: 'Book a consultation', te: 'సంప్రదింపు నమోదు' },
+  book: { en: 'Book a consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
   disciplines: { en: 'See the four disciplines', te: 'నాలుగు శాస్త్రాలు చూడండి' },
   note: { en: 'Note', te: 'గమనిక' },
 } satisfies Record<string, Bi>;

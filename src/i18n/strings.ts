@@ -17,10 +17,10 @@ export const en = {
   'a11y.skip': 'Skip to content',
 
   'utility.hours': 'Consultations · Mon–Sat, 9:00–18:00 IST · Online & in person',
-  'utility.call': '+91 00000 00000',
+  'utility.call': '+91 83090 96407',
 
   'brand.name': 'Sanātana Vidyā Kendra',
-  'brand.tag': 'Institute of Vedic Sciences',
+  'brand.tag': 'Vastu · Jyotisha · Numerology · Spiritual & Vedic Studies',
 
   'nav.services': 'Services',
   'nav.approach': 'Approach',
@@ -62,19 +62,19 @@ export const en = {
     'Four related disciplines, each studied on its own terms and applied together where a question genuinely calls for more than one of them.',
 
   'v.vastu.name': 'Vastu Shastra',
-  'v.vastu.sub': 'The science of built space',
+  'v.vastu.sub': 'The traditional discipline of Vastu',
   'v.vastu.desc':
     'Study, examination and guidance covering plots, houses and construction — directions, measurements, Ayadi Ganitham and the related principles of Vastu.',
   'v.vastu.count': 'Consultation & training',
 
   'v.jyotisha.name': 'Jyotisha',
-  'v.jyotisha.sub': 'The science of time and disposition',
+  'v.jyotisha.sub': 'The traditional discipline of Jyotisha',
   'v.jyotisha.desc':
     'Study and practice covering the birth chart, rashi and nakshatra, houses and planets, dashas, gochara, Prashna Jyotisham and Muhurtham.',
   'v.jyotisha.count': 'Consultation & training',
 
   'v.numero.name': 'Numerology',
-  'v.numero.sub': 'The science of number and name',
+  'v.numero.sub': 'The study of numbers and names',
   'v.numero.desc':
     'Study of the birth number, destiny number and name number, along with names, spelling, naming and numeric compatibility.',
   'v.numero.count': 'Consultation & training',
@@ -97,7 +97,7 @@ export const en = {
   's.vastu.10': 'Industrial Vastu',
   's.vastu.11': 'Educational institution Vastu',
   's.vastu.12': 'Dosha identification',
-  's.vastu.13': 'Remedies without demolition',
+  's.vastu.13': 'Non-demolition remedies, where applicable',
   's.vastu.14': 'New construction planning',
   's.vastu.15': 'Existing building analysis',
 
@@ -128,7 +128,7 @@ export const en = {
   's.num.7': 'Mobile number compatibility',
   's.num.8': 'Vehicle number compatibility',
   's.num.9': 'House & flat number compatibility',
-  's.num.10': 'Auspicious date selection',
+  's.num.10': 'Date selection by number',
   's.num.11': 'Signature analysis',
 
   's.swa.1': 'Mantra, meditation and swara sadhana',
@@ -148,11 +148,11 @@ export const en = {
     'The services most often asked for. A fuller list for each discipline is on its own page.',
   'sig.1.name': 'Plot & new-construction Vastu',
   'sig.1.desc':
-    'Orientation, shape, slope, road frontage and Ayadi compatibility assessed before purchase or before the foundation is laid — the one stage where correction costs nothing.',
+    'Assessing the site before purchase or construction allows potential Vastu considerations — orientation, shape, slope, road frontage and Ayadi compatibility — to be identified before major decisions are made.',
   'sig.1.dur': '90 minutes + site visit',
   'sig.2.name': 'Complete birth chart analysis',
   'sig.2.desc':
-    'Janma Jataka read in full — disposition, education, career, wealth, marriage, progeny and health — with the running dasha and the next three years of gochara mapped against it.',
+    'Janma Jataka read in full — disposition, education, career, wealth, marriage, progeny and health — with the relevant dasha and gochara periods examined in context.',
   'sig.2.dur': '90 minutes',
   'sig.3.disc': 'Jyotisha + Numerology',
   'sig.3.name': 'Marriage compatibility',
@@ -161,7 +161,7 @@ export const en = {
   'sig.3.dur': '60 minutes',
   'sig.4.name': 'Business & brand naming',
   'sig.4.desc':
-    'Candidate names evaluated on numeric value, pronounceability in Telugu and English, promoter chart fit, and a check against the registrar and trademark record before we shortlist.',
+    'Candidate names evaluated on numeric value, pronounceability in Telugu and English, and fit with the promoter. Where appropriate, available registration and trademark information is examined as well.',
   'sig.4.dur': 'Two sittings',
   'sig.5.name': 'Muhurtham & date selection',
   'sig.5.desc':
@@ -170,7 +170,7 @@ export const en = {
   'sig.6.disc': 'Institutional',
   'sig.6.name': 'Commercial & industrial Vastu audit',
   'sig.6.desc':
-    'Full-site audit for factories, showrooms, offices, schools and hospitals. Findings are issued as a drawing-level report your architect can build from, with phased remedies.',
+    'A site-based report is provided with Vastu observations, recommendations and, where appropriate, phased guidance for consideration by the client and their architect or technical team.',
   'sig.6.dur': 'Scoped per site',
   'sig.fee': 'Duration and fees are shared according to the requirement, before any work begins.',
 
@@ -184,7 +184,7 @@ export const en = {
   'out.report': 'Written report',
   'out.shortlist': 'Shortlist & rationale',
   'out.dates': 'Dated note with alternates',
-  'out.audit': 'Audit report & markups',
+  'out.audit': 'Written observations & recommendations',
   'medium.both': 'Telugu & English',
 
   'process.eyebrow': 'Method',
@@ -280,7 +280,7 @@ export const en = {
     'A centre for the study, practice and teaching of the Vedic disciplines.',
   'footer.location': 'Location',
   'footer.reach': 'Contact',
-  'footer.practice': 'Practice',
+  'footer.practice': 'The centre',
   'footer.faq': 'Questions',
   'footer.contact': 'Contact',
   'footer.addr': 'KDR Nagar · Wanaparthy · Telangana, India',
@@ -293,10 +293,10 @@ export const te: Record<StringKey, string> = {
   'a11y.skip': 'విషయానికి వెళ్లండి',
 
   'utility.hours': 'సంప్రదింపులు · సోమ–శని, ఉదయం 9:00 – సాయంత్రం 6:00 · ఆన్‌లైన్ మరియు ప్రత్యక్షంగా',
-  'utility.call': '+91 00000 00000',
+  'utility.call': '+91 83090 96407',
 
   'brand.name': 'సనాతన విద్యా కేంద్రం',
-  'brand.tag': 'వేద శాస్త్ర సంస్థ',
+  'brand.tag': 'వాస్తు · జ్యోతిషం · సంఖ్యా శాస్త్రం · వేద విద్యలు',
 
   'nav.services': 'సేవలు',
   'nav.approach': 'విధానం',
@@ -307,7 +307,7 @@ export const te: Record<StringKey, string> = {
   'nav.menu': 'మెనూ',
   'nav.close': 'మూసివేయండి',
 
-  'cta.book': 'సంప్రదింపు నమోదు',
+  'cta.book': 'సంప్రదింపును బుక్ చేసుకోండి',
   'cta.howItWorks': 'సంప్రదింపు ఎలా జరుగుతుంది',
   'cta.explore': 'ఈ శాస్త్రం గురించి',
   'cta.enquire': 'ఈ విభాగం గురించి',
@@ -338,19 +338,19 @@ export const te: Record<StringKey, string> = {
     'నాలుగు సంబంధిత శాస్త్రాలు — ప్రతి ఒక్కటీ విడిగా అధ్యయనం చేస్తూ, ఒక ప్రశ్నకు ఒకటి కంటే ఎక్కువ అవసరమైన చోట వాటిని కలిపి పరిశీలిస్తాం.',
 
   'v.vastu.name': 'వాస్తు శాస్త్రం',
-  'v.vastu.sub': 'నిర్మాణ స్థల శాస్త్రం',
+  'v.vastu.sub': 'వాస్తు యొక్క సంప్రదాయ శాస్త్రం',
   'v.vastu.desc':
     'స్థలం, గృహం, నిర్మాణం, దిక్కులు, కొలతలు, ఆయాది గణితం మరియు సంబంధిత వాస్తు అంశాల అధ్యయనం, పరిశీలన మరియు మార్గదర్శనం.',
   'v.vastu.count': 'సంప్రదింపు, శిక్షణ',
 
   'v.jyotisha.name': 'జ్యోతిష శాస్త్రం',
-  'v.jyotisha.sub': 'కాల, గ్రహస్థితి శాస్త్రం',
+  'v.jyotisha.sub': 'జ్యోతిషం యొక్క సంప్రదాయ శాస్త్రం',
   'v.jyotisha.desc':
     'జన్మకుండలి, రాశి, నక్షత్రం, భావాలు, గ్రహాలు, దశలు, గోచారం, ప్రశ్న జ్యోతిషం మరియు ముహూర్తం వంటి అంశాల అధ్యయనం మరియు ఆచరణ.',
   'v.jyotisha.count': 'సంప్రదింపు, శిక్షణ',
 
   'v.numero.name': 'సంఖ్యా శాస్త్రం',
-  'v.numero.sub': 'సంఖ్య, నామ శాస్త్రం',
+  'v.numero.sub': 'సంఖ్యలు మరియు నామాలకు సంబంధించిన అధ్యయనం',
   'v.numero.desc':
     'జన్మ సంఖ్య, భాగ్య సంఖ్య, నామ సంఖ్య, పేరు, స్పెల్లింగ్, నామకరణం మరియు సంఖ్యా అనుకూలతకు సంబంధించిన అధ్యయనం.',
   'v.numero.count': 'సంప్రదింపు, శిక్షణ',
@@ -373,7 +373,7 @@ export const te: Record<StringKey, string> = {
   's.vastu.10': 'పారిశ్రామిక వాస్తు',
   's.vastu.11': 'విద్యా సంస్థల వాస్తు',
   's.vastu.12': 'వాస్తు దోష నిర్ధారణ',
-  's.vastu.13': 'కూల్చివేత లేని పరిహారాలు',
+  's.vastu.13': 'అవకాశమున్న చోట కూల్చివేత లేని పరిహార సూచనలు',
   's.vastu.14': 'నూతన నిర్మాణ ప్రణాళిక',
   's.vastu.15': 'ప్రస్తుత భవన విశ్లేషణ',
 
@@ -404,7 +404,7 @@ export const te: Record<StringKey, string> = {
   's.num.7': 'మొబైల్ సంఖ్య అనుకూలత',
   's.num.8': 'వాహన సంఖ్య అనుకూలత',
   's.num.9': 'ఇల్లు, ఫ్లాట్ సంఖ్య అనుకూలత',
-  's.num.10': 'శుభ తేదీ ఎంపిక',
+  's.num.10': 'సంఖ్య ఆధారంగా తేదీ ఎంపిక',
   's.num.11': 'సంతక విశ్లేషణ',
 
   's.swa.1': 'మంత్రం, ధ్యానం, స్వర సాధన',
@@ -424,11 +424,11 @@ export const te: Record<StringKey, string> = {
     'ఎక్కువగా కోరబడే సేవలు ఇవి. ప్రతి శాస్త్రానికీ పూర్తి వివరాలు దాని సొంత పేజీలో ఉన్నాయి.',
   'sig.1.name': 'స్థల, నూతన నిర్మాణ వాస్తు',
   'sig.1.desc':
-    'కొనుగోలుకు ముందు లేదా పునాది వేయకముందే దిక్కు, ఆకారం, వాలు, రహదారి ముఖం, ఆయాది అనుకూలత పరిశీలన — సవరణకు ఏమీ ఖర్చు కాని ఏకైక దశ ఇదే.',
+    'కొనుగోలు లేదా నిర్మాణానికి ముందే దిక్కు, ఆకారం, వాలు, రహదారి ముఖం మరియు ఆయాది అనుకూలతను పరిశీలించడం ద్వారా భవిష్యత్తులో అవసరమయ్యే మార్పులను ముందుగానే పరిగణించవచ్చు.',
   'sig.1.dur': '90 నిమిషాలు + స్థల సందర్శన',
   'sig.2.name': 'సంపూర్ణ జన్మ జాతక విశ్లేషణ',
   'sig.2.desc':
-    'స్వభావం, విద్య, వృత్తి, ధనం, వివాహం, సంతానం, ఆరోగ్యం — జాతకాన్ని పూర్తిగా చదివి, నడుస్తున్న దశతోను, రాబోయే మూడేళ్ల గోచారంతోను సరిపోల్చుతాం.',
+    'స్వభావం, విద్య, వృత్తి, ధనం, వివాహం, సంతానం, ఆరోగ్యం — జాతకాన్ని పూర్తిగా చదివి, సంబంధిత దశా కాలాలు మరియు గోచారాలను సందర్భానుసారంగా పరిశీలిస్తాం.',
   'sig.2.dur': '90 నిమిషాలు',
   'sig.3.disc': 'జ్యోతిషం + సంఖ్యా శాస్త్రం',
   'sig.3.name': 'వివాహ అనుకూలత',
@@ -437,7 +437,7 @@ export const te: Record<StringKey, string> = {
   'sig.3.dur': '60 నిమిషాలు',
   'sig.4.name': 'వ్యాపార, బ్రాండ్ నామకరణం',
   'sig.4.desc':
-    'సంఖ్యా విలువ, తెలుగు–ఆంగ్లం రెండింటిలో ఉచ్చారణ, ప్రమోటర్ జాతకంతో సరిపోలిక, రిజిస్ట్రార్ మరియు ట్రేడ్‌మార్క్ రికార్డు పరిశీలన — ఇవన్నీ అయిన తర్వాతే ఎంపిక జాబితా.',
+    'సంఖ్యా విలువ, తెలుగు–ఆంగ్లం రెండింటిలో ఉచ్చారణ, ప్రమోటర్‌తో సరిపోలిక ఆధారంగా పేర్ల పరిశీలన. అవసరమైన సందర్భంలో అందుబాటులో ఉన్న రిజిస్ట్రేషన్ మరియు ట్రేడ్‌మార్క్ సమాచారాన్ని కూడా పరిశీలిస్తాం.',
   'sig.4.dur': 'రెండు సమావేశాలు',
   'sig.5.name': 'ముహూర్తం, తేదీ నిర్ణయం',
   'sig.5.desc':
@@ -446,7 +446,7 @@ export const te: Record<StringKey, string> = {
   'sig.6.disc': 'సంస్థాగతం',
   'sig.6.name': 'వాణిజ్య, పారిశ్రామిక వాస్తు తనిఖీ',
   'sig.6.desc':
-    'ఫ్యాక్టరీలు, షోరూమ్‌లు, కార్యాలయాలు, పాఠశాలలు, ఆసుపత్రులకు పూర్తి స్థల తనిఖీ. మీ ఆర్కిటెక్ట్ నేరుగా అమలు చేయగల డ్రాయింగ్ స్థాయి నివేదిక, దశలవారీ పరిహారాలతో.',
+    'పూర్తి స్థల పరిశీలన అనంతరం వాస్తు సంబంధిత పరిశీలనలు, సూచనలు మరియు అవసరమైన దశలవారీ మార్గదర్శకంతో నివేదిక అందించబడుతుంది.',
   'sig.6.dur': 'స్థలాన్ని బట్టి',
   'sig.fee':
     'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి.',
@@ -461,7 +461,7 @@ export const te: Record<StringKey, string> = {
   'out.report': 'లిఖిత నివేదిక',
   'out.shortlist': 'ఎంపిక జాబితా, కారణాలు',
   'out.dates': 'తేదీల పత్రం, ప్రత్యామ్నాయాలు',
-  'out.audit': 'తనిఖీ నివేదిక, గుర్తులు',
+  'out.audit': 'లిఖిత పరిశీలనలు, సూచనలు',
   'medium.both': 'తెలుగు, ఆంగ్లం',
 
   'process.eyebrow': 'పద్ధతి',
@@ -558,7 +558,7 @@ export const te: Record<StringKey, string> = {
     'వేద విద్యల అధ్యయనం, ఆచరణ మరియు బోధన కోసం ఒక కేంద్రం.',
   'footer.location': 'చిరునామా',
   'footer.reach': 'సంప్రదింపు',
-  'footer.practice': 'సంస్థ',
+  'footer.practice': 'కేంద్రం',
   'footer.faq': 'ప్రశ్నలు',
   'footer.contact': 'సంప్రదించండి',
   'footer.addr': 'కేడీఆర్ నగర్ · వనపర్తి · తెలంగాణ, భారతదేశం',

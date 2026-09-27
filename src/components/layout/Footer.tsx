@@ -26,7 +26,7 @@ export function Footer() {
               <div>
                 <dt>{t('footer.reach')}</dt>
                 <dd>
-                  <a href="tel:+910000000000">{t('utility.call')}</a>
+                  <a href="tel:+918309096407">{t('utility.call')}</a>
                 </dd>
               </div>
             </dl>

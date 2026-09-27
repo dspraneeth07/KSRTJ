@@ -34,7 +34,9 @@ const ui = {
 export default function SwaraPage() {
   const { b, bl } = useBi();
   const { t } = useLang();
-  const [faqOpen, setFaqOpen] = useState<string | null>(null);
+  // First answer open, so the section reads as questions *and* answers
+  // rather than as a bare list of questions.
+  const [faqOpen, setFaqOpen] = useState<string | null>(swaraPage.faqs[0]?.id ?? null);
 
   return (
     <div className="quiet">

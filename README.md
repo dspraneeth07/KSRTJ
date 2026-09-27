@@ -245,6 +245,14 @@ should not return unless they become true and provable:
 | "admission by assessment", "taught in a lineage" | Implied an established gurukula that would have to be shown to exist |
 | Builders / corporate / industrial / educational cards | Reduced to a single paragraph |
 | `[Guru's name]`, `[n] years`, `[year]`, `[university]`, `[CONFIRM]` | **No bracketed placeholder remains anywhere on the site** |
+| "The science of built space / of time and disposition / of number and name" | Reads as an academic claim; these are taught as traditional disciplines |
+| "the one stage where correction costs nothing" | Untrue — a consultation still carries a fee |
+| "a drawing-level report your architect can build from" | Implied architectural and structural services that are not offered |
+| "a check against the registrar and trademark record" | Must not read as legal or trademark clearance |
+| "Remedies without demolition" | Read as a guarantee; now "where applicable" |
+| "the next three years of gochara" | A fixed commitment per client |
+| "so trading is not interrupted", "phased to fall inside your scheduled shutdowns", "one review visit … included" | Scheduling and inclusions promised on the client's behalf |
+| "Institute of Vedic Sciences" | Formal-institution framing; the strapline now names the four fields |
 
 **The fourth field was reframed.** *Swarashastra & Brahmavidya* is now
 **Spiritual & Vedic Studies** at `/services/spiritual`, covering mantra,
@@ -313,7 +321,7 @@ is wanted again.
 | What | Where |
 |---|---|
 | **Organisation name** | `Sanātana Vidyā Kendra` is a working title. It appears in the header, footer, page titles, the OG card and the favicon |
-| Phone, WhatsApp, email | `utility.call` in `strings.ts`, and the `wa.me` links in `Sections.tsx` / `VerticalPage.tsx` |
+| Email address | Not yet on the site. Phone and WhatsApp are set to +91 83090 96407 |
 | Door number and PIN | `footer.addr` — the rest of the address is set |
 | Qualification detail | University and year for the M.A.; the Ph.D. institution |
 | Testimonials | The section was removed. It can return once there are genuine, attributed quotes |

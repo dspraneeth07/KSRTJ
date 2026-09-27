@@ -249,7 +249,9 @@ export function Courses() {
 
 export function Faq() {
   const { t } = useLang();
-  const [open, setOpen] = useState<string | null>(null);
+  // First answer open, so the section reads as questions *and* answers rather
+  // than as a bare list of questions.
+  const [open, setOpen] = useState<string | null>(faqs[0]?.id ?? null);
 
   return (
     <section className="section" id="faq">
@@ -299,7 +301,7 @@ export function ClosingCta() {
           <a className="btn btn--amber btn--lg" href="#book">
             {t('cta.book')}
           </a>
-          <a className="btn btn--ghost btn--lg" href="https://wa.me/910000000000">
+          <a className="btn btn--ghost btn--lg" href="https://wa.me/918309096407">
             {t('cta.whatsapp')}
           </a>
         </div>

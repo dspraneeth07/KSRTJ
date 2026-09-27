@@ -109,7 +109,7 @@ export function UtilityBar() {
       <div className="wrap utility__inner">
         <p className="utility__note">{t('utility.hours')}</p>
         <div className="utility__actions">
-          <a className="utility__link" href="tel:+910000000000">
+          <a className="utility__link" href="tel:+918309096407">
             {t('utility.call')}
           </a>
           <div className="langswitch" role="group" aria-label="Language">

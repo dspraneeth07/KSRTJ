@@ -424,8 +424,8 @@ export const vastuServices: Vertical['services'] = [
       te: 'కొత్త అంతస్తు లేదా వాణిజ్య భవనం ప్రణాళిక చేస్తున్నారు — లేదా మౌలికంగా అంతా సవ్యంగా ఉన్నా వ్యాపారం సాగడం లేదు, భవనం కారణమా కాదా అని తేల్చుకోవాలి.',
     },
     receive: {
-      en: 'Department-wise zoning drawings, a seating chart, and a phased implementation plan built around your occupancy so trading is not interrupted.',
-      te: 'విభాగాల వారీ మండల ప్రణాళికలు, కూర్చునే విధాన పట్టిక, మీ కార్యకలాపాలకు అంతరాయం కలగకుండా దశలవారీ అమలు ప్రణాళిక.',
+      en: 'Department-wise zoning notes, seating guidance, and, where appropriate, phased suggestions that take your occupancy into account.',
+      te: 'విభాగాల వారీ మండల సూచనలు, కూర్చునే విధానంపై మార్గదర్శనం; అవసరమైన చోట మీ కార్యకలాపాలను దృష్టిలో ఉంచుకుని దశలవారీ సూచనలు.',
     },
     cta: {
       en: 'Commercial work is scoped per site — request a scoping call.',
@@ -467,8 +467,8 @@ export const vastuServices: Vertical['services'] = [
       te: 'కొత్త యూనిట్ ప్రణాళిక చేస్తున్నారు, లేదా ఉన్న ప్లాంట్‌లో నిర్వహణపరమైన కారణం కనిపించకుండా పదే పదే యంత్ర లోపాలు, కార్మికుల మార్పు, నగదు ఇబ్బందులు ఉన్నాయి.',
     },
     receive: {
-      en: 'A plant layout audit set against your process drawing, with machinery and utility positions marked and the work phased to fall inside your scheduled shutdowns.',
-      te: 'మీ ప్రాసెస్ డ్రాయింగ్‌తో పోల్చిన ప్లాంట్ లేఅవుట్ తనిఖీ; యంత్రాలు, సదుపాయాల స్థానాలు గుర్తించి, పని మీ షట్‌డౌన్ సమయాల్లోనే జరిగేలా దశలవారీగా.',
+      en: 'Vastu observations on the plant layout, read against your process drawing, with suggested machinery and utility positions and, where appropriate, phasing discussed around your shutdown schedule.',
+      te: 'మీ ప్రాసెస్ డ్రాయింగ్‌తో పోల్చి ప్లాంట్ లేఅవుట్‌పై వాస్తు పరిశీలనలు; యంత్రాలు, సదుపాయాల స్థానాలపై సూచనలు; అవసరమైన చోట మీ షట్‌డౌన్ షెడ్యూల్‌ను దృష్టిలో ఉంచుకుని దశలవారీ చర్చ.',
     },
     cta: {
       en: 'We phase plant work around your shutdowns. Ask for a site scope.',
@@ -510,8 +510,8 @@ export const vastuServices: Vertical['services'] = [
       te: 'కొత్త విద్యా సముదాయం నిర్మిస్తున్న యాజమాన్యం, లేదా హాజరు, ఫలితాలు, సిబ్బంది నిలకడలో కారణం తెలియని ఇబ్బందులు ఎదుర్కొంటున్న సంస్థ.',
     },
     receive: {
-      en: 'A block-level campus zoning report, a classroom seating-direction chart, and a works plan phased to fall between academic sessions.',
-      te: 'భవనాల వారీ సముదాయ మండల నివేదిక, తరగతి గదుల కూర్చునే దిక్కుల పట్టిక, విద్యా సంవత్సరాల మధ్య కాలంలో జరిగేలా దశలవారీ పని ప్రణాళిక.',
+      en: 'A block-level campus zoning report, classroom seating-direction guidance, and, where appropriate, phasing suggested around the academic calendar.',
+      te: 'భవనాల వారీ సముదాయ మండల నివేదిక, తరగతి గదుల కూర్చునే దిక్కులపై మార్గదర్శనం; అవసరమైన చోట విద్యా క్యాలెండర్‌ను దృష్టిలో ఉంచుకుని దశలవారీ సూచనలు.',
     },
     cta: {
       en: 'Campus work belongs between sessions. Start with a scoping visit.',
@@ -682,8 +682,8 @@ export const vastuServices: Vertical['services'] = [
       te: 'మీరు ఇప్పటికే ఆ భవనంలో నివసిస్తున్నారు లేదా పని చేస్తున్నారు; ఏళ్ల తరబడి ముక్కలుగా వచ్చిన సలహాలు కాకుండా ఒకే సమగ్ర అభిప్రాయం కావాలి.',
     },
     receive: {
-      en: 'A full audit report — measured drawings, the dosha register, ranked remedies with cost bands — and one review visit after implementation, included.',
-      te: 'పూర్తి తనిఖీ నివేదిక — కొలతల ప్రణాళికలు, దోష నివేదిక, ఖర్చు శ్రేణులతో క్రమబద్ధ పరిహారాలు — అమలు తర్వాత ఒక సమీక్ష సందర్శన కూడా ఇందులోనే.',
+      en: 'A full report — measured drawings, the dosha register and ranked remedies with indicative cost bands — with a review after implementation by arrangement.',
+      te: 'పూర్తి నివేదిక — కొలతల ప్రణాళికలు, దోష నివేదిక, సూచనాత్మక ఖర్చు శ్రేణులతో క్రమబద్ధ పరిహారాలు — అమలు తర్వాత ముందస్తు ఏర్పాటుతో ఒక సమీక్ష.',
     },
     cta: {
       en: 'One audit, one report, one opinion. Book a site visit.',

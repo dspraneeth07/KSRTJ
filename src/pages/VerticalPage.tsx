@@ -32,7 +32,7 @@ const ui = {
   priceEyebrow: { en: 'Terms', te: 'నిబంధనలు' },
   priceTitle: { en: 'Duration and fees', te: 'వ్యవధి మరియు రుసుము' },
   ctaEyebrow: { en: 'Begin', te: 'ప్రారంభం' },
-  book: { en: 'Book a consultation', te: 'సంప్రదింపు నమోదు' },
+  book: { en: 'Book a consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
   ask: { en: 'Ask on WhatsApp', te: 'వాట్సాప్‌లో అడగండి' },
   note: { en: 'Please note', te: 'గమనిక' },
   conducted: {
@@ -127,7 +127,9 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
   // Two sets, not one: service ids and FAQ ids share a namespace otherwise,
   // and some verticals use the same id in both ('ayadi', 'remedies').
   const [open, setOpen] = useState<Set<string>>(new Set());
-  const [faqOpen, setFaqOpen] = useState<string | null>(null);
+  // First answer open, so the section reads as questions *and* answers
+  // rather than as a bare list of questions.
+  const [faqOpen, setFaqOpen] = useState<string | null>(vertical.faqs[0]?.id ?? null);
 
   const visibleClusters = useMemo(
     () => (filter === 'all' ? vertical.clusters : vertical.clusters.filter((c) => c.id === filter)),
@@ -358,7 +360,7 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
             <a className="btn btn--amber btn--lg" href="#book">
               {b(ui.book)}
             </a>
-            <a className="btn btn--ghost btn--lg" href="https://wa.me/910000000000">
+            <a className="btn btn--ghost btn--lg" href="https://wa.me/918309096407">
               {b(ui.ask)}
             </a>
           </div>
