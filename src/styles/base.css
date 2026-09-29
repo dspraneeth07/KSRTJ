@@ -67,6 +67,10 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* The off-canvas drawer is parked past the right edge until it opens.
+     `clip` keeps it out of the scrollable area; `hidden` would make the
+     root a scroll container and break the sticky header. */
+  overflow-x: clip;
 }
 
 body {

@@ -90,11 +90,19 @@ function SwaraMegaColumn({ onNavigate }: { onNavigate: () => void }) {
 
       <h3 className="mega__title mega__title--sub">{t('mega.training')}</h3>
       <ul className="mega__list">
-        {(['s.course.1', 's.course.2', 's.course.3', 's.course.4'] as const).map((k) => (
+        {(
+          [
+            'crs.vastu.name',
+            'crs.jyo.name',
+            'crs.num.name',
+            'crs.swara.name',
+            'crs.spiritual.name',
+          ] as const
+        ).map((k) => (
           <li key={k}>
-            <a href="/#courses" onClick={onNavigate}>
+            <Link to="/training" onClick={onNavigate}>
               {t(k)}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -220,9 +228,9 @@ export function Header() {
                 <ul className="mega__list">
                   {col.extraItems.map((item) => (
                     <li key={item}>
-                      <a href="#courses" onClick={closeAll}>
+                      <Link to="/training" onClick={closeAll}>
                         {t(item)}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -275,10 +283,8 @@ export function Header() {
             </li>
 
             {navLinks.map((link) => (
-              <li className="nav__item" key={link.href}>
-                {/* `/#pillars` rather than `#pillars`, so these still resolve
-                    when the visitor is on a service page. */}
-                <Link className="nav__link" to={`/${link.href}`} onClick={closeAll}>
+              <li className="nav__item" key={link.to}>
+                <Link className="nav__link" to={link.to} onClick={closeAll}>
                   {t(link.label)}
                 </Link>
               </li>
@@ -287,9 +293,9 @@ export function Header() {
         </nav>
 
         <div className="header__cta">
-          <a className="btn btn--amber btn--sm" href="#book">
+          <Link className="btn btn--amber btn--sm" to="/contact" onClick={closeAll}>
             {t('cta.book')}
-          </a>
+          </Link>
           <button
             type="button"
             className="burger"

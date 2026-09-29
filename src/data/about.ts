@@ -29,41 +29,22 @@ export const about = {
 
   /* ── Opening statement ────────────────────────────────────────── */
   opening: {
-    label: { en: 'Why the work is not divided', te: 'ఈ పని ఎందుకు విభజించబడలేదు' },
+    label: { en: 'The practice', te: 'ఆచరణ' },
     paras: [
       {
-        en: 'These subjects are usually taken up one at a time. The questions people actually bring, though, do not arrive divided by discipline — a house, a marriage and a decision about work often turn up in one conversation, and sometimes in a single sentence.',
-        te: 'ఈ విషయాలను సాధారణంగా ఒక్కొక్కటిగా చేపడతారు. కానీ ప్రజలు నిజంగా తెచ్చే ప్రశ్నలు శాస్త్రాల వారీగా విడిపోయి రావు — ఇల్లు, వివాహం, వృత్తి నిర్ణయం తరచుగా ఒకే సంభాషణలో, కొన్నిసార్లు ఒకే వాక్యంలో వస్తాయి.',
+        en: 'This centre was begun with knowledge and experience in Vastu Shastra, Jyotisha Shastra and allied studies, Numerology, Swara Shastra, and Spiritual Studies and Brahmavidya, and with the continued practice, research and teaching of them.',
+        te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యపై జ్ఞానం మరియు అనుభవంతో, వాటి ఆచరణ, పరిశోధన మరియు బోధనను కొనసాగిస్తూ ఈ కేంద్రాన్ని ప్రారంభించారు.',
       },
       {
-        en: 'That is why all four fields are studied and applied alongside one another here, and why the same person teaches them. Where a question genuinely calls for more than one discipline, it can be examined together rather than in separate appointments.',
-        te: 'అందుకే ఇక్కడ నాలుగు విభాగాలనూ పక్కపక్కనే అధ్యయనం చేసి ఆచరిస్తారు; వాటిని బోధించేది కూడా ఒకే వ్యక్తి. ఒక ప్రశ్నకు నిజంగా ఒకటి కంటే ఎక్కువ శాస్త్రం అవసరమైనప్పుడు, వేర్వేరు సమావేశాలుగా కాక కలిపి పరిశీలించవచ్చు.',
-      },
-      {
-        en: 'Practice and teaching are treated as two halves of the same work. What is used in a consultation is what is taught in the courses, and the courses are taught from the primary texts rather than from summaries.',
-        te: 'ఆచరణ, బోధన — ఈ రెంటినీ ఒకే పనిలోని రెండు భాగాలుగా చూస్తారు. సంప్రదింపులో ఉపయోగించేదే కోర్సుల్లో బోధిస్తారు; కోర్సులను సంక్షిప్త నోట్సుతో కాక మూల గ్రంథాల ఆధారంగా బోధిస్తారు.',
-      },
-    ],
-  },
-
-  /* ── Training ─────────────────────────────────────────────────── */
-  training: {
-    label: { en: 'Study and practice', te: 'అధ్యయనం, ఆచరణ' },
-    paras: [
-      {
-        en: 'Continuous study of the Sthapatya and Jyotisha traditions and of Numerology, alongside the spiritual and Vedic disciplines, applied in practice and taught to those who wish to learn them.',
-        te: 'స్థాపత్య, జ్యోతిష సంప్రదాయాలు మరియు సంఖ్యా శాస్త్రంపై నిరంతర అధ్యయనం; వాటితో పాటు ఆధ్యాత్మిక–వేద విద్యలు. వీటిని ఆచరణలో ఉపయోగిస్తూ, నేర్చుకోవాలనుకునేవారికి బోధిస్తారు.',
+        en: 'Consultations and classes are conducted in person, and are also available online where required. Each discipline is considered according to its own principles and methods — examined on its own, or, where the need calls for it, with the relevant disciplines considered together.',
+        te: 'సంప్రదింపులు మరియు తరగతులు ప్రత్యక్షంగా నిర్వహించడంతో పాటు, అవసరాన్ని బట్టి ఆన్‌లైన్‌లో కూడా అందించబడతాయి. ప్రతి శాస్త్రాన్ని దాని స్వంత సూత్రాలు మరియు విధానాల ప్రకారం పరిగణించి, సంబంధిత అవసరాన్ని బట్టి ఒక్కో శాస్త్రాన్ని విడిగా లేదా అవసరమైనప్పుడు సంబంధిత శాస్త్రాలను సమన్వయంగా పరిశీలిస్తారు.',
       },
     ],
   },
 
   /* ── Qualifications ───────────────────────────────────────────── */
   qualifications: {
-    label: { en: 'Qualifications', te: 'అర్హతలు' },
-    note: {
-      en: 'Only qualifications actually held are listed. Courses taught here carry a Course Completion Certificate; they are not university degrees or government-recognised qualifications, and are not presented as such.',
-      te: 'నిజంగా ఉన్న అర్హతలను మాత్రమే ఇక్కడ చేర్చాం. ఇక్కడ బోధించే కోర్సులకు Course Completion Certificate ఇవ్వబడుతుంది; ఇవి విశ్వవిద్యాలయ పట్టాలు కావు, ప్రభుత్వ గుర్తింపు పొందిన అర్హతలు కావు — అలా చెప్పబడవు కూడా.',
-    },
+    label: { en: 'Qualifications', te: 'విద్యార్హతలు' },
   },
 
   /* ── Method ───────────────────────────────────────────────────── */
@@ -170,7 +151,7 @@ export const about = {
         te: 'తరగతులు ఆన్‌లైన్ లేదా ప్రత్యక్షంగా జరుగుతాయి; బృంద కోర్సు సరిపోని చోట వ్యక్తిగత మార్గదర్శనం అందుబాటులో ఉంటుంది.',
       },
     ],
-    courseLink: { en: 'See the three courses', te: 'మూడు కోర్సులు చూడండి' },
+    courseLink: { en: 'Training & Educational Programs', te: 'శిక్షణ & విద్యా కార్యక్రమాలు' },
     swaraLink: { en: 'Spiritual & Vedic Studies', te: 'ఆధ్యాత్మిక & వేద విద్యలు' },
   },
 

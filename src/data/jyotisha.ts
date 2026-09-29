@@ -79,7 +79,7 @@ export const jyotishaVertical: Vertical = {
       id: 'foundations',
       label: { en: 'Life chart & foundations', te: 'జాతకం, మౌలిక పరిశీలన' },
       blurb: {
-        en: 'The whole chart, and the standing indications within it.',
+        en: 'The whole chart, and the standing indications read within it.',
         te: 'మొత్తం జాతకం, అందులోని స్థిర సూచనలు.',
       },
     },
@@ -291,6 +291,54 @@ export const jyotishaVertical: Vertical = {
       },
       mode: 'both',
       timing: { en: '60 minutes', te: '60 నిమిషాలు' },
+      fee: '₹ —',
+    },
+
+
+    /* ── 20 ──────────────────────────────────────────────────── */
+    {
+      id: 'samudrika',
+      index: 20,
+      cluster: 'foundations',
+      name: { en: 'Samudrika Shastra', te: 'సాముద్రిక శాస్త్రం' },
+      definition: {
+        en: 'A reading of the hand and of physical features against the principles of Samudrika Shastra — a separate traditional method, used alongside the chart rather than in place of it.',
+        te: 'సాముద్రిక శాస్త్ర సూత్రాల ఆధారంగా హస్తరేఖలు, శరీర లక్షణాల పరిశీలన — ఇది ఒక ప్రత్యేక సాంప్రదాయ పద్ధతి; జాతకానికి బదులుగా కాక, దానితో పాటు ఉపయోగిస్తారు.',
+      },
+      caution: {
+        en: 'This is not a medical or psychological assessment, and nothing observed here is a finding about your health. Where a reading touches health at all, it defers to a doctor.',
+        te: 'ఇది వైద్య లేదా మానసిక పరీక్ష కాదు; ఇక్కడ గమనించినది మీ ఆరోగ్యం గురించిన నిర్ధారణ కాదు. ఆరోగ్యానికి సంబంధించిన విషయం వచ్చినప్పుడు వైద్యుని సలహాకే ప్రాధాన్యం.',
+      },
+      examine: {
+        en: [
+          'The principal lines of the hand, their course and their relation to one another',
+          'The shape of the hand, the fingers and the mounts, read together rather than as isolated signs',
+          'Physical features traditionally treated as significant within Samudrika Shastra',
+          'How the reading sits alongside the birth chart, where one is available — the two are compared rather than one being used to override the other',
+          'Where the indications are unclear or the traditions disagree, which is said rather than smoothed over',
+        ],
+        te: [
+          'హస్తంలోని ప్రధాన రేఖలు, వాటి గమనం, ఒకదానితో ఒకటి ఉన్న సంబంధం',
+          'హస్తం, వేళ్లు, ఉన్నత భాగాల ఆకృతి — వేర్వేరు గుర్తులుగా కాక, కలిపి చూసి',
+          'సాముద్రిక శాస్త్రంలో సాంప్రదాయంగా ముఖ్యమైనవిగా చెప్పే శరీర లక్షణాలు',
+          'జాతకం అందుబాటులో ఉంటే, ఈ పరిశీలన దానితో ఎలా కలుస్తుంది — ఒకదాన్ని మరొకటి తోసిపుచ్చకుండా, రెండింటినీ పోల్చి',
+          'సూచనలు స్పష్టంగా లేని చోట, లేదా సంప్రదాయాల మధ్య భేదం ఉన్న చోట — దాన్ని కప్పిపుచ్చకుండా చెప్పడం',
+        ],
+      },
+      who: {
+        en: 'Someone whose birth details are unavailable or uncertain, or who wants this traditional reading taken alongside the chart.',
+        te: 'జనన వివరాలు అందుబాటులో లేని లేదా నిశ్చయంగా తెలియని వారికి; లేదా జాతకంతో పాటు ఈ సాంప్రదాయ పరిశీలన కూడా కోరేవారికి.',
+      },
+      receive: {
+        en: 'A written note on what was observed and the guidance that follows from it, with the basis for each observation stated.',
+        te: 'గమనించిన అంశాలు, వాటి ఆధారంగా ఇచ్చే మార్గదర్శనం — ప్రతి పరిశీలన వెనుక కారణంతో సహా లిఖిత రూపంలో.',
+      },
+      cta: {
+        en: 'Clear photographs of both palms are needed for a remote reading.',
+        te: 'దూరస్థ పరిశీలనకు రెండు అరచేతుల స్పష్టమైన ఫోటోలు అవసరం.',
+      },
+      mode: 'both',
+      timing: { en: '45 minutes', te: '45 నిమిషాలు' },
       fee: '₹ —',
     },
 

@@ -1,7 +1,6 @@
 import { Hero } from '../components/sections/Hero';
 import {
   ClosingCta,
-  Courses,
   Faq,
   Founder,
   Institutional,
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Process />
       <Founder />
       <Institutional />
-      <Courses />
       <Faq />
       <ClosingCta />
     </>

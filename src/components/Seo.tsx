@@ -46,6 +46,36 @@ const pages: Record<string, Entry> = {
       te: 'శ్రీ కె. శ్రీనివాస్ రెడ్డి వనపర్తి, తెలంగాణ నుండి వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రాలను మరియు ఆధ్యాత్మిక–వేద విద్యలను అధ్యయనం చేస్తూ, ఆచరిస్తూ, బోధిస్తారు.',
     },
   },
+  '/contact': {
+    title: {
+      en: `Contact · ${BRAND}`,
+      te: `సంప్రదించండి · ${BRAND}`,
+    },
+    description: {
+      en: 'Call or message on WhatsApp for a consultation or to ask about the courses. Online or in person, in Telugu and English, from KDR Nagar, Wanaparthy, Telangana.',
+      te: 'సంప్రదింపు కోసం లేదా కోర్సుల గురించి తెలుసుకోవడానికి ఫోన్ చేయండి లేదా వాట్సాప్‌లో సందేశం పంపండి. ఆన్‌లైన్ లేదా ప్రత్యక్షంగా, తెలుగు–ఆంగ్లంలో. కేడీఆర్ నగర్, వనపర్తి, తెలంగాణ.',
+    },
+  },
+  '/training': {
+    title: {
+      en: `Training & Educational Programs · ${BRAND}`,
+      te: `శిక్షణ & విద్యా కార్యక్రమాలు · ${BRAND}`,
+    },
+    description: {
+      en: 'Certificate courses in Vastu Shastra, Jyotisha Shastra & Allied Studies and Numerology, and study programmes in Swara Shastra and Spiritual Studies & Brahmavidya. Telugu and English, online or in person.',
+      te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రంలో సర్టిఫికేట్ కోర్సులు; స్వర శాస్త్రం, ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యలో అధ్యయన కార్యక్రమాలు. తెలుగు, ఆంగ్లం — ఆన్‌లైన్ లేదా ప్రత్యక్షం.',
+    },
+  },
+  '/training/certificate-courses': {
+    title: {
+      en: `Certificate Courses · ${BRAND}`,
+      te: `సర్టిఫికేట్ కోర్సులు · ${BRAND}`,
+    },
+    description: {
+      en: 'Vastu Shastra, Jyotisha Shastra & Allied Studies and Numerology, taught from foundational to advanced levels in Telugu and English. Each course concludes with a Course Completion Certificate.',
+      te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం — ప్రాథమిక స్థాయి నుండి ఉన్నత స్థాయి వరకు, తెలుగు–ఆంగ్లంలో. ప్రతి కోర్సు చివర Course Completion Certificate ఇవ్వబడుతుంది.',
+    },
+  },
   '/services/vastu': {
     title: {
       en: `Vastu Shastra — consultation and training · ${BRAND}`,

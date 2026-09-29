@@ -97,60 +97,48 @@ export const megaColumns: MegaColumn[] = [
     title: 'v.swara.name',
     items: ['s.swa.1', 's.swa.2'],
     extraTitle: 'mega.training',
-    extraItems: ['s.course.1', 's.course.2', 's.course.3', 's.course.4'],
+    extraItems: ['crs.vastu.name', 'crs.jyo.name', 'crs.num.name', 'crs.swara.name', 'crs.spiritual.name'],
   },
 ];
 
-export interface SignatureItem {
+export interface MainService {
   id: string;
-  discipline: StringKey;
   name: StringKey;
   desc: StringKey;
-  mode: StringKey;
 }
 
-export const signatures: SignatureItem[] = [
+export interface ServiceGroup {
+  id: string;
+  title: StringKey;
+  items: MainService[];
+}
+
+/**
+ * The main services, grouped by discipline rather than shown as a flat row
+ * of cards. Every one is offered online or in person, so the mode is stated
+ * once per card from `ms.mode` instead of being modelled per service.
+ */
+export const serviceGroups: ServiceGroup[] = [
   {
-    id: 'plot',
-    discipline: 'v.vastu.name',
-    name: 'sig.1.name',
-    desc: 'sig.1.desc',
-    mode: 'mode.inPerson',
+    id: 'vastu',
+    title: 'grp.vastu',
+    items: [{ id: 'vastu-consult', name: 'ms.vastu.1.name', desc: 'ms.vastu.1.desc' }],
   },
   {
-    id: 'chart',
-    discipline: 'v.jyotisha.name',
-    name: 'sig.2.name',
-    desc: 'sig.2.desc',
-    mode: 'mode.both',
+    id: 'jyotisha',
+    title: 'grp.jyotisha',
+    items: [
+      { id: 'birthchart', name: 'ms.jyo.1.name', desc: 'ms.jyo.1.desc' },
+      { id: 'prasna', name: 'ms.jyo.2.name', desc: 'ms.jyo.2.desc' },
+      { id: 'marriage', name: 'ms.jyo.3.name', desc: 'ms.jyo.3.desc' },
+      { id: 'muhurta', name: 'ms.jyo.4.name', desc: 'ms.jyo.4.desc' },
+      { id: 'samudrika', name: 'ms.jyo.5.name', desc: 'ms.jyo.5.desc' },
+    ],
   },
   {
-    id: 'marriage',
-    discipline: 'sig.3.disc',
-    name: 'sig.3.name',
-    desc: 'sig.3.desc',
-    mode: 'mode.both',
-  },
-  {
-    id: 'naming',
-    discipline: 'v.numero.name',
-    name: 'sig.4.name',
-    desc: 'sig.4.desc',
-    mode: 'mode.both',
-  },
-  {
-    id: 'muhurtham',
-    discipline: 'v.jyotisha.name',
-    name: 'sig.5.name',
-    desc: 'sig.5.desc',
-    mode: 'mode.online',
-  },
-  {
-    id: 'audit',
-    discipline: 'sig.6.disc',
-    name: 'sig.6.name',
-    desc: 'sig.6.desc',
-    mode: 'mode.inPerson',
+    id: 'numerology',
+    title: 'grp.numerology',
+    items: [{ id: 'numerology', name: 'ms.num.1.name', desc: 'ms.num.1.desc' }],
   },
 ];
 
@@ -168,17 +156,44 @@ export const processSteps: ProcessStep[] = [
   { id: 'followup', name: 'process.5.name', desc: 'process.5.desc' },
 ];
 
-export interface Course {
+export interface CourseItem {
   id: string;
   name: StringKey;
   desc: StringKey;
 }
 
-export const courses: Course[] = [
-  { id: 'vastu', name: 's.course.1', desc: 'courses.1.desc' },
-  { id: 'jyotisha', name: 's.course.2', desc: 'courses.2.desc' },
-  { id: 'numerology', name: 's.course.3', desc: 'courses.3.desc' },
-  { id: 'spiritual', name: 's.course.4', desc: 'courses.4.desc' },
+export interface CourseGroup {
+  id: string;
+  title: StringKey;
+  /**
+   * Certificate courses carry level, duration, medium, mode and certificate.
+   * Study programmes are open-ended and carry mode only — listing a duration
+   * or a certificate against them would claim something they do not offer.
+   */
+  kind: 'certificate' | 'study';
+  items: CourseItem[];
+}
+
+export const courseGroups: CourseGroup[] = [
+  {
+    id: 'certificate',
+    title: 'courses.grp.cert',
+    kind: 'certificate',
+    items: [
+      { id: 'vastu', name: 'crs.vastu.name', desc: 'crs.vastu.desc' },
+      { id: 'jyotisha', name: 'crs.jyo.name', desc: 'crs.jyo.desc' },
+      { id: 'numerology', name: 'crs.num.name', desc: 'crs.num.desc' },
+    ],
+  },
+  {
+    id: 'study',
+    title: 'courses.grp.study',
+    kind: 'study',
+    items: [
+      { id: 'swara', name: 'crs.swara.name', desc: 'crs.swara.desc' },
+      { id: 'spiritual', name: 'crs.spiritual.name', desc: 'crs.spiritual.desc' },
+    ],
+  },
 ];
 
 export interface FaqItem {
@@ -196,16 +211,16 @@ export const faqs: FaqItem[] = [
 ];
 
 export interface NavLink {
-  href: string;
+  /** An absolute path, so these resolve from any route, not just home. */
+  to: string;
   label: StringKey;
 }
 
 export const navLinks: NavLink[] = [
-  { href: '#courses', label: 'nav.courses' },
-  { href: '#process', label: 'nav.process' },
-  { href: 'about', label: 'nav.about' },
-  { href: '#faq', label: 'footer.faq' },
-  { href: '#book', label: 'footer.contact' },
+  { to: '/training', label: 'nav.courses' },
+  { to: '/about', label: 'nav.about' },
+  { to: '/#faq', label: 'footer.faq' },
+  { to: '/contact', label: 'footer.contact' },
 ];
 
 export const footerColumns: { id: string; title: StringKey; items: StringKey[] }[] = [
@@ -229,11 +244,25 @@ export const footerColumns: { id: string; title: StringKey; items: StringKey[] }
     title: 'footer.practice',
     items: [
       'nav.about',
-      'nav.process',
-      'nav.institutional',
       'nav.courses',
+      'courses.grp.cert',
+      'nav.process',
       'footer.faq',
       'footer.contact',
     ],
   },
 ];
+
+/**
+ * Where each footer link in the last column goes. Kept beside the column
+ * itself so a new entry cannot silently fall back to an anchor that does
+ * not exist on the page the visitor happens to be on.
+ */
+export const footerLinkTargets: Partial<Record<StringKey, string>> = {
+  'nav.about': '/about',
+  'nav.courses': '/training',
+  'courses.grp.cert': '/training/certificate-courses',
+  'nav.process': '/contact#process',
+  'footer.faq': '/#faq',
+  'footer.contact': '/contact',
+};

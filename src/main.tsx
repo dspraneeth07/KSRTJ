@@ -5,6 +5,7 @@ import './styles/sections.css';
 import './styles/verticals.css';
 import './styles/quiet.css';
 import './styles/about.css';
+import './styles/pages.css';
 import App from './App';
 
 createRoot(document.getElementById('root')!).render(

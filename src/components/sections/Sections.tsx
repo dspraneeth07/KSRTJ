@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { courses, faqs, pillars, processSteps, signatures } from '../../data/content';
+import { faqs, pillars, processSteps, serviceGroups } from '../../data/content';
 import type { StringKey } from '../../i18n/strings';
 import { PillarIcon, YantraOutline } from '../Icons';
 import { Portrait } from '../Portrait';
@@ -96,31 +96,39 @@ export function Signature() {
     <section className="section section--paper2" id="signature">
       <div className="wrap">
         <SectionHead eyebrow="sig.eyebrow" title="sig.title" lede="sig.lede" />
-        <div className="sig">
-          {signatures.map((s, i) => (
-            <Reveal key={s.id} delay={(i % 3) * 80}>
-              <Tilt className="sig__tilt" max={5} lift={16}>
-                <article className="sig__card">
-                  <p className="sig__disc">{t(s.discipline)}</p>
-                  <h3 className="sig__name">{t(s.name)}</h3>
-                  <p className="sig__desc">{t(s.desc)}</p>
-                  <dl className="sig__meta">
-                    <div>
-                      <dt>{t('meta.mode')}</dt>
-                      <dd>{t(s.mode)}</dd>
-                    </div>
-                  </dl>
-                </article>
-              </Tilt>
+
+        {serviceGroups.map((group) => (
+          <div className="msgroup" key={group.id}>
+            <Reveal className="msgroup__head" variant="lift">
+              <h3 className="msgroup__title">{t(group.title)}</h3>
             </Reveal>
-          ))}
-        </div>
-        <p className="sig__foot">
-          <span>{t('sig.fee')}</span>{' '}
+
+            <div className="msgrid">
+              {group.items.map((item, i) => (
+                <Reveal key={item.id} delay={(i % 3) * 70}>
+                  <Tilt className="ms__tilt" max={5} lift={14}>
+                    <article className="ms">
+                      <h4 className="ms__name">{t(item.name)}</h4>
+                      <p className="ms__desc">{t(item.desc)}</p>
+                      <p className="ms__mode">
+                        <span className="ms__modeLabel">{t('meta.mode')}</span>
+                        {t('ms.mode')}
+                      </p>
+                    </article>
+                  </Tilt>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <Reveal className="msfee" variant="lift">
+          <h3 className="msfee__title">{t('sig.feeTitle')}</h3>
+          <p className="msfee__body">{t('sig.fee')}</p>
           <a className="link" href="#book">
-            {t('cta.requestFee')}
+            {t('sig.feeCta')}
           </a>
-        </p>
+        </Reveal>
       </div>
     </section>
   );
@@ -173,6 +181,7 @@ export function Founder() {
           <ul className="founder__creds">
             <li>{t('founder.cred1')}</li>
             <li>{t('founder.cred2')}</li>
+            <li>{t('founder.cred3')}</li>
           </ul>
           <Link className="link" to="/about">
             {t('cta.readFull')}
@@ -197,49 +206,6 @@ export function Institutional() {
             {t('cta.instBrief')}
           </a>
         </Reveal>
-      </div>
-    </section>
-  );
-}
-
-/* ── courses ────────────────────────────────────────────────────── */
-
-export function Courses() {
-  const { t } = useLang();
-  return (
-    <section className="section" id="courses">
-      <div className="wrap">
-        <SectionHead eyebrow="courses.eyebrow" title="courses.title" lede="courses.lede" />
-        <div className="courses">
-          {courses.map((course, i) => (
-            <Reveal key={course.id} delay={i * 80}>
-              <Tilt className="course__tilt" max={6} lift={16}>
-                <article className="course">
-                  <h3 className="course__name">{t(course.name)}</h3>
-                  <p className="course__desc">{t(course.desc)}</p>
-                  <dl className="course__meta">
-                    <div>
-                      <dt>{t('meta.duration')}</dt>
-                      <dd>{t('courses.dur')}</dd>
-                    </div>
-                    <div>
-                      <dt>{t('meta.medium')}</dt>
-                      <dd>{t('medium.both')}</dd>
-                    </div>
-                    <div>
-                      <dt>{t('meta.mode')}</dt>
-                      <dd>{t('courses.mode')}</dd>
-                    </div>
-                    <div>
-                      <dt>{t('courses.certLabel')}</dt>
-                      <dd>{t('courses.cert')}</dd>
-                    </div>
-                  </dl>
-                </article>
-              </Tilt>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

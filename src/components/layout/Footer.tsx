@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { footerColumns } from '../../data/content';
+import { footerColumns, footerLinkTargets } from '../../data/content';
 import { BrandMark } from '../Icons';
 
 export function Footer() {
@@ -37,17 +37,13 @@ export function Footer() {
               <div className="footer__col" key={col.id}>
                 <h4>{t(col.title)}</h4>
                 <ul>
-                  {col.items.map((item) =>
-                    item === 'nav.about' ? (
-                      <li key={item}>
-                        <Link to="/about">{t(item)}</Link>
-                      </li>
-                    ) : (
-                      <li key={item}>
-                        <a href="#book">{t(item)}</a>
-                      </li>
-                    ),
-                  )}
+                  {col.items.map((item) => (
+                    <li key={item}>
+                      {/* Service names have no page of their own, so they
+                          go to the contact page rather than nowhere. */}
+                      <Link to={footerLinkTargets[item] ?? '/contact'}>{t(item)}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             ))}

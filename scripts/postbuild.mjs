@@ -24,6 +24,9 @@ const isProduction = (process.env.CONTEXT || 'production') === 'production';
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'monthly' },
   { path: '/about', priority: '0.8', changefreq: 'yearly' },
+  { path: '/contact', priority: '0.8', changefreq: 'yearly' },
+  { path: '/training', priority: '0.8', changefreq: 'monthly' },
+  { path: '/training/certificate-courses', priority: '0.7', changefreq: 'monthly' },
   { path: '/services/vastu', priority: '0.9', changefreq: 'monthly' },
   { path: '/services/jyotisha', priority: '0.9', changefreq: 'monthly' },
   { path: '/services/numerology', priority: '0.9', changefreq: 'monthly' },

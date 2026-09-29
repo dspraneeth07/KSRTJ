@@ -11,10 +11,15 @@ import HomePage from './pages/HomePage';
 const VerticalPage = lazy(() => import('./pages/VerticalPage'));
 const SwaraPage = lazy(() => import('./pages/SwaraPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const TrainingPage = lazy(() => import('./pages/TrainingPage'));
+const CertificateCoursesPage = lazy(() => import('./pages/CertificateCoursesPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 import { Seo } from './components/Seo';
 import { verticals } from './data/verticals';
 import { swaraPage } from './data/swara';
+import { training } from './data/training';
+import { contact } from './data/contact';
 
 /**
  * Routing resets the scroll position, and an in-page hash arriving from
@@ -70,6 +75,11 @@ function Shell() {
               catalogue of bookable services, and has its own shape. */}
           <Route path={swaraPath} element={<SwaraPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path={contact.path} element={<ContactPage />} />
+          {/* Training is its own page, not a homepage section: the courses
+              are a distinct offering from the consultations. */}
+          <Route path={training.path} element={<TrainingPage />} />
+          <Route path={training.certificatePath} element={<CertificateCoursesPage />} />
           {/* Netlify rewrites unknown paths to index.html with a 200, so the
               page itself has to say it does not exist. */}
           <Route path="*" element={<NotFound />} />

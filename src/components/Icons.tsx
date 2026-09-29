@@ -81,3 +81,53 @@ export function YantraOutline({ className = '' }: { className?: string }) {
     </svg>
   );
 }
+
+/**
+ * Contact channel glyphs. Stroked to the same 1.4 weight as the pillar
+ * icons so a row of them reads as one family, and sized by the font so
+ * they scale with the card rather than against it.
+ */
+export function ContactIcon({
+  name,
+  className = '',
+}: {
+  name: 'phone' | 'whatsapp' | 'place';
+  className?: string;
+}) {
+  const common = {
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.4,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+  };
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      {name === 'phone' && (
+        <path
+          {...common}
+          d="M6.2 3.6h3l1.3 3.6-1.9 1.3a12.4 12.4 0 0 0 5.9 5.9l1.3-1.9 3.6 1.3v3a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.2 5.8a2 2 0 0 1 2-2.2Z"
+        />
+      )}
+      {name === 'whatsapp' && (
+        <>
+          {/* Speech bubble with the tail bottom-left, as the mark reads. */}
+          <path
+            {...common}
+            d="M3.6 20.4l1.3-3.9A8.4 8.4 0 1 1 8 19.5l-4.4.9Z"
+          />
+          <path
+            {...common}
+            d="M9.3 8.6l.9-.1.9 1.9-.9.8a5.3 5.3 0 0 0 2.6 2.6l.8-.9 1.9.9-.1.9a1.3 1.3 0 0 1-1.4 1 6.9 6.9 0 0 1-5.7-5.7 1.3 1.3 0 0 1 1-1.4Z"
+          />
+        </>
+      )}
+      {name === 'place' && (
+        <>
+          <path {...common} d="M12 21.2s6.4-5.6 6.4-10.2a6.4 6.4 0 1 0-12.8 0C5.6 15.6 12 21.2 12 21.2Z" />
+          <circle {...common} cx="12" cy="10.8" r="2.4" />
+        </>
+      )}
+    </svg>
+  );
+}

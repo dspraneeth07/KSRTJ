@@ -19,7 +19,6 @@ const ui = {
   home: { en: 'Home', te: 'ముఖపేజీ' },
   book: { en: 'Book a consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
   disciplines: { en: 'See the four disciplines', te: 'నాలుగు శాస్త్రాలు చూడండి' },
-  note: { en: 'Note', te: 'గమనిక' },
 } satisfies Record<string, Bi>;
 
 export default function AboutPage() {
@@ -65,28 +64,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Training + qualifications ───────────────────────────── */}
+      {/* ── Qualifications ──────────────────────────────────────── */}
       <section className="asection asection--rule">
         <div className="wrap acol">
           <Reveal variant="lift">
-            <h2 className="ah2">{b(about.training.label)}</h2>
-            {about.training.paras.map((para, i) => (
-              <p className="abody" key={i}>
-                {b(para)}
-              </p>
-            ))}
-          </Reveal>
-
-          <Reveal variant="lift" delay={80}>
-            <h3 className="alabel">{b(about.qualifications.label)}</h3>
+            <h2 className="ah2">{b(about.qualifications.label)}</h2>
             <ul className="acreds">
               <li>{t('founder.cred1')}</li>
               <li>{t('founder.cred2')}</li>
+              <li>{t('founder.cred3')}</li>
             </ul>
-            <p className="anote">
-              <span className="anote__label">{b(ui.note)}</span>
-              {b(about.qualifications.note)}
-            </p>
           </Reveal>
         </div>
       </section>
@@ -158,7 +145,7 @@ export default function AboutPage() {
               </p>
             ))}
             <p className="alinks">
-              <Link className="link" to="/#courses">
+              <Link className="link" to="/training">
                 {b(about.teaching.courseLink)}
               </Link>
               <Link className="link" to="/services/spiritual">

@@ -23,9 +23,7 @@ export const en = {
   'brand.tag': 'Vastu · Jyotisha · Numerology · Spiritual & Vedic Studies',
 
   'nav.services': 'Services',
-  'nav.approach': 'Approach',
   'nav.process': 'Process',
-  'nav.institutional': 'Institutions',
   'nav.courses': 'Training',
   'nav.about': 'About',
   'nav.menu': 'Menu',
@@ -35,7 +33,6 @@ export const en = {
   'cta.howItWorks': 'See how a consultation works',
   'cta.explore': 'Explore the discipline',
   'cta.enquire': 'Explore this field',
-  'cta.requestFee': 'Request the fee schedule',
   'cta.readFull': 'Read the full profile',
   'cta.instBrief': 'Get in touch',
   'cta.whatsapp': 'Ask on WhatsApp',
@@ -43,7 +40,7 @@ export const en = {
   'cta.title': 'Get in touch.',
   'cta.lede':
     'Choose the service or course, decide whether you would prefer it online or in person, and message us on WhatsApp to arrange a time.',
-  'cta.foot': 'WhatsApp · Phone · Email',
+  'cta.foot': 'WhatsApp · Phone',
 
   'hero.eyebrow': 'Vastu Shastra · Jyotisha · Numerology · Spiritual & Vedic Studies',
   'hero.title': 'Study, practice, and teaching.',
@@ -134,88 +131,83 @@ export const en = {
   's.swa.1': 'Mantra, meditation and swara sadhana',
   's.swa.2': 'Self-knowledge and related study',
 
-  's.course.1': 'Vastu Shastra — foundational principles',
-  's.course.2': 'Jyotisha Shastra — foundational principles',
-  's.course.3': 'Numerology — foundational principles',
-  's.course.4': 'Spiritual & Vedic Studies',
 
   'mega.seeAll': 'See details',
   'mega.training': 'Training',
 
   'sig.eyebrow': 'Services',
-  'sig.title': 'Principal services',
+  'sig.title': 'Our main services',
   'sig.lede':
-    'The services most often asked for. A fuller list for each discipline is on its own page.',
-  'sig.1.name': 'Plot & new-construction Vastu',
-  'sig.1.desc':
-    'Assessing the site before purchase or construction allows potential Vastu considerations — orientation, shape, slope, road frontage and Ayadi compatibility — to be identified before major decisions are made.',
-  'sig.1.dur': '90 minutes + site visit',
-  'sig.2.name': 'Complete birth chart analysis',
-  'sig.2.desc':
-    'Janma Jataka read in full — disposition, education, career, wealth, marriage, progeny and health — with the relevant dasha and gochara periods examined in context.',
-  'sig.2.dur': '90 minutes',
-  'sig.3.disc': 'Jyotisha + Numerology',
-  'sig.3.name': 'Marriage compatibility',
-  'sig.3.desc':
-    'Guna Milan across the eight kutas, read together with Mangala dosha and the seventh house of both charts. Where it helps, the numeric side is examined alongside.',
-  'sig.3.dur': '60 minutes',
-  'sig.4.name': 'Business & brand naming',
-  'sig.4.desc':
-    'Candidate names evaluated on numeric value, pronounceability in Telugu and English, and fit with the promoter. Where appropriate, available registration and trademark information is examined as well.',
-  'sig.4.dur': 'Two sittings',
-  'sig.5.name': 'Muhurtham & date selection',
-  'sig.5.desc':
-    'Auspicious timing for marriage, griha pravesh, registration, launch or foundation — fixed against the principals’ charts and the panchanga, with two alternates for practicality.',
-  'sig.5.dur': '45 minutes',
-  'sig.6.disc': 'Institutional',
-  'sig.6.name': 'Commercial & industrial Vastu audit',
-  'sig.6.desc':
-    'A site-based report is provided with Vastu observations, recommendations and, where appropriate, phased guidance for consideration by the client and their architect or technical team.',
-  'sig.6.dur': 'Scoped per site',
-  'sig.fee': 'Duration and fees are shared according to the requirement, before any work begins.',
+    'Guidance is provided based on the relevant disciplines according to your individual, family, education, career, business, financial, health-related, site, construction and other important needs, concerns, queries and decisions.',
+
+  'grp.vastu': 'Vastu Shastra',
+  'grp.jyotisha': 'Jyotisha Shastra',
+  'grp.numerology': 'Numerology',
+
+  'ms.vastu.1.name': 'Vastu Consultations — Residential, Commercial & Industrial Spaces',
+  'ms.vastu.1.desc':
+    'Vastu-related needs, concerns and queries are examined for sites, new construction, buildings under construction, existing houses or buildings requiring modifications, offices, business premises, factories, warehouses and other structures, with appropriate guidance and recommendations.',
+
+  'ms.jyo.1.name': 'Birth Chart Analysis',
+  'ms.jyo.1.desc':
+    'Astrological guidance is provided on personal nature, education, employment, career, business, finances, marriage, family, children, health, property, foreign travel, foreign education or employment, overseas settlement and other important areas of life.',
+  'ms.jyo.2.name': 'Prasna Shastra',
+  'ms.jyo.2.desc':
+    'When birth details are unavailable, or when guidance is sought for a specific question, relevant astrological guidance is provided based on the time of the question.',
+  'ms.jyo.3.name': 'Marriage Compatibility',
+  'ms.jyo.3.desc':
+    'The birth charts of both individuals are examined to provide guidance on marriage compatibility, relationship-related matters and other relevant considerations. Numerology may also be considered where appropriate.',
+  'ms.jyo.4.name': 'Muhurta, Date & Time Selection',
+  'ms.jyo.4.desc':
+    'Suitable dates and timings are suggested for marriage, housewarming, Bhumi Puja, foundation work, registration, business or institutional inauguration, important beginnings, vehicle purchase and other auspicious activities.',
+  'ms.jyo.5.name': 'Samudrika Shastra Consultations',
+  'ms.jyo.5.desc':
+    'Relevant aspects are examined based on Samudrika Shastra principles relating to palm lines and physical features, followed by appropriate guidance.',
+
+  'ms.num.1.name': 'Numerology Analysis & Naming',
+  'ms.num.1.desc':
+    'Numerological aspects related to date of birth, name and name correction are comprehensively examined. Guidance is also provided for baby naming, personal numerology, business/company/brand naming, mobile numbers, vehicle numbers and house/flat numbers.',
+
+  'ms.mode': 'Online or In-Person',
+  'sig.feeTitle': 'Service Duration & Fees',
+  'sig.fee':
+    'The service duration and fees will be communicated in advance, based on the nature, requirements and scope of each service.',
+  'sig.feeCta': 'Contact us for fee details.',
 
   'meta.duration': 'Duration',
   'meta.mode': 'Mode',
-  'meta.output': 'Deliverable',
-  'meta.medium': 'Medium',
-  'mode.inPerson': 'In person',
-  'mode.online': 'Online',
-  'mode.both': 'Online or in person',
-  'out.report': 'Written report',
-  'out.shortlist': 'Shortlist & rationale',
-  'out.dates': 'Dated note with alternates',
-  'out.audit': 'Written observations & recommendations',
-  'medium.both': 'Telugu & English',
+  'meta.medium': 'Medium of Instruction',
+  'medium.both': 'Telugu, English',
 
   'process.eyebrow': 'Method',
-  'process.title': 'How a consultation works.',
+  'process.title': 'Consultation Process',
   'process.lede':
-    'The same five stages apply whichever discipline the question belongs to.',
-  'process.1.name': 'Gathering details',
+    'The consultation process proceeds through the following steps, based on the information required for the relevant service.',
+  'process.1.name': 'Information Collection',
   'process.1.desc':
-    'We collect the birth details, site details or other information the question requires. Where a birth time is uncertain, we say so.',
-  'process.2.name': 'Preliminary examination',
-  'process.2.desc':
-    'The relevant chart, Vastu plan or numeric details are examined in advance of the sitting.',
+    'We collect the birth details, site details, or other information required for the relevant service from you. If there is any uncertainty regarding the details, we confirm them with you.',
+  'process.2.name': 'Preliminary Review',
+  'process.2.desc': 'The information provided is reviewed before the consultation.',
   'process.3.name': 'Consultation',
   'process.3.desc':
-    'The matter is discussed in detail, online or in person, in Telugu or English. Findings are explained with the reasoning behind them.',
-  'process.4.name': 'Written notes',
+    'The relevant subject and questions are discussed online or in person, in Telugu or English.',
+  'process.4.name': 'Explanation of Analysis',
   'process.4.desc':
-    'Where the work calls for it, the findings and recommendations are provided in writing.',
-  'process.5.name': 'Follow-up',
+    'The relevant aspects identified during the review are clearly explained along with their supporting basis.',
+  'process.5.name': 'Guidance',
   'process.5.desc':
-    'Further guidance is offered according to the need.',
+    'Appropriate suggestions and guidance are provided according to the relevant subject.',
 
   'founder.eyebrow': 'The practice',
   'founder.title': 'Sri K. Sreenivasa Reddy',
   'founder.role': 'Founder & Principal Guide',
   'founder.p1':
-    'This centre was begun out of a sustained interest in the study, practice and teaching of Vastu Shastra, Jyotisha, Numerology and the related spiritual and Vedic disciplines.',
+    'This centre was begun with knowledge and experience in Vastu Shastra, Jyotisha Shastra and allied studies, Numerology, Swara Shastra, and Spiritual Studies and Brahmavidya, and with the continued practice, research and teaching of them.',
   'founder.p2':
-    'Consultations and classes are conducted personally. The questions people bring are rarely divided by discipline — a house, a marriage and a decision about work often arrive together — so the four fields are studied and applied alongside one another.',
-  'founder.cred1': 'M.A. in Astrology',
-  'founder.cred2': 'Ph.D. scholar — research in progress',
+    'Consultations and classes are conducted in person, and are also available online where required. Each discipline is considered according to its own principles and methods — examined on its own, or, where the need calls for it, with the relevant disciplines considered together.',
+  'founder.cred1': 'M.A. (Jyotisha Shastra)',
+  'founder.cred2': 'P.G. Diploma in Jyotirvastu',
+  'founder.cred3': 'Ph.D. research in Vastu Shastra — ongoing',
   'founder.credLabel': 'Qualifications',
   'founder.alt': 'Sri K. Sreenivasa Reddy at his desk',
 
@@ -223,35 +215,38 @@ export const en = {
   'inst.title': 'Institutions and commercial premises.',
   'inst.lede':
     'Vastu examination and guidance is offered, according to the requirement, for institutions, educational premises, commercial spaces and other buildings.',
-  'inst.1.name': 'Real estate & developers',
-  'inst.1.desc':
-    'Layout-stage review of plotting, road orientation, common areas and unit-level Vastu, so that saleable inventory is not compromised after approval.',
-  'inst.2.name': 'Corporate & commercial',
-  'inst.2.desc':
-    'Office floor plates, seating zones, cabins, reception and server placement, reviewed alongside the promoters’ charts and the entity’s naming.',
-  'inst.3.name': 'Industrial',
-  'inst.3.desc':
-    'Plant layout, machinery orientation, raw material and finished goods storage, effluent and water positioning — coordinated with your process engineer.',
-  'inst.4.name': 'Educational institutions',
-  'inst.4.desc':
-    'Classroom orientation, library, laboratory and administrative zoning for schools and colleges, planned around the academic calendar.',
   'inst.ctaText': 'Get in touch with the details and we will tell you what is involved.',
 
   'courses.eyebrow': 'Training',
-  'courses.title': 'Training & study programmes',
+  'courses.title': 'Training & Educational Programs',
   'courses.lede':
-    'Taught in small batches, in Telugu and English, from the primary texts. Open to anyone who wishes to study these subjects seriously.',
-  'courses.1.desc':
-    'Directions, the Vastu Purusha mandala, measurement, Ayadi Ganitham, entrance determination and the foundational principles of Vastu.',
-  'courses.2.desc':
-    'Rashi and nakshatra, houses, planets and lordship, yogas, the dasha system and the basics of reading a birth chart.',
-  'courses.3.desc':
-    'Birth number, destiny number and name number, names, numeric compatibility and the methods used in practice.',
-  'courses.4.name': 'Spiritual & Vedic Studies',
-  'courses.4.desc':
-    'Spiritual study, meditation, mantra, swara sadhana and related subjects, taken at a pace that suits the student.',
-  'courses.dur': 'Depends on the course',
-  'courses.mode': 'Online or in person',
+    'Structured teaching and study guidance is provided for learning Vastu, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya, based on relevant texts, principles, and practical approaches.',
+
+  'courses.grp.cert': 'Certificate Courses',
+  'courses.grp.study': 'Study Programs',
+
+  'crs.vastu.name': 'Vastu Shastra',
+  'crs.vastu.desc':
+    'Structured teaching of the principles, methods, and practical aspects of Vastu Shastra according to the nature and level of the course.',
+  'crs.jyo.name': 'Jyotisha Shastra & Allied Studies',
+  'crs.jyo.desc':
+    'Structured teaching of relevant principles, methods, and practical aspects of Jyotisha Shastra & Allied Studies according to the nature and level of the course.',
+  'crs.num.name': 'Numerology',
+  'crs.num.desc':
+    'Structured teaching of relevant principles, methods, and practical aspects of Numerology according to the nature and level of the course.',
+  'crs.swara.name': 'Swara Shastra',
+  'crs.swara.desc':
+    'Study and guidance on breath flow, nadi flow, the nature of swara, time-related observations, and related aspects of Swara Shastra.',
+  'crs.spiritual.name': 'Spiritual Studies & Brahmavidya',
+  'crs.spiritual.desc':
+    'Study, practice, and guidance related to meditation, mantra, introspective practices, self-knowledge, and Brahmavidya.',
+
+  'meta.level': 'Course Level',
+  'courses.level': 'Based on the nature of the course',
+  'crs.levelsLabel': 'Course Levels',
+  'crs.levels': 'From foundational to advanced levels, depending on the nature and scope of the course',
+  'courses.dur': 'Depending on the course',
+  'courses.mode': 'Online or In-person',
   'courses.certLabel': 'Certificate',
   'courses.cert': 'Course Completion Certificate',
 
@@ -299,9 +294,7 @@ export const te: Record<StringKey, string> = {
   'brand.tag': 'వాస్తు · జ్యోతిషం · సంఖ్యా శాస్త్రం · వేద విద్యలు',
 
   'nav.services': 'సేవలు',
-  'nav.approach': 'విధానం',
   'nav.process': 'ప్రక్రియ',
-  'nav.institutional': 'సంస్థలకు',
   'nav.courses': 'శిక్షణ',
   'nav.about': 'మా గురించి',
   'nav.menu': 'మెనూ',
@@ -311,7 +304,6 @@ export const te: Record<StringKey, string> = {
   'cta.howItWorks': 'సంప్రదింపు ఎలా జరుగుతుంది',
   'cta.explore': 'ఈ శాస్త్రం గురించి',
   'cta.enquire': 'ఈ విభాగం గురించి',
-  'cta.requestFee': 'రుసుము వివరాలు కోరండి',
   'cta.readFull': 'పూర్తి పరిచయం చదవండి',
   'cta.instBrief': 'సంప్రదించండి',
   'cta.whatsapp': 'వాట్సాప్‌లో అడగండి',
@@ -319,7 +311,7 @@ export const te: Record<StringKey, string> = {
   'cta.title': 'సంప్రదించండి.',
   'cta.lede':
     'సేవ లేదా కోర్సును ఎంచుకోండి; ఆన్‌లైన్ లేదా ప్రత్యక్ష సంప్రదింపును ఎంచుకోండి; సమయం కోసం వాట్సాప్ ద్వారా సంప్రదించండి.',
-  'cta.foot': 'వాట్సాప్ · ఫోన్ · ఈమెయిల్',
+  'cta.foot': 'వాట్సాప్ · ఫోన్',
 
   'hero.eyebrow': 'వాస్తు శాస్త్రం · జ్యోతిష శాస్త్రం · సంఖ్యా శాస్త్రం · ఆధ్యాత్మిక & వేద విద్యలు',
   'hero.title': 'అధ్యయనం, ఆచరణ, బోధన.',
@@ -410,89 +402,83 @@ export const te: Record<StringKey, string> = {
   's.swa.1': 'మంత్రం, ధ్యానం, స్వర సాధన',
   's.swa.2': 'ఆత్మజ్ఞానం, సంబంధిత అధ్యయనం',
 
-  's.course.1': 'వాస్తు శాస్త్రం — మౌలిక సూత్రాలు',
-  's.course.2': 'జ్యోతిష శాస్త్రం — మౌలిక సూత్రాలు',
-  's.course.3': 'సంఖ్యా శాస్త్రం — మౌలిక సూత్రాలు',
-  's.course.4': 'ఆధ్యాత్మిక & వేద విద్యలు',
 
   'mega.seeAll': 'వివరాలు చూడండి',
   'mega.training': 'శిక్షణ',
 
   'sig.eyebrow': 'సేవలు',
-  'sig.title': 'ప్రధాన సేవలు',
+  'sig.title': 'మా ప్రధాన సేవలు',
   'sig.lede':
-    'ఎక్కువగా కోరబడే సేవలు ఇవి. ప్రతి శాస్త్రానికీ పూర్తి వివరాలు దాని సొంత పేజీలో ఉన్నాయి.',
-  'sig.1.name': 'స్థల, నూతన నిర్మాణ వాస్తు',
-  'sig.1.desc':
-    'కొనుగోలు లేదా నిర్మాణానికి ముందే దిక్కు, ఆకారం, వాలు, రహదారి ముఖం మరియు ఆయాది అనుకూలతను పరిశీలించడం ద్వారా భవిష్యత్తులో అవసరమయ్యే మార్పులను ముందుగానే పరిగణించవచ్చు.',
-  'sig.1.dur': '90 నిమిషాలు + స్థల సందర్శన',
-  'sig.2.name': 'సంపూర్ణ జన్మ జాతక విశ్లేషణ',
-  'sig.2.desc':
-    'స్వభావం, విద్య, వృత్తి, ధనం, వివాహం, సంతానం, ఆరోగ్యం — జాతకాన్ని పూర్తిగా చదివి, సంబంధిత దశా కాలాలు మరియు గోచారాలను సందర్భానుసారంగా పరిశీలిస్తాం.',
-  'sig.2.dur': '90 నిమిషాలు',
-  'sig.3.disc': 'జ్యోతిషం + సంఖ్యా శాస్త్రం',
-  'sig.3.name': 'వివాహ అనుకూలత',
-  'sig.3.desc':
-    'అష్టకూట గుణ మిలన్‌ను కుజ దోషం, ఇద్దరి సప్తమ స్థానంతో కలిపి చూస్తాం. అవసరమైన సందర్భంలో సంఖ్యా శాస్త్ర అంశాలను కూడా సమన్వయంగా పరిశీలిస్తాం.',
-  'sig.3.dur': '60 నిమిషాలు',
-  'sig.4.name': 'వ్యాపార, బ్రాండ్ నామకరణం',
-  'sig.4.desc':
-    'సంఖ్యా విలువ, తెలుగు–ఆంగ్లం రెండింటిలో ఉచ్చారణ, ప్రమోటర్‌తో సరిపోలిక ఆధారంగా పేర్ల పరిశీలన. అవసరమైన సందర్భంలో అందుబాటులో ఉన్న రిజిస్ట్రేషన్ మరియు ట్రేడ్‌మార్క్ సమాచారాన్ని కూడా పరిశీలిస్తాం.',
-  'sig.4.dur': 'రెండు సమావేశాలు',
-  'sig.5.name': 'ముహూర్తం, తేదీ నిర్ణయం',
-  'sig.5.desc':
-    'వివాహం, గృహ ప్రవేశం, రిజిస్ట్రేషన్, ప్రారంభోత్సవం లేదా పునాదికి శుభ సమయం — సంబంధిత వ్యక్తుల జాతకాలు, పంచాంగం ఆధారంగా; ఆచరణ సౌలభ్యం కోసం రెండు ప్రత్యామ్నాయాలతో.',
-  'sig.5.dur': '45 నిమిషాలు',
-  'sig.6.disc': 'సంస్థాగతం',
-  'sig.6.name': 'వాణిజ్య, పారిశ్రామిక వాస్తు తనిఖీ',
-  'sig.6.desc':
-    'పూర్తి స్థల పరిశీలన అనంతరం వాస్తు సంబంధిత పరిశీలనలు, సూచనలు మరియు అవసరమైన దశలవారీ మార్గదర్శకంతో నివేదిక అందించబడుతుంది.',
-  'sig.6.dur': 'స్థలాన్ని బట్టి',
+    'మీ వ్యక్తిగత, కుటుంబ, విద్య, వృత్తి, వ్యాపార, ఆర్థిక, ఆరోగ్య సంబంధిత అంశాలు, స్థలం, నిర్మాణం మరియు ఇతర ముఖ్య అవసరాలు, సమస్యలు, సందేహాలు మరియు నిర్ణయాలకు అనుగుణంగా సంబంధిత శాస్త్రాల ఆధారంగా తగిన మార్గదర్శకత్వం అందించబడుతుంది.',
+
+  'grp.vastu': 'వాస్తు శాస్త్రం',
+  'grp.jyotisha': 'జ్యోతిష శాస్త్రం',
+  'grp.numerology': 'సంఖ్యా శాస్త్రం',
+
+  'ms.vastu.1.name': 'వాస్తు సంప్రదింపులు — నివాస, వాణిజ్య మరియు పారిశ్రామిక ప్రదేశాలు',
+  'ms.vastu.1.desc':
+    'స్థలం, కొత్త నిర్మాణం, నిర్మాణంలో ఉన్న భవనాలు, ఇప్పటికే ఉన్న ఇల్లు లేదా భవనంలో మార్పులు, కార్యాలయాలు, వ్యాపార ప్రదేశాలు, ఫ్యాక్టరీలు, గోదాములు మరియు ఇతర నిర్మాణాలకు సంబంధించిన వాస్తు అవసరాలు, సమస్యలు మరియు సందేహాలను పరిశీలించి, తగిన మార్గదర్శకత్వం మరియు అవసరమైన సూచనలు అందించడం.',
+
+  'ms.jyo.1.name': 'జన్మ జాతక విశ్లేషణ',
+  'ms.jyo.1.desc':
+    'వ్యక్తిగత స్వభావం, విద్య, ఉద్యోగం, వృత్తి, వ్యాపారం, ఆర్థిక పరిస్థితులు, వివాహం, కుటుంబం, సంతానం, ఆరోగ్యం, ఆస్తి, విదేశీ ప్రయాణం, విదేశీ విద్య లేదా ఉద్యోగం, విదేశీ స్థిరనివాసం మరియు జీవితంలోని ఇతర ముఖ్య అంశాలపై జ్యోతిష్య పరిశీలన మరియు మార్గదర్శకత్వం అందించడం.',
+  'ms.jyo.2.name': 'ప్రశ్న శాస్త్రం',
+  'ms.jyo.2.desc':
+    'జన్మ వివరాలు అందుబాటులో లేని సందర్భాల్లో లేదా ఒక నిర్దిష్ట ప్రశ్నకు సమాధానం కోరినప్పుడు, ప్రశ్న సమయాన్ని ఆధారంగా చేసుకుని అడిగిన విషయానికి సంబంధించిన జ్యోతిష్య పరిశీలన మరియు మార్గదర్శకత్వం అందించడం.',
+  'ms.jyo.3.name': 'వివాహ అనుకూలత',
+  'ms.jyo.3.desc':
+    'వివాహానికి ముందు ఇరువురి జాతకాలను పరిశీలించి, వివాహ అనుకూలత, దాంపత్య సంబంధిత అంశాలు మరియు అవసరమైన ఇతర విషయాలపై మార్గదర్శకత్వం అందించడం. అవసరమైన సందర్భంలో సంఖ్యా శాస్త్ర అంశాలను కూడా పరిశీలించడం.',
+  'ms.jyo.4.name': 'ముహూర్తం, తేదీ మరియు సమయ నిర్ణయం',
+  'ms.jyo.4.desc':
+    'వివాహం, గృహప్రవేశం, భూమి పూజ, పునాది, రిజిస్ట్రేషన్, వ్యాపార ప్రారంభం, సంస్థ ప్రారంభం, ముఖ్య కార్యారంభాలు, వాహనం కొనుగోలు మరియు ఇతర శుభకార్యాలకు అనుకూలమైన తేదీ మరియు సమయాన్ని సూచించడం.',
+  'ms.jyo.5.name': 'సాముద్రిక శాస్త్ర సంప్రదింపులు',
+  'ms.jyo.5.desc':
+    'హస్తరేఖలు మరియు శరీర లక్షణాలకు సంబంధించిన సాముద్రిక శాస్త్ర సూత్రాల ఆధారంగా సంబంధిత అంశాలను పరిశీలించి మార్గదర్శకత్వం అందించడం.',
+
+  'ms.num.1.name': 'సంఖ్యా విశ్లేషణ మరియు నామకరణం',
+  'ms.num.1.desc':
+    'జన్మతేదీ, పేరు మరియు పేరు సవరణకు సంబంధించిన సంఖ్యా అంశాలను సమగ్రంగా పరిశీలించడం; శిశు నామకరణం, వ్యక్తిగత సంఖ్యా విశ్లేషణ, వ్యాపార/సంస్థ/బ్రాండ్ నామకరణం, మొబైల్ నంబర్, వాహన నంబర్ మరియు ఇంటి/ఫ్లాట్ నంబర్‌కు సంబంధించిన సంఖ్యా అంశాలను పరిశీలించి మార్గదర్శకత్వం అందించడం.',
+
+  'ms.mode': 'ఆన్‌లైన్ లేదా ప్రత్యక్షంగా',
+  'sig.feeTitle': 'సేవా వ్యవధి & రుసుము',
   'sig.fee':
-    'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి.',
+    'ప్రతి సేవ యొక్క స్వభావం, అవసరం మరియు పని పరిధిని బట్టి సేవా వ్యవధి మరియు రుసుము ముందుగానే తెలియజేయబడతాయి.',
+  'sig.feeCta': 'రుసుము వివరాల కోసం సంప్రదించండి.',
 
   'meta.duration': 'వ్యవధి',
   'meta.mode': 'విధానం',
-  'meta.output': 'అందించేది',
   'meta.medium': 'బోధనా భాష',
-  'mode.inPerson': 'ప్రత్యక్షంగా',
-  'mode.online': 'ఆన్‌లైన్',
-  'mode.both': 'ఆన్‌లైన్ లేదా ప్రత్యక్షం',
-  'out.report': 'లిఖిత నివేదిక',
-  'out.shortlist': 'ఎంపిక జాబితా, కారణాలు',
-  'out.dates': 'తేదీల పత్రం, ప్రత్యామ్నాయాలు',
-  'out.audit': 'లిఖిత పరిశీలనలు, సూచనలు',
   'medium.both': 'తెలుగు, ఆంగ్లం',
 
   'process.eyebrow': 'పద్ధతి',
-  'process.title': 'సంప్రదింపు విధానం.',
+  'process.title': 'సంప్రదింపు విధానం',
   'process.lede':
-    'ప్రశ్న ఏ శాస్త్రానికి సంబంధించినదైనా ఇవే అయిదు దశలు.',
+    'సంబంధిత సేవకు అవసరమైన వివరాల ఆధారంగా సంప్రదింపు ప్రక్రియ ఈ దశల్లో కొనసాగుతుంది.',
   'process.1.name': 'వివరాల సేకరణ',
   'process.1.desc':
-    'అవసరమైన జనన వివరాలు, స్థల వివరాలు లేదా సంబంధిత సమాచారాన్ని సేకరిస్తాం. జనన సమయం మీద సందేహం ఉంటే అది చెప్తాం.',
+    'సంబంధిత సేవకు అవసరమైన జనన, స్థల లేదా ఇతర వివరాలను మీ నుంచి సేకరిస్తాం. వివరాల్లో ఏదైనా సందేహం ఉంటే, మీతో నిర్ధారించుకుంటాం.',
   'process.2.name': 'ముందస్తు పరిశీలన',
-  'process.2.desc':
-    'సంబంధిత జాతకం, వాస్తు ప్రణాళిక లేదా సంఖ్యా వివరాలను సమావేశానికి ముందే పరిశీలిస్తాం.',
+  'process.2.desc': 'అందిన వివరాలను సంప్రదింపుకు ముందుగా పరిశీలిస్తాం.',
   'process.3.name': 'సంప్రదింపు',
   'process.3.desc':
-    'ఆన్‌లైన్ లేదా ప్రత్యక్షంగా, తెలుగులో లేదా ఆంగ్లంలో విషయాన్ని వివరంగా చర్చిస్తాం. ఫలితాలను వాటి వెనుక ఉన్న కారణాలతో సహా వివరిస్తాం.',
-  'process.4.name': 'లిఖిత సూచనలు',
+    'ఆన్‌లైన్ లేదా ప్రత్యక్షంగా, తెలుగులో లేదా ఆంగ్లంలో సంబంధిత విషయం మరియు ప్రశ్నలను చర్చిస్తాం.',
+  'process.4.name': 'విశ్లేషణ వివరణ',
   'process.4.desc':
-    'అవసరమైన సందర్భంలో పరిశీలనలు మరియు సూచనలను లిఖిత రూపంలో అందిస్తాం.',
-  'process.5.name': 'అనుసరణ',
+    'పరిశీలనలో గుర్తించిన సంబంధిత అంశాలను వాటి ఆధారాలతో సహా స్పష్టంగా వివరిస్తాం.',
+  'process.5.name': 'మార్గదర్శకత్వం',
   'process.5.desc':
-    'అవసరాన్ని బట్టి తదుపరి మార్గదర్శనం అందించబడుతుంది.',
+    'సంబంధిత అంశానికి అనుగుణంగా అవసరమైన సూచనలు మరియు మార్గదర్శకత్వాన్ని తెలియజేస్తాం.',
 
   'founder.eyebrow': 'ఆచరణ',
   'founder.title': 'శ్రీ కె. శ్రీనివాస్ రెడ్డి',
   'founder.role': 'స్థాపకులు & ప్రధాన మార్గదర్శకులు',
   'founder.p1':
-    'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం, సంఖ్యా శాస్త్రం మరియు సంబంధిత ఆధ్యాత్మిక–వేద విద్యలపై అధ్యయనం, ఆచరణ మరియు బోధనలో ఆసక్తితో ఈ కేంద్రాన్ని ప్రారంభించారు.',
+    'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యపై జ్ఞానం మరియు అనుభవంతో, వాటి ఆచరణ, పరిశోధన మరియు బోధనను కొనసాగిస్తూ ఈ కేంద్రాన్ని ప్రారంభించారు.',
   'founder.p2':
-    'సంప్రదింపులు, తరగతులు వ్యక్తిగతంగానే నిర్వహిస్తారు. ప్రజలు తెచ్చే ప్రశ్నలు శాస్త్రాల వారీగా విడిపోయి ఉండవు — ఇల్లు, వివాహం, వృత్తి నిర్ణయం తరచుగా కలిసే వస్తాయి. అందుకే ఈ నాలుగు విభాగాలనూ పక్కపక్కనే అధ్యయనం చేసి ఆచరిస్తారు.',
-  'founder.cred1': 'ఎం.ఎ. (జ్యోతిష శాస్త్రం)',
-  'founder.cred2': 'పీహెచ్‌డీ పరిశోధక విద్యార్థి — పరిశోధన కొనసాగుతోంది',
+    'సంప్రదింపులు మరియు తరగతులు ప్రత్యక్షంగా నిర్వహించడంతో పాటు, అవసరాన్ని బట్టి ఆన్‌లైన్‌లో కూడా అందించబడతాయి. ప్రతి శాస్త్రాన్ని దాని స్వంత సూత్రాలు మరియు విధానాల ప్రకారం పరిగణించి, సంబంధిత అవసరాన్ని బట్టి ఒక్కో శాస్త్రాన్ని విడిగా లేదా అవసరమైనప్పుడు సంబంధిత శాస్త్రాలను సమన్వయంగా పరిశీలిస్తారు.',
+  'founder.cred1': 'ఎం.ఏ. (జ్యోతిష శాస్త్రం)',
+  'founder.cred2': 'పీ.జీ. డిప్లొమా ఇన్ జ్యోతిర్వాస్తు',
+  'founder.cred3': 'వాస్తు శాస్త్రంలో పీహెచ్‌డీ పరిశోధన — కొనసాగుతోంది',
   'founder.credLabel': 'విద్యార్హతలు',
   'founder.alt': 'శ్రీ కె. శ్రీనివాస్ రెడ్డి తమ కార్యస్థానంలో',
 
@@ -500,34 +486,37 @@ export const te: Record<StringKey, string> = {
   'inst.title': 'సంస్థలు మరియు వాణిజ్య అవసరాలకు.',
   'inst.lede':
     'అవసరాన్ని బట్టి సంస్థలు, విద్యా సంస్థలు, వాణిజ్య ప్రదేశాలు మరియు ఇతర నిర్మాణాలకు వాస్తు సంబంధిత పరిశీలన మరియు మార్గదర్శనం అందించబడుతుంది.',
-  'inst.1.name': 'రియల్ ఎస్టేట్, డెవలపర్లు',
-  'inst.1.desc':
-    'లేఅవుట్ దశలోనే ప్లాట్ విభజన, రహదారి దిక్కు, ఉమ్మడి స్థలాలు, యూనిట్ స్థాయి వాస్తు పరిశీలన — అనుమతుల తర్వాత అమ్మకపు విలువ దెబ్బతినకుండా.',
-  'inst.2.name': 'కార్పొరేట్, వాణిజ్యం',
-  'inst.2.desc':
-    'కార్యాలయ అంతస్తుల ప్రణాళిక, సీటింగ్ జోన్లు, క్యాబిన్లు, రిసెప్షన్, సర్వర్ స్థానం — ప్రమోటర్ల జాతకాలు, సంస్థ నామకరణంతో కలిపి పరిశీలన.',
-  'inst.3.name': 'పారిశ్రామికం',
-  'inst.3.desc':
-    'ప్లాంట్ లేఅవుట్, యంత్రాల దిక్కు, ముడి సరుకు, తయారీ వస్తువుల నిల్వ, వ్యర్థ జలాలు, నీటి స్థానం — మీ ప్రాసెస్ ఇంజనీర్‌తో సమన్వయంగా.',
-  'inst.4.name': 'విద్యా సంస్థలు',
-  'inst.4.desc':
-    'పాఠశాలలు, కళాశాలలకు తరగతి గదుల దిక్కు, గ్రంథాలయం, ప్రయోగశాల, పరిపాలనా విభాగాల స్థాన నిర్ణయం — విద్యా సంవత్సరానికి అంతరాయం కలగకుండా.',
   'inst.ctaText':
     'వివరాలతో సంప్రదించండి; ఏమి అవసరమో తెలియజేస్తాం.',
 
   'courses.eyebrow': 'శిక్షణ',
   'courses.title': 'శిక్షణ & విద్యా కార్యక్రమాలు',
   'courses.lede':
-    'చిన్న బ్యాచ్‌లలో, తెలుగు మరియు ఆంగ్లంలో, మూల గ్రంథాల ఆధారంగా బోధన. ఈ విషయాలను క్రమబద్ధంగా నేర్చుకోవాలనుకునే ఎవరికైనా.',
-  'courses.1.desc':
-    'దిక్కులు, వాస్తు పురుష మండలం, కొలతలు, ఆయాది గణితం, ద్వార నిర్ణయం మరియు ప్రాథమిక వాస్తు సూత్రాలు.',
-  'courses.2.desc':
-    'రాశి, నక్షత్రం, భావం, గ్రహాలు, అధిపత్యం, యోగాలు, దశా విధానం మరియు జాతక విశ్లేషణకు సంబంధించిన ప్రాథమిక అంశాలు.',
-  'courses.3.desc':
-    'జన్మ సంఖ్య, భాగ్య సంఖ్య, నామ సంఖ్య, పేరు, సంఖ్యా అనుకూలత మరియు ఆచరణలో ఉపయోగించే ప్రాథమిక విధానాలు.',
-  'courses.4.name': 'ఆధ్యాత్మిక & వేద విద్యలు',
-  'courses.4.desc':
-    'ఆధ్యాత్మిక అధ్యయనం, ధ్యానం, మంత్రం, స్వర సాధన మరియు సంబంధిత అంశాలు — విద్యార్థికి అనుకూలమైన వేగంతో.',
+    'వాస్తు, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యకు సంబంధించిన అంశాలను క్రమబద్ధంగా నేర్చుకోవడానికి, సంబంధిత శాస్త్ర గ్రంథాలు, సూత్రాలు మరియు ఆచరణాత్మక విధానాల ఆధారంగా బోధన మరియు అధ్యయన మార్గదర్శనం అందించబడుతుంది.',
+
+  'courses.grp.cert': 'సర్టిఫికేట్ కోర్సులు',
+  'courses.grp.study': 'అధ్యయన కార్యక్రమాలు',
+
+  'crs.vastu.name': 'వాస్తు శాస్త్రం',
+  'crs.vastu.desc':
+    'వాస్తు శాస్త్రంలోని సూత్రాలు, విధానాలు మరియు ఆచరణాత్మక అంశాలను కోర్సు స్వభావం మరియు స్థాయిని బట్టి క్రమబద్ధంగా బోధించడం.',
+  'crs.jyo.name': 'జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు',
+  'crs.jyo.desc':
+    'జ్యోతిష శాస్త్రం & అనుబంధ విద్యలలోని సంబంధిత సూత్రాలు, విధానాలు మరియు ఆచరణాత్మక అంశాలను కోర్సు స్వభావం మరియు స్థాయిని బట్టి క్రమబద్ధంగా బోధించడం.',
+  'crs.num.name': 'సంఖ్యా శాస్త్రం',
+  'crs.num.desc':
+    'సంఖ్యా శాస్త్రంలోని సంబంధిత సూత్రాలు, విధానాలు మరియు ఆచరణాత్మక అంశాలను కోర్సు స్వభావం మరియు స్థాయిని బట్టి క్రమబద్ధంగా బోధించడం.',
+  'crs.swara.name': 'స్వర శాస్త్రం',
+  'crs.swara.desc':
+    'శ్వాస ప్రవాహం, నాడీ ప్రవాహం, స్వర స్వభావం, కాల సంబంధిత పరిశీలనలు మరియు స్వర శాస్త్రానికి సంబంధించిన అంశాలపై అధ్యయనం మరియు మార్గదర్శనం.',
+  'crs.spiritual.name': 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
+  'crs.spiritual.desc':
+    'ధ్యానం, మంత్రం, అంతర్ముఖ సాధన, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అంశాలపై అధ్యయనం, సాధన మరియు మార్గదర్శనం.',
+
+  'meta.level': 'కోర్సు స్థాయి',
+  'courses.level': 'కోర్సు స్వభావాన్ని బట్టి',
+  'crs.levelsLabel': 'కోర్సు స్థాయిలు',
+  'crs.levels': 'ప్రాథమిక స్థాయి నుండి ఉన్నత స్థాయి వరకు, కోర్సు స్వభావం మరియు అంశాల పరిధిని బట్టి',
   'courses.dur': 'కోర్సును బట్టి',
   'courses.mode': 'ఆన్‌లైన్ లేదా ప్రత్యక్షం',
   'courses.certLabel': 'సర్టిఫికేట్',
