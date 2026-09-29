@@ -6,54 +6,47 @@ import type { StringKey } from '../i18n/strings';
  * rejects a key that does not exist in the dictionary.
  */
 
-export type IconName = 'vastu' | 'jyotisha' | 'numerology' | 'swara';
+export type IconName = 'vastu' | 'jyotisha' | 'numerology' | 'swara' | 'spiritual';
 
 export interface Pillar {
   id: string;
   icon: IconName;
   name: StringKey;
-  sub: StringKey;
   desc: StringKey;
-  count: StringKey;
-  cta: StringKey;
+  /** Where the card leads. Swara and Brahmavidya share one page. */
+  to: string;
 }
 
+/** The five educational disciplines, in the order they are taught. */
 export const pillars: Pillar[] = [
-  {
-    id: 'vastu',
-    icon: 'vastu',
-    name: 'v.vastu.name',
-    sub: 'v.vastu.sub',
-    desc: 'v.vastu.desc',
-    count: 'v.vastu.count',
-    cta: 'cta.explore',
-  },
+  { id: 'vastu', icon: 'vastu', name: 'd.vastu.name', desc: 'd.vastu.desc', to: '/services/vastu' },
   {
     id: 'jyotisha',
     icon: 'jyotisha',
-    name: 'v.jyotisha.name',
-    sub: 'v.jyotisha.sub',
-    desc: 'v.jyotisha.desc',
-    count: 'v.jyotisha.count',
-    cta: 'cta.explore',
+    name: 'd.jyotisha.name',
+    desc: 'd.jyotisha.desc',
+    to: '/services/jyotisha',
   },
   {
     id: 'numerology',
     icon: 'numerology',
-    name: 'v.numero.name',
-    sub: 'v.numero.sub',
-    desc: 'v.numero.desc',
-    count: 'v.numero.count',
-    cta: 'cta.explore',
+    name: 'd.numerology.name',
+    desc: 'd.numerology.desc',
+    to: '/services/numerology',
   },
   {
     id: 'swara',
     icon: 'swara',
-    name: 'v.swara.name',
-    sub: 'v.swara.sub',
-    desc: 'v.swara.desc',
-    count: 'v.swara.count',
-    cta: 'cta.enquire',
+    name: 'd.swara.name',
+    desc: 'd.swara.desc',
+    to: '/services/spiritual#swarashastra',
+  },
+  {
+    id: 'spiritual',
+    icon: 'spiritual',
+    name: 'd.spiritual.name',
+    desc: 'd.spiritual.desc',
+    to: '/services/spiritual#brahmavidya',
   },
 ];
 
@@ -98,47 +91,6 @@ export const megaColumns: MegaColumn[] = [
     items: ['s.swa.1', 's.swa.2'],
     extraTitle: 'mega.training',
     extraItems: ['crs.vastu.name', 'crs.jyo.name', 'crs.num.name', 'crs.swara.name', 'crs.spiritual.name'],
-  },
-];
-
-export interface MainService {
-  id: string;
-  name: StringKey;
-  desc: StringKey;
-}
-
-export interface ServiceGroup {
-  id: string;
-  title: StringKey;
-  items: MainService[];
-}
-
-/**
- * The main services, grouped by discipline rather than shown as a flat row
- * of cards. Every one is offered online or in person, so the mode is stated
- * once per card from `ms.mode` instead of being modelled per service.
- */
-export const serviceGroups: ServiceGroup[] = [
-  {
-    id: 'vastu',
-    title: 'grp.vastu',
-    items: [{ id: 'vastu-consult', name: 'ms.vastu.1.name', desc: 'ms.vastu.1.desc' }],
-  },
-  {
-    id: 'jyotisha',
-    title: 'grp.jyotisha',
-    items: [
-      { id: 'birthchart', name: 'ms.jyo.1.name', desc: 'ms.jyo.1.desc' },
-      { id: 'prasna', name: 'ms.jyo.2.name', desc: 'ms.jyo.2.desc' },
-      { id: 'marriage', name: 'ms.jyo.3.name', desc: 'ms.jyo.3.desc' },
-      { id: 'muhurta', name: 'ms.jyo.4.name', desc: 'ms.jyo.4.desc' },
-      { id: 'samudrika', name: 'ms.jyo.5.name', desc: 'ms.jyo.5.desc' },
-    ],
-  },
-  {
-    id: 'numerology',
-    title: 'grp.numerology',
-    items: [{ id: 'numerology', name: 'ms.num.1.name', desc: 'ms.num.1.desc' }],
   },
 ];
 

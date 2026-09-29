@@ -810,7 +810,6 @@ export const vastuVertical: Vertical = {
   icon: 'vastu',
   nameKey: 'v.vastu.name',
   subKey: 'v.vastu.sub',
-  countKey: 'v.vastu.count',
 
   eyebrow: { en: 'Vertical one of four', te: 'నాలుగింటిలో మొదటి శాఖ' },
   title: {

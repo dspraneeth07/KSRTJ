@@ -44,10 +44,19 @@ const paths: Record<IconName, React.ReactNode> = {
   ),
   swara: (
     <>
-      <path d="M24 7 40.7 36H7.3Z" />
-      <path d="M24 41 7.3 12h33.4Z" />
+      {/* Two breath channels crossing a still centre. */}
       <circle cx="24" cy="24" r="19" />
+      <path d="M11 33c6.5 0 6.5-18 13-18s6.5 18 13 18" />
+      <path d="M11 15c6.5 0 6.5 18 13 18s6.5-18 13-18" />
       <circle cx="24" cy="24" r="2.6" />
+    </>
+  ),
+  spiritual: (
+    <>
+      {/* A lamp flame inside the circle of enquiry. */}
+      <circle cx="24" cy="24" r="19" />
+      <path d="M24 10c5.5 6.4 8.2 10.6 8.2 15a8.2 8.2 0 0 1-16.4 0c0-4.4 2.7-8.6 8.2-15Z" />
+      <path d="M24 38c-2.6-3-3.9-5-3.9-7.1A3.9 3.9 0 0 1 24 27a3.9 3.9 0 0 1 3.9 3.9c0 2.1-1.3 4.1-3.9 7.1Z" />
     </>
   ),
 };

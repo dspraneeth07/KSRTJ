@@ -20,7 +20,9 @@ export const en = {
   'utility.call': '+91 83090 96407',
 
   'brand.name': 'Sanātana Vidyā Kendra',
-  'brand.tag': 'Vastu · Jyotisha · Numerology · Spiritual & Vedic Studies',
+  'brand.tag': 'Vastu · Jyotisha · Numerology · Swara · Brahmavidya',
+  'brand.full':
+    'Vastu Shastra · Jyotisha Shastra & Allied Studies · Numerology · Swara Shastra · Spiritual Studies & Brahmavidya',
 
   'nav.services': 'Services',
   'nav.process': 'Process',
@@ -30,9 +32,6 @@ export const en = {
   'nav.close': 'Close',
 
   'cta.book': 'Book a consultation',
-  'cta.howItWorks': 'See how a consultation works',
-  'cta.explore': 'Explore the discipline',
-  'cta.enquire': 'Explore this field',
   'cta.readFull': 'Read the full profile',
   'cta.instBrief': 'Get in touch',
   'cta.whatsapp': 'Ask on WhatsApp',
@@ -42,45 +41,43 @@ export const en = {
     'Choose the service or course, decide whether you would prefer it online or in person, and message us on WhatsApp to arrange a time.',
   'cta.foot': 'WhatsApp · Phone',
 
-  'hero.eyebrow': 'Vastu Shastra · Jyotisha · Numerology · Spiritual & Vedic Studies',
-  'hero.title': 'Study, practice, and teaching.',
-  'hero.lede':
-    'A centre for the systematic study of Vastu Shastra, Jyotisha, Numerology and the spiritual and Vedic disciplines — applying them in practice, and teaching them to those who wish to learn.',
-  'hero.foot':
-    'Consultations · Personal guidance · Structured training · Wanaparthy, Telangana',
+  'hero.title': 'Sanātana Vidyā Kendra',
+  'hero.lede': 'Knowledge, Practice, Experience, Research & Teaching.',
+  'hero.foot': 'Consultations & training · Online or In-person · Wanaparthy, Telangana',
 
   'trust.title': 'Experience in practice and study',
   'trust.body':
-    'Continuous study, practice and teaching across Vastu Shastra, Jyotisha, Numerology and the related spiritual disciplines.',
+    'Continuous study, practice and teaching across Vastu Shastra, Jyotisha Shastra and its allied studies, Numerology, Swara Shastra, and Spiritual Studies and Brahmavidya.',
 
-  'pillars.eyebrow': 'Fields of study',
-  'pillars.title': 'Our principal fields of study.',
-  'pillars.lede':
-    'Four related disciplines, each studied on its own terms and applied together where a question genuinely calls for more than one of them.',
+  'pillars.eyebrow': 'Educational Disciplines',
+  'pillars.title': 'Our Main Educational Disciplines',
+
+  'd.vastu.name': 'Vastu Shastra',
+  'd.vastu.desc':
+    'Vastu principles, site assessment, structural aspects and their practical application.',
+  'd.jyotisha.name': 'Jyotisha Shastra & Allied Studies',
+  'd.jyotisha.desc':
+    'Jyotisha principles, horoscope analysis, and the knowledge, analysis and application of various allied areas of Jyotisha.',
+  'd.numerology.name': 'Numerology',
+  'd.numerology.desc':
+    'The nature of numbers, numerical relationships, and their relevance to personality, aspects of life and the application of numbers.',
+  'd.swara.name': 'Swara Shastra',
+  'd.swara.desc':
+    'Breath flow, subtle breath channels, swara characteristics, time-related observations and their practical application.',
+  'd.spiritual.name': 'Spiritual Studies & Brahmavidya',
+  'd.spiritual.desc':
+    'Self-knowledge, philosophical inquiry, inner practices, and knowledge and practice relating to Brahmavidya.',
 
   'v.vastu.name': 'Vastu Shastra',
-  'v.vastu.sub': 'The traditional discipline of Vastu',
-  'v.vastu.desc':
-    'Study, examination and guidance covering plots, houses and construction — directions, measurements, Ayadi Ganitham and the related principles of Vastu.',
-  'v.vastu.count': 'Consultation & training',
-
-  'v.jyotisha.name': 'Jyotisha',
-  'v.jyotisha.sub': 'The traditional discipline of Jyotisha',
-  'v.jyotisha.desc':
-    'Study and practice covering the birth chart, rashi and nakshatra, houses and planets, dashas, gochara, Prashna Jyotisham and Muhurtham.',
-  'v.jyotisha.count': 'Consultation & training',
-
+  'v.vastu.sub': 'The traditional science of Vastu',
+  'v.jyotisha.name': 'Jyotisha Shastra & Allied Studies',
+  'v.jyotisha.sub':
+    'Traditional knowledge of Jyotisha Shastra and its various allied disciplines',
   'v.numero.name': 'Numerology',
   'v.numero.sub': 'The study of numbers and names',
-  'v.numero.desc':
-    'Study of the birth number, destiny number and name number, along with names, spelling, naming and numeric compatibility.',
-  'v.numero.count': 'Consultation & training',
-
-  'v.swara.name': 'Spiritual & Vedic Studies',
-  'v.swara.sub': 'Mantra, meditation, swara and self-knowledge',
-  'v.swara.desc':
-    'Guidance for the systematic study of mantra, meditation, swara sadhana, subjects relating to self-knowledge, and other spiritual disciplines.',
-  'v.swara.count': 'Guidance & study',
+  'v.swara.name': 'Spiritual Studies & Brahmavidya',
+  'v.swara.sub':
+    'Study, practice and guidance related to meditation, mantra, Swara Shastra, self-knowledge and Brahmavidya',
 
   's.vastu.1': 'Plot Vastu — direction, shape, slope, road frontage',
   's.vastu.2': 'House & villa Vastu',
@@ -136,43 +133,7 @@ export const en = {
   'mega.training': 'Training',
 
   'sig.eyebrow': 'Services',
-  'sig.title': 'Our main services',
-  'sig.lede':
-    'Guidance is provided based on the relevant disciplines according to your individual, family, education, career, business, financial, health-related, site, construction and other important needs, concerns, queries and decisions.',
-
-  'grp.vastu': 'Vastu Shastra',
-  'grp.jyotisha': 'Jyotisha Shastra',
-  'grp.numerology': 'Numerology',
-
-  'ms.vastu.1.name': 'Vastu Consultations — Residential, Commercial & Industrial Spaces',
-  'ms.vastu.1.desc':
-    'Vastu-related needs, concerns and queries are examined for sites, new construction, buildings under construction, existing houses or buildings requiring modifications, offices, business premises, factories, warehouses and other structures, with appropriate guidance and recommendations.',
-
-  'ms.jyo.1.name': 'Birth Chart Analysis',
-  'ms.jyo.1.desc':
-    'Astrological guidance is provided on personal nature, education, employment, career, business, finances, marriage, family, children, health, property, foreign travel, foreign education or employment, overseas settlement and other important areas of life.',
-  'ms.jyo.2.name': 'Prasna Shastra',
-  'ms.jyo.2.desc':
-    'When birth details are unavailable, or when guidance is sought for a specific question, relevant astrological guidance is provided based on the time of the question.',
-  'ms.jyo.3.name': 'Marriage Compatibility',
-  'ms.jyo.3.desc':
-    'The birth charts of both individuals are examined to provide guidance on marriage compatibility, relationship-related matters and other relevant considerations. Numerology may also be considered where appropriate.',
-  'ms.jyo.4.name': 'Muhurta, Date & Time Selection',
-  'ms.jyo.4.desc':
-    'Suitable dates and timings are suggested for marriage, housewarming, Bhumi Puja, foundation work, registration, business or institutional inauguration, important beginnings, vehicle purchase and other auspicious activities.',
-  'ms.jyo.5.name': 'Samudrika Shastra Consultations',
-  'ms.jyo.5.desc':
-    'Relevant aspects are examined based on Samudrika Shastra principles relating to palm lines and physical features, followed by appropriate guidance.',
-
-  'ms.num.1.name': 'Numerology Analysis & Naming',
-  'ms.num.1.desc':
-    'Numerological aspects related to date of birth, name and name correction are comprehensively examined. Guidance is also provided for baby naming, personal numerology, business/company/brand naming, mobile numbers, vehicle numbers and house/flat numbers.',
-
-  'ms.mode': 'Online or In-Person',
-  'sig.feeTitle': 'Service Duration & Fees',
-  'sig.fee':
-    'The service duration and fees will be communicated in advance, based on the nature, requirements and scope of each service.',
-  'sig.feeCta': 'Contact us for fee details.',
+  'sig.title': 'Main Services',
 
   'meta.duration': 'Duration',
   'meta.mode': 'Mode',
@@ -227,22 +188,20 @@ export const en = {
 
   'crs.vastu.name': 'Vastu Shastra',
   'crs.vastu.desc':
-    'Structured teaching of the principles, methods, and practical aspects of Vastu Shastra according to the nature and level of the course.',
+    'Systematic teaching of the principles, methods and practical aspects of Vastu Shastra according to the nature and level of the course.',
   'crs.jyo.name': 'Jyotisha Shastra & Allied Studies',
   'crs.jyo.desc':
-    'Structured teaching of relevant principles, methods, and practical aspects of Jyotisha Shastra & Allied Studies according to the nature and level of the course.',
+    'Systematic teaching of relevant principles, methods and practical aspects of Jyotisha Shastra & Allied Studies according to the nature and level of the course.',
   'crs.num.name': 'Numerology',
   'crs.num.desc':
-    'Structured teaching of relevant principles, methods, and practical aspects of Numerology according to the nature and level of the course.',
+    'Systematic teaching of relevant principles, methods and practical aspects of Numerology according to the nature and level of the course.',
   'crs.swara.name': 'Swara Shastra',
   'crs.swara.desc':
-    'Study and guidance on breath flow, nadi flow, the nature of swara, time-related observations, and related aspects of Swara Shastra.',
+    'Study and guidance on breath flow, Nadi flow, nature of Swara, time-related observations and related aspects of Swara Shastra.',
   'crs.spiritual.name': 'Spiritual Studies & Brahmavidya',
   'crs.spiritual.desc':
-    'Study, practice, and guidance related to meditation, mantra, introspective practices, self-knowledge, and Brahmavidya.',
+    'Study, practice and guidance related to meditation, mantra, inner practice, self-knowledge and Brahmavidya.',
 
-  'meta.level': 'Course Level',
-  'courses.level': 'Based on the nature of the course',
   'crs.levelsLabel': 'Course Levels',
   'crs.levels': 'From foundational to advanced levels, depending on the nature and scope of the course',
   'courses.dur': 'Depending on the course',
@@ -270,7 +229,7 @@ export const en = {
     'No. Examination and guidance are offered on the basis of the Jyotisha, Vastu and Numerology traditions. No guarantee is given about future outcomes.',
 
   'footer.disciplines':
-    'Vastu Shastra | Jyotisha | Numerology | Spiritual & Vedic Studies',
+    'Vastu Shastra | Jyotisha Shastra & Allied Studies | Numerology | Swara Shastra | Spiritual Studies & Brahmavidya',
   'footer.blurb':
     'A centre for the study, practice and teaching of the Vedic disciplines.',
   'footer.location': 'Location',
@@ -291,7 +250,9 @@ export const te: Record<StringKey, string> = {
   'utility.call': '+91 83090 96407',
 
   'brand.name': 'సనాతన విద్యా కేంద్రం',
-  'brand.tag': 'వాస్తు · జ్యోతిషం · సంఖ్యా శాస్త్రం · వేద విద్యలు',
+  'brand.tag': 'వాస్తు · జ్యోతిషం · సంఖ్యా శాస్త్రం · స్వరం · బ్రహ్మవిద్య',
+  'brand.full':
+    'వాస్తు శాస్త్రం · జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు · సంఖ్యా శాస్త్రం · స్వర శాస్త్రం · ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
 
   'nav.services': 'సేవలు',
   'nav.process': 'ప్రక్రియ',
@@ -301,9 +262,6 @@ export const te: Record<StringKey, string> = {
   'nav.close': 'మూసివేయండి',
 
   'cta.book': 'సంప్రదింపును బుక్ చేసుకోండి',
-  'cta.howItWorks': 'సంప్రదింపు ఎలా జరుగుతుంది',
-  'cta.explore': 'ఈ శాస్త్రం గురించి',
-  'cta.enquire': 'ఈ విభాగం గురించి',
   'cta.readFull': 'పూర్తి పరిచయం చదవండి',
   'cta.instBrief': 'సంప్రదించండి',
   'cta.whatsapp': 'వాట్సాప్‌లో అడగండి',
@@ -313,45 +271,43 @@ export const te: Record<StringKey, string> = {
     'సేవ లేదా కోర్సును ఎంచుకోండి; ఆన్‌లైన్ లేదా ప్రత్యక్ష సంప్రదింపును ఎంచుకోండి; సమయం కోసం వాట్సాప్ ద్వారా సంప్రదించండి.',
   'cta.foot': 'వాట్సాప్ · ఫోన్',
 
-  'hero.eyebrow': 'వాస్తు శాస్త్రం · జ్యోతిష శాస్త్రం · సంఖ్యా శాస్త్రం · ఆధ్యాత్మిక & వేద విద్యలు',
-  'hero.title': 'అధ్యయనం, ఆచరణ, బోధన.',
-  'hero.lede':
-    'వాస్తు, జ్యోతిష్యం, సంఖ్యా శాస్త్రం మరియు ఆధ్యాత్మిక–వేద విద్యలను క్రమబద్ధంగా అధ్యయనం చేసి, ఆచరణలో ఉపయోగిస్తూ, ఆసక్తి ఉన్న వారికి శిక్షణ అందించే విద్యా కేంద్రం.',
-  'hero.foot':
-    'ఆచరణాత్మక సేవలు · వ్యక్తిగత మార్గదర్శనం · క్రమబద్ధమైన శిక్షణ · వనపర్తి, తెలంగాణ',
+  'hero.title': 'సనాతన విద్యా కేంద్రం',
+  'hero.lede': 'విద్యలపై జ్ఞానం, ఆచరణ, అనుభవం, పరిశోధన మరియు బోధన.',
+  'hero.foot': 'సంప్రదింపులు & శిక్షణ · ఆన్‌లైన్ లేదా ప్రత్యక్షం · వనపర్తి, తెలంగాణ',
 
   'trust.title': 'ఆచరణ మరియు అధ్యయన అనుభవం',
   'trust.body':
-    'వాస్తు, జ్యోతిష్యం, సంఖ్యా శాస్త్రం మరియు సంబంధిత విద్యలపై నిరంతర అధ్యయనం, ఆచరణ మరియు బోధన.',
+    'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యలలో నిరంతర అధ్యయనం, ఆచరణ మరియు బోధన.',
 
   'pillars.eyebrow': 'విద్యా విభాగాలు',
-  'pillars.title': 'మా ప్రధాన విద్యా విభాగాలు.',
-  'pillars.lede':
-    'నాలుగు సంబంధిత శాస్త్రాలు — ప్రతి ఒక్కటీ విడిగా అధ్యయనం చేస్తూ, ఒక ప్రశ్నకు ఒకటి కంటే ఎక్కువ అవసరమైన చోట వాటిని కలిపి పరిశీలిస్తాం.',
+  'pillars.title': 'మా ప్రధాన విద్యా విభాగాలు',
+
+  'd.vastu.name': 'వాస్తు శాస్త్రం',
+  'd.vastu.desc':
+    'వాస్తు సూత్రాలు, స్థల పరిశీలన, నిర్మాణ సంబంధిత అంశాలు మరియు వాటి ఆచరణాత్మక అన్వయం.',
+  'd.jyotisha.name': 'జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు',
+  'd.jyotisha.desc':
+    'జ్యోతిష శాస్త్రంలోని సూత్రాలు, జాతక విశ్లేషణ మరియు దానికి అనుబంధంగా ఉన్న వివిధ జ్యోతిష విద్యల పరిజ్ఞానం, విశ్లేషణ మరియు అన్వయం.',
+  'd.numerology.name': 'సంఖ్యా శాస్త్రం',
+  'd.numerology.desc':
+    'సంఖ్యల స్వభావం, సంఖ్యా సంబంధాలు మరియు వాటి ఆధారంగా వ్యక్తిత్వం, జీవన అంశాలు మరియు సంఖ్యల అన్వయంపై పరిశీలన.',
+  'd.swara.name': 'స్వర శాస్త్రం',
+  'd.swara.desc':
+    'శ్వాస ప్రవాహం, నాడీ ప్రవాహం, స్వర స్వభావం, కాల సంబంధిత పరిశీలనలు మరియు వాటి ఆచరణాత్మక అన్వయం.',
+  'd.spiritual.name': 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
+  'd.spiritual.desc':
+    'ఆత్మజ్ఞానం, తత్త్వవిచారణ, అంతర్ముఖ సాధన మరియు బ్రహ్మవిద్యకు సంబంధించిన జ్ఞానం మరియు సాధన.',
 
   'v.vastu.name': 'వాస్తు శాస్త్రం',
   'v.vastu.sub': 'వాస్తు యొక్క సంప్రదాయ శాస్త్రం',
-  'v.vastu.desc':
-    'స్థలం, గృహం, నిర్మాణం, దిక్కులు, కొలతలు, ఆయాది గణితం మరియు సంబంధిత వాస్తు అంశాల అధ్యయనం, పరిశీలన మరియు మార్గదర్శనం.',
-  'v.vastu.count': 'సంప్రదింపు, శిక్షణ',
-
-  'v.jyotisha.name': 'జ్యోతిష శాస్త్రం',
-  'v.jyotisha.sub': 'జ్యోతిషం యొక్క సంప్రదాయ శాస్త్రం',
-  'v.jyotisha.desc':
-    'జన్మకుండలి, రాశి, నక్షత్రం, భావాలు, గ్రహాలు, దశలు, గోచారం, ప్రశ్న జ్యోతిషం మరియు ముహూర్తం వంటి అంశాల అధ్యయనం మరియు ఆచరణ.',
-  'v.jyotisha.count': 'సంప్రదింపు, శిక్షణ',
-
+  'v.jyotisha.name': 'జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు',
+  'v.jyotisha.sub':
+    'జ్యోతిష శాస్త్రం మరియు దానికి అనుబంధంగా ఉన్న వివిధ విద్యల సంప్రదాయ పరిజ్ఞానం',
   'v.numero.name': 'సంఖ్యా శాస్త్రం',
   'v.numero.sub': 'సంఖ్యలు మరియు నామాలకు సంబంధించిన అధ్యయనం',
-  'v.numero.desc':
-    'జన్మ సంఖ్య, భాగ్య సంఖ్య, నామ సంఖ్య, పేరు, స్పెల్లింగ్, నామకరణం మరియు సంఖ్యా అనుకూలతకు సంబంధించిన అధ్యయనం.',
-  'v.numero.count': 'సంప్రదింపు, శిక్షణ',
-
-  'v.swara.name': 'ఆధ్యాత్మిక & వేద విద్యలు',
-  'v.swara.sub': 'మంత్రం, ధ్యానం, స్వరం, ఆత్మజ్ఞానం',
-  'v.swara.desc':
-    'మంత్రం, ధ్యానం, స్వర సాధన, ఆత్మజ్ఞాన సంబంధిత అంశాలు మరియు ఇతర ఆధ్యాత్మిక విద్యలను క్రమబద్ధంగా అధ్యయనం చేయడానికి మార్గదర్శనం.',
-  'v.swara.count': 'మార్గదర్శనం, అధ్యయనం',
+  'v.swara.name': 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
+  'v.swara.sub':
+    'ధ్యానం, మంత్రం, స్వర శాస్త్రం, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అధ్యయనం, సాధన మరియు మార్గదర్శనం',
 
   's.vastu.1': 'స్థల వాస్తు — దిక్కు, ఆకారం, వాలు, రహదారి ముఖం',
   's.vastu.2': 'ఇల్లు, విల్లా వాస్తు',
@@ -407,43 +363,7 @@ export const te: Record<StringKey, string> = {
   'mega.training': 'శిక్షణ',
 
   'sig.eyebrow': 'సేవలు',
-  'sig.title': 'మా ప్రధాన సేవలు',
-  'sig.lede':
-    'మీ వ్యక్తిగత, కుటుంబ, విద్య, వృత్తి, వ్యాపార, ఆర్థిక, ఆరోగ్య సంబంధిత అంశాలు, స్థలం, నిర్మాణం మరియు ఇతర ముఖ్య అవసరాలు, సమస్యలు, సందేహాలు మరియు నిర్ణయాలకు అనుగుణంగా సంబంధిత శాస్త్రాల ఆధారంగా తగిన మార్గదర్శకత్వం అందించబడుతుంది.',
-
-  'grp.vastu': 'వాస్తు శాస్త్రం',
-  'grp.jyotisha': 'జ్యోతిష శాస్త్రం',
-  'grp.numerology': 'సంఖ్యా శాస్త్రం',
-
-  'ms.vastu.1.name': 'వాస్తు సంప్రదింపులు — నివాస, వాణిజ్య మరియు పారిశ్రామిక ప్రదేశాలు',
-  'ms.vastu.1.desc':
-    'స్థలం, కొత్త నిర్మాణం, నిర్మాణంలో ఉన్న భవనాలు, ఇప్పటికే ఉన్న ఇల్లు లేదా భవనంలో మార్పులు, కార్యాలయాలు, వ్యాపార ప్రదేశాలు, ఫ్యాక్టరీలు, గోదాములు మరియు ఇతర నిర్మాణాలకు సంబంధించిన వాస్తు అవసరాలు, సమస్యలు మరియు సందేహాలను పరిశీలించి, తగిన మార్గదర్శకత్వం మరియు అవసరమైన సూచనలు అందించడం.',
-
-  'ms.jyo.1.name': 'జన్మ జాతక విశ్లేషణ',
-  'ms.jyo.1.desc':
-    'వ్యక్తిగత స్వభావం, విద్య, ఉద్యోగం, వృత్తి, వ్యాపారం, ఆర్థిక పరిస్థితులు, వివాహం, కుటుంబం, సంతానం, ఆరోగ్యం, ఆస్తి, విదేశీ ప్రయాణం, విదేశీ విద్య లేదా ఉద్యోగం, విదేశీ స్థిరనివాసం మరియు జీవితంలోని ఇతర ముఖ్య అంశాలపై జ్యోతిష్య పరిశీలన మరియు మార్గదర్శకత్వం అందించడం.',
-  'ms.jyo.2.name': 'ప్రశ్న శాస్త్రం',
-  'ms.jyo.2.desc':
-    'జన్మ వివరాలు అందుబాటులో లేని సందర్భాల్లో లేదా ఒక నిర్దిష్ట ప్రశ్నకు సమాధానం కోరినప్పుడు, ప్రశ్న సమయాన్ని ఆధారంగా చేసుకుని అడిగిన విషయానికి సంబంధించిన జ్యోతిష్య పరిశీలన మరియు మార్గదర్శకత్వం అందించడం.',
-  'ms.jyo.3.name': 'వివాహ అనుకూలత',
-  'ms.jyo.3.desc':
-    'వివాహానికి ముందు ఇరువురి జాతకాలను పరిశీలించి, వివాహ అనుకూలత, దాంపత్య సంబంధిత అంశాలు మరియు అవసరమైన ఇతర విషయాలపై మార్గదర్శకత్వం అందించడం. అవసరమైన సందర్భంలో సంఖ్యా శాస్త్ర అంశాలను కూడా పరిశీలించడం.',
-  'ms.jyo.4.name': 'ముహూర్తం, తేదీ మరియు సమయ నిర్ణయం',
-  'ms.jyo.4.desc':
-    'వివాహం, గృహప్రవేశం, భూమి పూజ, పునాది, రిజిస్ట్రేషన్, వ్యాపార ప్రారంభం, సంస్థ ప్రారంభం, ముఖ్య కార్యారంభాలు, వాహనం కొనుగోలు మరియు ఇతర శుభకార్యాలకు అనుకూలమైన తేదీ మరియు సమయాన్ని సూచించడం.',
-  'ms.jyo.5.name': 'సాముద్రిక శాస్త్ర సంప్రదింపులు',
-  'ms.jyo.5.desc':
-    'హస్తరేఖలు మరియు శరీర లక్షణాలకు సంబంధించిన సాముద్రిక శాస్త్ర సూత్రాల ఆధారంగా సంబంధిత అంశాలను పరిశీలించి మార్గదర్శకత్వం అందించడం.',
-
-  'ms.num.1.name': 'సంఖ్యా విశ్లేషణ మరియు నామకరణం',
-  'ms.num.1.desc':
-    'జన్మతేదీ, పేరు మరియు పేరు సవరణకు సంబంధించిన సంఖ్యా అంశాలను సమగ్రంగా పరిశీలించడం; శిశు నామకరణం, వ్యక్తిగత సంఖ్యా విశ్లేషణ, వ్యాపార/సంస్థ/బ్రాండ్ నామకరణం, మొబైల్ నంబర్, వాహన నంబర్ మరియు ఇంటి/ఫ్లాట్ నంబర్‌కు సంబంధించిన సంఖ్యా అంశాలను పరిశీలించి మార్గదర్శకత్వం అందించడం.',
-
-  'ms.mode': 'ఆన్‌లైన్ లేదా ప్రత్యక్షంగా',
-  'sig.feeTitle': 'సేవా వ్యవధి & రుసుము',
-  'sig.fee':
-    'ప్రతి సేవ యొక్క స్వభావం, అవసరం మరియు పని పరిధిని బట్టి సేవా వ్యవధి మరియు రుసుము ముందుగానే తెలియజేయబడతాయి.',
-  'sig.feeCta': 'రుసుము వివరాల కోసం సంప్రదించండి.',
+  'sig.title': 'ప్రధాన సేవలు',
 
   'meta.duration': 'వ్యవధి',
   'meta.mode': 'విధానం',
@@ -513,8 +433,6 @@ export const te: Record<StringKey, string> = {
   'crs.spiritual.desc':
     'ధ్యానం, మంత్రం, అంతర్ముఖ సాధన, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అంశాలపై అధ్యయనం, సాధన మరియు మార్గదర్శనం.',
 
-  'meta.level': 'కోర్సు స్థాయి',
-  'courses.level': 'కోర్సు స్వభావాన్ని బట్టి',
   'crs.levelsLabel': 'కోర్సు స్థాయిలు',
   'crs.levels': 'ప్రాథమిక స్థాయి నుండి ఉన్నత స్థాయి వరకు, కోర్సు స్వభావం మరియు అంశాల పరిధిని బట్టి',
   'courses.dur': 'కోర్సును బట్టి',
@@ -542,7 +460,7 @@ export const te: Record<StringKey, string> = {
     'ఇవ్వము. జ్యోతిషం, వాస్తు మరియు సంఖ్యా శాస్త్ర సంప్రదాయాల ఆధారంగా పరిశీలన మరియు మార్గదర్శనం అందిస్తాం. భవిష్యత్తు ఫలితాలకు హామీ ఇవ్వము.',
 
   'footer.disciplines':
-    'వాస్తు శాస్త్రం | జ్యోతిష శాస్త్రం | సంఖ్యా శాస్త్రం | ఆధ్యాత్మిక & వేద విద్యలు',
+    'వాస్తు శాస్త్రం | జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు | సంఖ్యా శాస్త్రం | స్వర శాస్త్రం | ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
   'footer.blurb':
     'వేద విద్యల అధ్యయనం, ఆచరణ మరియు బోధన కోసం ఒక కేంద్రం.',
   'footer.location': 'చిరునామా',

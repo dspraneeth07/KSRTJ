@@ -42,10 +42,10 @@ export interface Discipline {
 export const swaraPage = {
   path: '/services/spiritual',
 
-  eyebrow: { en: 'Fields of study', te: 'విద్యా విభాగం' },
+  eyebrow: { en: 'Educational Disciplines', te: 'విద్యా విభాగాలు' },
   title: {
-    en: 'Spiritual and Vedic studies.',
-    te: 'ఆధ్యాత్మిక & వేద విద్యలు.',
+    en: 'Spiritual Studies & Brahmavidya.',
+    te: 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య.',
   },
   lede: {
     en: 'Guidance for the systematic study of mantra, meditation, swara sadhana and subjects relating to self-knowledge. This is study taken up over time rather than a single consultation, so it is arranged differently from the other three fields.',

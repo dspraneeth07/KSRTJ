@@ -22,7 +22,6 @@ export const numerologyVertical: Vertical = {
   icon: 'numerology',
   nameKey: 'v.numero.name',
   subKey: 'v.numero.sub',
-  countKey: 'v.numero.count',
 
   eyebrow: { en: 'Vertical three of four', te: 'నాలుగింటిలో మూడో శాఖ' },
   title: {

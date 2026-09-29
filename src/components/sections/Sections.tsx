@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { faqs, pillars, processSteps, serviceGroups } from '../../data/content';
+import { faqs, pillars, processSteps } from '../../data/content';
+import { serviceBlocks, viewDetails } from '../../data/services';
+import { useBi } from '../../i18n/bi';
 import type { StringKey } from '../../i18n/strings';
 import { PillarIcon, YantraOutline } from '../Icons';
 import { Portrait } from '../Portrait';
@@ -62,23 +64,21 @@ export function Pillars() {
   return (
     <section className="section" id="pillars">
       <div className="wrap">
-        <SectionHead eyebrow="pillars.eyebrow" title="pillars.title" lede="pillars.lede" />
+        <SectionHead eyebrow="pillars.eyebrow" title="pillars.title" />
         <div className="pillars">
           {pillars.map((p, i) => (
-            <Reveal key={p.id} delay={i * 80}>
+            <Reveal key={p.id} delay={i * 70}>
               <Tilt className="pillar__tilt" max={6} lift={18}>
-                <article className="pillar">
+                <Link className="pillar" to={p.to}>
                   <div className="pillar__icon">
                     <PillarIcon name={p.icon} />
                   </div>
                   <h3 className="pillar__name">{t(p.name)}</h3>
-                  <p className="pillar__sub">{t(p.sub)}</p>
                   <p className="pillar__desc">{t(p.desc)}</p>
-                  <p className="pillar__count">{t(p.count)}</p>
-                  <a className="link" href="#book">
-                    {t(p.cta)}
-                  </a>
-                </article>
+                  <span className="pillar__go" aria-hidden="true">
+                    &rarr;
+                  </span>
+                </Link>
               </Tilt>
             </Reveal>
           ))}
@@ -91,44 +91,40 @@ export function Pillars() {
 /* ── signature consultations ────────────────────────────────────── */
 
 export function Signature() {
-  const { t } = useLang();
+  const { b, bl } = useBi();
+
   return (
     <section className="section section--paper2" id="signature">
       <div className="wrap">
-        <SectionHead eyebrow="sig.eyebrow" title="sig.title" lede="sig.lede" />
+        <SectionHead eyebrow="sig.eyebrow" title="sig.title" />
 
-        {serviceGroups.map((group) => (
-          <div className="msgroup" key={group.id}>
-            <Reveal className="msgroup__head" variant="lift">
-              <h3 className="msgroup__title">{t(group.title)}</h3>
+        {serviceBlocks.map((block) => (
+          <article className="msvc" id={`svc-${block.id}`} key={block.id}>
+            <Reveal className="msvc__head" variant="lift">
+              <h3 className="msvc__name">{b(block.name)}</h3>
+              <p className="msvc__standfirst">{b(block.standfirst)}</p>
             </Reveal>
 
-            <div className="msgrid">
-              {group.items.map((item, i) => (
-                <Reveal key={item.id} delay={(i % 3) * 70}>
-                  <Tilt className="ms__tilt" max={5} lift={14}>
-                    <article className="ms">
-                      <h4 className="ms__name">{t(item.name)}</h4>
-                      <p className="ms__desc">{t(item.desc)}</p>
-                      <p className="ms__mode">
-                        <span className="ms__modeLabel">{t('meta.mode')}</span>
-                        {t('ms.mode')}
-                      </p>
-                    </article>
-                  </Tilt>
+            <div className="msvc__clusters">
+              {block.clusters.map((cluster, i) => (
+                <Reveal className="msvccl" key={cluster.id} delay={(i % 3) * 60}>
+                  <h4 className="msvccl__label">{b(cluster.label)}</h4>
+                  <ul className="msvccl__list">
+                    {bl(cluster.items).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </Reveal>
               ))}
             </div>
-          </div>
-        ))}
 
-        <Reveal className="msfee" variant="lift">
-          <h3 className="msfee__title">{t('sig.feeTitle')}</h3>
-          <p className="msfee__body">{t('sig.fee')}</p>
-          <a className="link" href="#book">
-            {t('sig.feeCta')}
-          </a>
-        </Reveal>
+            <Reveal variant="lift">
+              <Link className="msvc__more" to={block.to}>
+                {b(viewDetails)} <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </Reveal>
+          </article>
+        ))}
       </div>
     </section>
   );

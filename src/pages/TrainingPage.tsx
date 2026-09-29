@@ -69,8 +69,8 @@ export default function TrainingPage() {
                         {group.kind === 'certificate' && (
                           <>
                             <div>
-                              <dt>{t('meta.level')}</dt>
-                              <dd>{t('courses.level')}</dd>
+                              <dt>{t('crs.levelsLabel')}</dt>
+                              <dd>{t('crs.levels')}</dd>
                             </div>
                             <div>
                               <dt>{t('meta.duration')}</dt>

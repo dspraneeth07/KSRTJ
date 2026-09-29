@@ -68,7 +68,6 @@ export interface Vertical {
   /** Vertical name and one-liner, reused from the homepage dictionary. */
   nameKey: StringKey;
   subKey: StringKey;
-  countKey: StringKey;
   eyebrow: Bi;
   title: Bi;
   lede: Bi;

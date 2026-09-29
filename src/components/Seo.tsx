@@ -28,12 +28,12 @@ const BRAND = 'Sanātana Vidyā Kendra';
 const pages: Record<string, Entry> = {
   '/': {
     title: {
-      en: `${BRAND} — Vastu, Jyotisha, Numerology & Vedic Studies`,
-      te: `${BRAND} — వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రం, వేద విద్యలు`,
+      en: `${BRAND} — Vastu, Jyotisha, Numerology, Swara & Brahmavidya`,
+      te: `${BRAND} — వాస్తు, జ్యోతిష, సంఖ్యా శాస్త్రం, స్వరం, బ్రహ్మవిద్య`,
     },
     description: {
-      en: 'A centre for the study, practice and teaching of Vastu Shastra, Jyotisha, Numerology and the spiritual and Vedic disciplines. Consultations and courses in Telugu and English, from Wanaparthy, Telangana.',
-      te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం, సంఖ్యా శాస్త్రం మరియు ఆధ్యాత్మిక–వేద విద్యల అధ్యయనం, ఆచరణ, బోధన కోసం ఒక కేంద్రం. తెలుగు, ఆంగ్లంలో సంప్రదింపులు, కోర్సులు. వనపర్తి, తెలంగాణ.',
+      en: 'Knowledge, practice, experience, research and teaching in Vastu Shastra, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya. Consultations and courses in Telugu and English, from Wanaparthy, Telangana.',
+      te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం, ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యలపై జ్ఞానం, ఆచరణ, అనుభవం, పరిశోధన మరియు బోధన. తెలుగు, ఆంగ్లంలో సంప్రదింపులు, కోర్సులు. వనపర్తి, తెలంగాణ.',
     },
   },
   '/about': {
@@ -88,8 +88,8 @@ const pages: Record<string, Entry> = {
   },
   '/services/jyotisha': {
     title: {
-      en: `Jyotisha — consultation and training · ${BRAND}`,
-      te: `జ్యోతిష శాస్త్రం — సంప్రదింపు, శిక్షణ · ${BRAND}`,
+      en: `Jyotisha Shastra & Allied Studies — consultation and training · ${BRAND}`,
+      te: `జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు — సంప్రదింపు, శిక్షణ · ${BRAND}`,
     },
     description: {
       en: 'Birth chart analysis, career, marriage and Guna Milan, dasha–bhukti and gochara, life-event timing, Prashna Jyotisham, Muhurtham and naming guidance.',
@@ -108,12 +108,12 @@ const pages: Record<string, Entry> = {
   },
   '/services/spiritual': {
     title: {
-      en: `Spiritual & Vedic Studies · ${BRAND}`,
-      te: `ఆధ్యాత్మిక & వేద విద్యలు · ${BRAND}`,
+      en: `Spiritual Studies & Brahmavidya · ${BRAND}`,
+      te: `ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య · ${BRAND}`,
     },
     description: {
-      en: 'Guidance for the systematic study of mantra, meditation, swara sadhana and subjects relating to self-knowledge, in Telugu and English.',
-      te: 'మంత్రం, ధ్యానం, స్వర సాధన మరియు ఆత్మజ్ఞాన సంబంధిత అంశాల క్రమబద్ధ అధ్యయనానికి మార్గదర్శనం — తెలుగు, ఆంగ్లంలో.',
+      en: 'Study, practice and guidance related to Swara Shastra, meditation, mantra, inner practice, self-knowledge and Brahmavidya, in Telugu and English.',
+      te: 'స్వర శాస్త్రం, ధ్యానం, మంత్రం, అంతర్ముఖ సాధన, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అధ్యయనం, సాధన మరియు మార్గదర్శనం — తెలుగు, ఆంగ్లంలో.',
     },
   },
 };

@@ -25,7 +25,6 @@ export const jyotishaVertical: Vertical = {
   icon: 'jyotisha',
   nameKey: 'v.jyotisha.name',
   subKey: 'v.jyotisha.sub',
-  countKey: 'v.jyotisha.count',
 
   eyebrow: { en: 'Vertical two of four', te: 'నాలుగింటిలో రెండో శాఖ' },
   title: {

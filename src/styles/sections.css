@@ -239,12 +239,46 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   font-weight: 600;
   text-shadow: 0 18px 46px rgba(0, 0, 0, 0.45);
 }
-.hero__lede {
+/* The five disciplines, between the name and the statement. Each item
+   carries its own leading rule, so the row keeps its rhythm when items
+   wrap onto a second line — a shared `·` separator would not. */
+.hero__disc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
   margin-top: 26px;
-  max-width: 600px;
-  font-size: clamp(16px, 1.3vw, 18.5px);
-  line-height: 1.76;
-  color: rgba(253, 249, 240, 0.76);
+  max-width: 660px;
+  list-style: none;
+  padding: 0;
+}
+.hero__disc li {
+  position: relative;
+  padding-left: 17px;
+  font-size: clamp(12.5px, 1vw, 14px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--amber-lit);
+}
+/* An upright hairline, not a dash: a horizontal rule in front of a word
+   reads as a hyphen attached to it. This reads as a separator, and still
+   does so on the first item of a wrapped second line. */
+.hero__disc li::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 0.24em;
+  bottom: 0.24em;
+  width: 1px;
+  background: var(--amber);
+  opacity: 0.55;
+}
+
+.hero__lede {
+  margin-top: 30px;
+  font-size: clamp(17px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--paper);
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 .hero__foot {
@@ -293,15 +327,17 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
 /* ── Pillars ───────────────────────────────────────────────────── */
 .pillars {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 .pillar__tilt { border-radius: 8px; }
 .pillar {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 34px 28px 30px;
+  padding: 30px 24px 26px;
+  text-decoration: none;
+  color: inherit;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: linear-gradient(168deg, var(--paper-3), #FAF3E4);
@@ -311,34 +347,33 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
 .tilt:hover .pillar { box-shadow: var(--shadow-lift); border-color: var(--line-amber); }
 
 .pillar__icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   color: var(--amber);
   margin-bottom: 24px;
   transform: translateZ(30px);
 }
 .pillar__icon svg { width: 100%; height: 100%; }
-.pillar__name { font-size: 21px; color: var(--orange); transform: translateZ(22px); }
-.pillar__sub {
-  margin-top: 7px;
-  font-size: 10.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+.pillar__name {
+  font-size: 18.5px;
+  line-height: 1.3;
+  color: var(--orange);
+  transform: translateZ(22px);
 }
+.pillar__go {
+  margin-top: auto;
+  font-size: 17px;
+  color: var(--orange);
+  transition: transform 0.3s var(--ease);
+}
+.tilt:hover .pillar__go { transform: translateX(5px); }
+
 .pillar__desc {
-  margin-top: 18px;
-  margin-bottom: 20px;
-  font-size: 14.5px;
+  margin-top: 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--ink-2);
-}
-.pillar__count {
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  font-size: 12px;
-  color: var(--amber-ink);
 }
 .pillar .link { margin-top: 16px; align-self: flex-start; }
 
@@ -692,6 +727,18 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
    Responsive
    ═══════════════════════════════════════════════════════════════════ */
 
+/* Five across needs more room than four did, so the pillars step down
+   one breakpoint earlier than the rest of the grids. */
+@media (max-width: 1180px) {
+  .pillars { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px) {
+  .pillars { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .pillars { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 1080px) {
   .pillars,
   .trust__grid,
@@ -926,101 +973,96 @@ html[lang='te'] .footer__meta dt {
 .footer__meta a { transition: color 0.25s var(--ease); }
 .footer__meta a:hover { color: var(--amber-soft); }
 
-/* ── Main services, grouped by discipline ─────────────────────────
-   Replaces the old flat row of six cards. The disciplines have very
-   different service counts (1 / 5 / 1), so a single grid would have
-   left orphans; grouping makes the imbalance read as structure. */
-.msgroup + .msgroup { margin-top: clamp(40px, 5vw, 64px); }
-.msgroup__head {
-  padding-bottom: 14px;
-  margin-bottom: 22px;
-  border-bottom: 1px solid var(--line-amber);
-}
-.msgroup__title {
-  font-size: clamp(19px, 2vw, 24px);
-  font-weight: 600;
-  color: var(--orange);
-  letter-spacing: -0.026em;
-}
-
-.msgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-/* A lone service should not stretch across the full width. */
-.msgroup:has(.msgrid > *:only-child) .msgrid { grid-template-columns: repeat(2, 1fr); }
-
-.ms {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 28px 26px 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--paper-3);
-  box-shadow: var(--shadow-flat);
-  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
-}
-.tilt:hover .ms { box-shadow: var(--shadow-lift); border-color: var(--line-amber); }
-
-.ms__name {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.34;
-  letter-spacing: -0.022em;
-  color: var(--orange);
-  transform: translateZ(16px);
-}
-html[lang='te'] .ms__name { font-size: 17px; line-height: 1.5; }
-.ms__desc {
-  margin-top: 14px;
-  font-size: 14.5px;
-  line-height: 1.72;
-  color: var(--ink-2);
-  flex-grow: 1;
-}
-.ms__mode {
-  margin-top: 22px;
-  padding-top: 16px;
+/* ── Main services ────────────────────────────────────────────────
+   One band per discipline: a heading, then the clusters a client
+   actually arrives with, as plain lists. Cards were the wrong
+   container here — there are eighty-odd items, and a visitor wants to
+   scan for their own situation, not read every card. */
+.msvc + .msvc {
+  margin-top: clamp(44px, 5vw, 72px);
+  padding-top: clamp(44px, 5vw, 72px);
   border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  font-size: 12.5px;
+}
+.msvc__head { margin-bottom: clamp(24px, 3vw, 36px); }
+.msvc__name {
+  font-size: clamp(22px, 2.5vw, 31px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--orange);
+  line-height: 1.2;
+}
+html[lang='te'] .msvc__name { line-height: 1.42; }
+.msvc__standfirst {
+  margin-top: 10px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+.msvc__clusters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3vw, 38px) clamp(24px, 3vw, 44px);
+}
+
+.msvccl__label {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-amber);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--ink);
 }
-.ms__modeLabel { color: var(--ink-3); }
-
-/* ── Duration & fees ─────────────────────────────────────────────── */
-.msfee {
-  margin-top: clamp(44px, 5vw, 68px);
-  padding: 28px 30px;
-  border: 1px solid var(--line-amber);
-  border-radius: 8px;
-  background: var(--paper-3);
-  box-shadow: var(--shadow-flat);
-  max-width: 760px;
-  margin-inline: auto;
-  text-align: center;
-}
-.msfee__title {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--orange);
-  letter-spacing: -0.022em;
-}
-.msfee__body {
+.msvccl__list {
   margin-top: 12px;
-  font-size: 15px;
-  line-height: 1.76;
+  list-style: none;
+  padding: 0;
+}
+.msvccl__list li {
+  position: relative;
+  padding-left: 16px;
+  padding-block: 5px;
+  font-size: 14.5px;
+  line-height: 1.62;
   color: var(--ink-2);
 }
-.msfee .link { margin-top: 16px; }
+/* A drawn marker rather than a list bullet, so it aligns to the first
+   line of a wrapped item instead of to the middle of the block. */
+.msvccl__list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.92em;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--amber-ink);
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.msvc__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: clamp(22px, 2.6vw, 32px);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s var(--ease);
+}
+.msvc__more:hover,
+.msvc__more:focus-visible { border-bottom-color: currentColor; }
+.msvc__more span { transition: transform 0.3s var(--ease); }
+.msvc__more:hover span { transform: translateX(4px); }
 
 @media (max-width: 1080px) {
-  .msgrid,
-  .msgroup:has(.msgrid > *:only-child) .msgrid { grid-template-columns: repeat(2, 1fr); }
+  .msvc__clusters { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 720px) {
-  .msgrid,
-  .msgroup:has(.msgrid > *:only-child) .msgrid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .msvc__clusters { grid-template-columns: 1fr; }
 }
 
 /* ── Training: certificate courses and study programmes ───────────

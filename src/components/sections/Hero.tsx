@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 import { YantraOutline } from '../Icons';
@@ -70,22 +71,34 @@ export function Hero() {
       </div>
 
       <div className="wrap hero__inner" ref={layers}>
-        <p className="eyebrow eyebrow--light hero__layer" style={{ ['--depth' as string]: 26 }}>
-          {t('hero.eyebrow')}
-        </p>
-        <h1 className="hero__title hero__layer" style={{ ['--depth' as string]: 18 }}>
+        <h1 className="hero__title hero__layer" style={{ ['--depth' as string]: 20 }}>
           {t('hero.title')}
         </h1>
-        <p className="hero__lede hero__layer" style={{ ['--depth' as string]: 11 }}>
+
+        {/* The five disciplines, set as one rule-separated line. Split on
+            the middot so each reads as its own item at any width rather
+            than wrapping mid-name. */}
+        <ul className="hero__disc hero__layer" style={{ ['--depth' as string]: 14 }}>
+          {t('brand.full')
+            .split('·')
+            .map((part) => part.trim())
+            .filter(Boolean)
+            .map((part) => (
+              <li key={part}>{part}</li>
+            ))}
+        </ul>
+
+        <p className="hero__lede hero__layer" style={{ ['--depth' as string]: 10 }}>
           {t('hero.lede')}
         </p>
+
         <div className="hero__actions hero__layer" style={{ ['--depth' as string]: 7 }}>
-          <a className="btn btn--amber btn--lg" href="#book">
+          <Link className="btn btn--amber btn--lg" to="/contact">
             {t('cta.book')}
-          </a>
-          <a className="btn btn--ghost btn--lg" href="#process">
-            {t('cta.howItWorks')}
-          </a>
+          </Link>
+          <Link className="btn btn--ghost btn--lg" to="/training">
+            {t('nav.courses')}
+          </Link>
         </div>
         <p className="hero__foot">{t('hero.foot')}</p>
       </div>
