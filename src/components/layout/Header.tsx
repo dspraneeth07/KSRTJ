@@ -127,7 +127,12 @@ export function Header() {
           </span>
         </Link>
 
+        {/* Dims the page behind the drawer and closes it on a tap. Only
+            painted on phones; `hidden` keeps it out of the tab order. */}
+        <div className="scrim" hidden={!drawerOpen} onClick={closeAll} aria-hidden="true" />
+
         <nav className={`nav ${drawerOpen ? 'is-open' : ''}`} id="nav" aria-label="Primary">
+          <p className="nav__heading">{t('brand.name')}</p>
           <ul className="nav__list">
             <li className="nav__item nav__item--mega">
               <button
@@ -156,6 +161,19 @@ export function Header() {
               </li>
             ))}
           </ul>
+
+          {/* The two actions the header hides on a phone, given back at
+              the foot of the drawer where there is room for them. */}
+          <div className="nav__foot">
+            <Link className="btn btn--amber btn--lg nav__book" to="/contact" onClick={closeAll}>
+              {t('cta.book')}
+            </Link>
+            <a className="nav__call" href={PHONE_TEL}>
+              <ContactIcon name="phone" className="nav__callIcon" />
+              <span>{t('utility.call')}</span>
+            </a>
+            <p className="nav__hours">{t('utility.hours')}</p>
+          </div>
         </nav>
 
         <div className="header__cta">
