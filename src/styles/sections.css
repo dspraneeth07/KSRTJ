@@ -592,7 +592,21 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   gap: 7px;
 }
 .course__meta > div { display: flex; justify-content: space-between; gap: 14px; font-size: 12.5px; }
-.course__meta dt { color: var(--ink-3); }
+.course__meta dt { color: var(--ink-3); flex: 0 0 auto; }
+.course__meta dd { text-align: right; }
+/* The course-levels value is a sentence, not a word. Left to share the
+   row it squeezes the label onto two lines and reads as a broken table,
+   so it takes the full width with the label above it. */
+.course__meta > div:has(dd.course__long) {
+  display: block;
+  padding-bottom: 3px;
+}
+.course__meta dd.course__long {
+  margin-top: 2px;
+  text-align: left;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
 
 /* ── Testimonials ──────────────────────────────────────────────── */
 .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(26px, 3.2vw, 48px); }

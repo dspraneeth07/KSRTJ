@@ -180,26 +180,26 @@ export const en = {
   'courses.eyebrow': 'Training',
   'courses.title': 'Training & Educational Programs',
   'courses.lede':
-    'Structured teaching and study guidance is provided for learning Vastu, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya, based on relevant texts, principles, and practical approaches.',
+    'Structured teaching and study guidance is provided for learning Vastu Shastra, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya, based on relevant texts, principles, and practical approaches.',
 
   'courses.grp.cert': 'Certificate Courses',
   'courses.grp.study': 'Study Programs',
 
   'crs.vastu.name': 'Vastu Shastra',
   'crs.vastu.desc':
-    'Systematic teaching of the principles, methods and practical aspects of Vastu Shastra according to the nature and level of the course.',
+    'Systematic teaching of the principles, methods, and practical aspects of Vastu Shastra according to the nature and level of the course.',
   'crs.jyo.name': 'Jyotisha Shastra & Allied Studies',
   'crs.jyo.desc':
-    'Systematic teaching of relevant principles, methods and practical aspects of Jyotisha Shastra & Allied Studies according to the nature and level of the course.',
+    'Systematic teaching of relevant principles, methods, and practical aspects of Jyotisha Shastra & Allied Studies according to the nature and level of the course.',
   'crs.num.name': 'Numerology',
   'crs.num.desc':
-    'Systematic teaching of relevant principles, methods and practical aspects of Numerology according to the nature and level of the course.',
+    'Systematic teaching of relevant principles, methods, and practical aspects of Numerology according to the nature and level of the course.',
   'crs.swara.name': 'Swara Shastra',
   'crs.swara.desc':
-    'Study and guidance on breath flow, Nadi flow, nature of Swara, time-related observations and related aspects of Swara Shastra.',
+    'Study and guidance on breath flow, Nadi flow, the nature of Swara, time-related observations, and related aspects of Swara Shastra.',
   'crs.spiritual.name': 'Spiritual Studies & Brahmavidya',
   'crs.spiritual.desc':
-    'Study, practice and guidance related to meditation, mantra, inner practice, self-knowledge and Brahmavidya.',
+    'Study, practice, and guidance related to meditation, mantra practice, inner practice, self-knowledge, and Brahmavidya.',
 
   'crs.levelsLabel': 'Course Levels',
   'crs.levels': 'From foundational to advanced levels, depending on the nature and scope of the course',
@@ -407,7 +407,7 @@ export const te: Record<StringKey, string> = {
   'courses.eyebrow': 'శిక్షణ',
   'courses.title': 'శిక్షణ & విద్యా కార్యక్రమాలు',
   'courses.lede':
-    'వాస్తు, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యకు సంబంధించిన అంశాలను క్రమబద్ధంగా నేర్చుకోవడానికి, సంబంధిత శాస్త్ర గ్రంథాలు, సూత్రాలు మరియు ఆచరణాత్మక విధానాల ఆధారంగా బోధన మరియు అధ్యయన మార్గదర్శనం అందించబడుతుంది.',
+    'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యకు సంబంధించిన అంశాలను క్రమబద్ధంగా నేర్చుకోవడానికి, సంబంధిత శాస్త్ర గ్రంథాలు, సూత్రాలు మరియు ఆచరణాత్మక విధానాల ఆధారంగా బోధన మరియు అధ్యయన మార్గదర్శనం అందించబడుతుంది.',
 
   'courses.grp.cert': 'సర్టిఫికేట్ కోర్సులు',
   'courses.grp.study': 'అధ్యయన కార్యక్రమాలు',
@@ -426,7 +426,7 @@ export const te: Record<StringKey, string> = {
     'శ్వాస ప్రవాహం, నాడీ ప్రవాహం, స్వర స్వభావం, కాల సంబంధిత పరిశీలనలు మరియు స్వర శాస్త్రానికి సంబంధించిన అంశాలపై అధ్యయనం మరియు మార్గదర్శనం.',
   'crs.spiritual.name': 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
   'crs.spiritual.desc':
-    'ధ్యానం, మంత్రం, అంతర్ముఖ సాధన, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అంశాలపై అధ్యయనం, సాధన మరియు మార్గదర్శనం.',
+    'ధ్యానం, మంత్ర సాధన, అంతర్ముఖ సాధన, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అంశాలపై అధ్యయనం, సాధన మరియు మార్గదర్శనం.',
 
   'crs.levelsLabel': 'కోర్సు స్థాయిలు',
   'crs.levels': 'ప్రాథమిక స్థాయి నుండి ఉన్నత స్థాయి వరకు, కోర్సు స్వభావం మరియు అంశాల పరిధిని బట్టి',

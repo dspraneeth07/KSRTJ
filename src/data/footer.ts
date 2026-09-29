@@ -26,12 +26,12 @@ export const footerDisciplines: FooterColumn[] = [
     to: '/services/vastu',
     items: {
       en: [
-        'Site Vastu — direction, shape, slope, road frontage',
-        'House and villa Vastu',
-        'Flat and apartment Vastu',
-        'Ayadi calculations',
+        'Plot Vastu — direction, shape, slope, road frontage',
+        'House & villa Vastu',
+        'Flat & apartment Vastu',
+        'Ayadi Ganitham',
         'Industrial Vastu',
-        'Practical Vastu remedy suggestions',
+        'Practical Vastu remedies, where applicable',
       ],
       te: [
         'స్థల వాస్తు — దిక్కు, ఆకారం, వాలు, రహదారి ముఖం',
@@ -39,7 +39,7 @@ export const footerDisciplines: FooterColumn[] = [
         'ఫ్లాట్, అపార్ట్‌మెంట్ వాస్తు',
         'ఆయాది గణితం',
         'పారిశ్రామిక వాస్తు',
-        'వాస్తు సంబంధిత ఆచరణాత్మక పరిహార సూచనలు',
+        'అవసరమైన చోట ఆచరణాత్మక వాస్తు పరిహార సూచనలు',
       ],
     },
   },
@@ -52,12 +52,12 @@ export const footerDisciplines: FooterColumn[] = [
     to: '/services/jyotisha',
     items: {
       en: [
-        'Birth horoscope analysis',
+        'Birth chart analysis (Janma Jataka)',
         'Marriage compatibility',
-        'Assessment based on Dasha–Bhukti and transits',
+        'Dasha–bhukti and gochara-based assessment',
         'Prashna Shastra',
-        'Selection of Muhurta, date and time',
-        'Naming based on Nakshatra and Pada',
+        'Muhurta, date & time selection',
+        'Naming based on Nakshatra & Pada',
       ],
       te: [
         'జన్మ జాతక విశ్లేషణ',
@@ -75,11 +75,11 @@ export const footerDisciplines: FooterColumn[] = [
     to: '/services/numerology',
     items: {
       en: [
-        'Personal name and spelling correction',
-        'Naming of children',
-        'Brand names',
-        'House and flat number compatibility',
-        'Date selection based on numbers',
+        'Personal name & spelling correction',
+        'Child naming',
+        'Brand name',
+        'House & flat number compatibility',
+        'Date selection by number',
         'Signature analysis',
       ],
       te: [
@@ -101,13 +101,18 @@ export interface FooterLink {
 }
 
 export const footerCentre = {
-  title: { en: 'Centre', te: 'కేంద్రం' } satisfies Bi,
+  title: { en: 'The Centre', te: 'కేంద్రం' } satisfies Bi,
   links: [
-    { id: 'about', label: { en: 'About Us', te: 'మా గురించి' }, to: '/about' },
+    { id: 'about', label: { en: 'About', te: 'మా గురించి' }, to: '/about' },
     { id: 'services', label: { en: 'Services', te: 'సేవలు' }, to: '/#signature' },
     { id: 'training', label: { en: 'Training', te: 'శిక్షణ' }, to: '/training' },
+    {
+      id: 'certificates',
+      label: { en: 'Certificate Courses', te: 'సర్టిఫికేట్ కోర్సులు' },
+      to: '/training/certificate-courses',
+    },
     { id: 'process', label: { en: 'Process', te: 'ప్రక్రియ' }, to: '/contact#process' },
-    { id: 'faq', label: { en: 'FAQs', te: 'ప్రశ్నలు' }, to: '/#faq' },
+    { id: 'faq', label: { en: 'Questions', te: 'ప్రశ్నలు' }, to: '/#faq' },
     { id: 'contact', label: { en: 'Contact', te: 'సంప్రదించండి' }, to: '/contact' },
   ] satisfies FooterLink[],
 };

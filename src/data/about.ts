@@ -15,8 +15,8 @@ export const about = {
 
   /** The standfirst beside the photograph. */
   standfirst: {
-    en: 'With 12+ years of experience in Vastu Shastra, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya, he founded this centre with a continued focus on practice, research, and teaching.',
-    te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యపై 12+ సంవత్సరాల అనుభవంతో, వాటి ఆచరణ, పరిశోధన మరియు బోధనను కొనసాగిస్తూ ఈ కేంద్రాన్ని ప్రారంభించారు.',
+    en: 'With 15+ years of experience in Vastu Shastra, Jyotisha Shastra & Allied Studies, Numerology, Swara Shastra, and Spiritual Studies & Brahmavidya, he founded this centre with a continued focus on practice, research, and teaching.',
+    te: 'వాస్తు శాస్త్రం, జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు, సంఖ్యా శాస్త్రం, స్వర శాస్త్రం మరియు ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యపై 15+ సంవత్సరాల అనుభవంతో, వాటి ఆచరణ, పరిశోధన మరియు బోధనను కొనసాగిస్తూ ఈ కేంద్రాన్ని ప్రారంభించారు.',
   },
   place: { en: 'KDR Nagar · Wanaparthy · Telangana', te: 'కేడీఆర్ నగర్ · వనపర్తి · తెలంగాణ' },
 
