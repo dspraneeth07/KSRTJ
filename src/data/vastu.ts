@@ -329,6 +329,7 @@ export const vastuVertical: Vertical = {
   icon: 'vastu',
   nameKey: 'v.vastu.name',
   subKey: 'v.vastu.sub',
+  eyebrow: { en: 'First of Five Main Areas', te: 'ఐదు ప్రధాన విభాగాల్లో మొదటిది' },
   title: { en: 'Vastu Shastra', te: 'వాస్తు శాస్త్రం' },
   standfirst: {
     en: 'A Traditional Discipline Based on Space, Direction and Measurement',

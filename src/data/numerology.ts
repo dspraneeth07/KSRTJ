@@ -23,7 +23,10 @@ export const numerologyVertical: Vertical = {
   nameKey: 'v.numero.name',
   subKey: 'v.numero.sub',
 
-  eyebrow: { en: 'Vertical three of four', te: 'నాలుగింటిలో మూడో శాఖ' },
+  eyebrow: {
+    en: 'Third of Five Main Areas',
+    te: 'ఐదు ప్రధాన విభాగాల్లో మూడోది',
+  },
   title: {
     en: 'Three numbers you cannot change, and one you can.',
     te: 'మార్చలేని మూడు సంఖ్యలు, మార్చగలిగే ఒకటి.',
