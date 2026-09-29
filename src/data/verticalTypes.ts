@@ -29,15 +29,22 @@ export interface Service {
   cluster: string;
   name: Bi;
   definition: Bi;
-  examine: BiList;
-  who: Bi;
-  receive: Bi;
-  cta: Bi;
-  mode: ConsultMode;
+  /**
+   * The expandable detail. A service that carries none is rendered as a
+   * plain row instead of a toggle — better than an accordion that opens
+   * onto nothing.
+   */
+  examine?: BiList;
+  who?: Bi;
+  receive?: Bi;
+  cta?: Bi;
+  mode?: ConsultMode;
   /** Turnaround for a deliverable, or session length for a sitting. */
-  timing: Bi;
+  timing?: Bi;
   /** Placeholder — real figures go in here. See README. */
-  fee: string;
+  fee?: string;
+  /** A second paragraph under the definition, where one is needed. */
+  note?: Bi;
   /**
    * Responsible-framing callout, rendered as a distinct block. Used where a
    * reading touches medicine, fertility or anything a client could mistake
@@ -51,7 +58,7 @@ export interface Bundle {
   name: Bi;
   includes: string[];
   /** Services from other verticals, named rather than linked. */
-  crossVertical?: Bi;
+  crossVertical?: BiList;
   value: Bi;
 }
 
@@ -68,18 +75,21 @@ export interface Vertical {
   /** Vertical name and one-liner, reused from the homepage dictionary. */
   nameKey: StringKey;
   subKey: StringKey;
-  eyebrow: Bi;
+  eyebrow?: Bi;
   title: Bi;
-  lede: Bi;
+  /** One line under the title, where the title is just the name. */
+  standfirst?: Bi;
+  /** Paragraph runs: these sections argue rather than label. */
+  lede: Bi[];
   framingTitle: Bi;
-  framing: Bi;
+  framing: Bi[];
   /** Column label for the per-service duration/turnaround field. */
-  timingLabel: Bi;
+  timingLabel?: Bi;
   filterAll: Bi;
   bundlesTitle: Bi;
   bundlesLede: Bi;
   faqTitle: Bi;
-  feeLede: Bi;
+  feeLede: Bi[];
   ctaTitle: Bi;
   ctaLede: Bi;
   clusters: Cluster[];

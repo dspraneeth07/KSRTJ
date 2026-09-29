@@ -1,114 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { useBi } from '../../i18n/bi';
-import { megaColumns, navLinks } from '../../data/content';
-import { verticalById } from '../../data/verticals';
-import { swaraPage } from '../../data/swara';
-import type { Vertical } from '../../data/verticalTypes';
-import { BrandMark } from '../Icons';
-
-/**
- * A vertical's mega-menu column, grouped into its own clusters. Fifteen or
- * nineteen links in a flat list is a wall of text; grouped by where the
- * client actually is, it stays scannable.
- */
-function VerticalMegaColumn({
-  vertical,
-  onNavigate,
-}: {
-  vertical: Vertical;
-  onNavigate: () => void;
-}) {
-  const { t } = useLang();
-  const { b } = useBi();
-
-  return (
-    <section className="mega__col mega__col--grouped">
-      <h3 className="mega__title">
-        <Link to={vertical.path} onClick={onNavigate}>
-          {t(vertical.nameKey)}
-        </Link>
-      </h3>
-      <p className="mega__blurb">{t(vertical.subKey)}</p>
-
-      {vertical.clusters.map((cluster) => (
-        <div className="mega__group" key={cluster.id}>
-          <h4 className="mega__groupTitle">{b(cluster.label)}</h4>
-          <ul className="mega__list">
-            {vertical.services
-              .filter((service) => service.cluster === cluster.id)
-              .map((service) => (
-                <li key={service.id}>
-                  <Link to={`${vertical.path}#services`} onClick={onNavigate}>
-                    {b(service.name)}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-      ))}
-
-      <Link className="mega__all" to={vertical.path} onClick={onNavigate}>
-        {t('mega.seeAll')} →
-      </Link>
-    </section>
-  );
-}
-
-/**
- * The fourth column carries two disciplines rather than a dozen services,
- * so it is set as two substantial blocks with a line of description each.
- * A bullet list of two items would look like an unfinished column.
- */
-function SwaraMegaColumn({ onNavigate }: { onNavigate: () => void }) {
-  const { t } = useLang();
-  const { b } = useBi();
-
-  return (
-    <section className="mega__col mega__col--pair">
-      <h3 className="mega__title">
-        <Link to={swaraPage.path} onClick={onNavigate}>
-          {t('v.swara.name')}
-        </Link>
-      </h3>
-      <p className="mega__blurb">{t('v.swara.sub')}</p>
-
-      <div className="mega__pair">
-        {swaraPage.disciplines.map((discipline) => (
-          <Link
-            className="mega__pairItem"
-            to={`${swaraPage.path}#${discipline.id}`}
-            key={discipline.id}
-            onClick={onNavigate}
-          >
-            <span className="mega__pairName">{b(discipline.name)}</span>
-            <span className="mega__pairLine">{b(discipline.standfirst)}</span>
-          </Link>
-        ))}
-      </div>
-
-      <h3 className="mega__title mega__title--sub">{t('mega.training')}</h3>
-      <ul className="mega__list">
-        {(
-          [
-            'crs.vastu.name',
-            'crs.jyo.name',
-            'crs.num.name',
-            'crs.swara.name',
-            'crs.spiritual.name',
-          ] as const
-        ).map((k) => (
-          <li key={k}>
-            <Link to="/training" onClick={onNavigate}>
-              {t(k)}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
+import { navLinks, serviceNav } from '../../data/content';
+import { PHONE_TEL } from '../../data/contact';
+import { BrandMark, ContactIcon } from '../Icons';
 
 export function UtilityBar() {
   const { t, lang, setLang } = useLang();
@@ -117,8 +12,9 @@ export function UtilityBar() {
       <div className="wrap utility__inner">
         <p className="utility__note">{t('utility.hours')}</p>
         <div className="utility__actions">
-          <a className="utility__link" href="tel:+918309096407">
-            {t('utility.call')}
+          <a className="utility__link utility__call" href={PHONE_TEL}>
+            <ContactIcon name="phone" className="utility__callIcon" />
+            <span>{t('utility.call')}</span>
           </a>
           <div className="langswitch" role="group" aria-label="Language">
             <button
@@ -198,48 +94,18 @@ export function Header() {
     closeTimer.current = window.setTimeout(() => setMegaOpen(false), 160);
   };
 
+  // Headings only: each one goes to the page that holds its detail.
   const megaPanel = (
     <div className="mega" id="mega" hidden={!megaOpen}>
-      <div className="wrap mega__grid">
-        {megaColumns.map((col) => {
-          if (col.id === 'swara') return <SwaraMegaColumn key={col.id} onNavigate={closeAll} />;
-          const vertical = verticalById[col.id];
-          return vertical ? (
-            <VerticalMegaColumn key={col.id} vertical={vertical} onNavigate={closeAll} />
-          ) : (
-          <section className="mega__col" key={col.id}>
-            <h3 className="mega__title">
-              <a href="#pillars" onClick={closeAll}>
-                {t(col.title)}
-              </a>
-            </h3>
-            <ul className="mega__list">
-              {col.items.map((item) => (
-                <li key={item}>
-                  <a href="#book" onClick={closeAll}>
-                    {t(item)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            {col.extraTitle && col.extraItems && (
-              <>
-                <h3 className="mega__title mega__title--sub">{t(col.extraTitle)}</h3>
-                <ul className="mega__list">
-                  {col.extraItems.map((item) => (
-                    <li key={item}>
-                      <Link to="/training" onClick={closeAll}>
-                        {t(item)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-          </section>
-          );
-        })}
-      </div>
+      <ul className="mega__list">
+        {serviceNav.map((item) => (
+          <li key={item.id}>
+            <Link to={item.to} onClick={closeAll}>
+              {t(item.label)}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 

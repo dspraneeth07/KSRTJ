@@ -50,48 +50,24 @@ export const pillars: Pillar[] = [
   },
 ];
 
-export interface MegaColumn {
+export interface ServiceNavItem {
   id: string;
-  title: StringKey;
-  items: StringKey[];
-  extraTitle?: StringKey;
-  extraItems?: StringKey[];
+  label: StringKey;
+  to: string;
 }
 
-export const megaColumns: MegaColumn[] = [
-  {
-    id: 'vastu',
-    title: 'v.vastu.name',
-    items: [
-      's.vastu.1', 's.vastu.2', 's.vastu.3', 's.vastu.4', 's.vastu.5',
-      's.vastu.6', 's.vastu.7', 's.vastu.8', 's.vastu.9', 's.vastu.10',
-      's.vastu.11', 's.vastu.12', 's.vastu.13', 's.vastu.14', 's.vastu.15',
-    ],
-  },
-  {
-    id: 'jyotisha',
-    title: 'v.jyotisha.name',
-    items: [
-      's.jyo.1', 's.jyo.2', 's.jyo.3', 's.jyo.4', 's.jyo.5', 's.jyo.6',
-      's.jyo.7', 's.jyo.8', 's.jyo.9', 's.jyo.10', 's.jyo.11', 's.jyo.12',
-      's.jyo.13', 's.jyo.14', 's.jyo.15', 's.jyo.16', 's.jyo.17',
-    ],
-  },
-  {
-    id: 'numerology',
-    title: 'v.numero.name',
-    items: [
-      's.num.1', 's.num.2', 's.num.3', 's.num.4', 's.num.5', 's.num.6',
-      's.num.7', 's.num.8', 's.num.9', 's.num.10', 's.num.11',
-    ],
-  },
-  {
-    id: 'swara',
-    title: 'v.swara.name',
-    items: ['s.swa.1', 's.swa.2'],
-    extraTitle: 'mega.training',
-    extraItems: ['crs.vastu.name', 'crs.jyo.name', 'crs.num.name', 'crs.swara.name', 'crs.spiritual.name'],
-  },
+/**
+ * The Services menu — headings only.
+ *
+ * The sub-lists that used to sit here repeated each page's own contents,
+ * which made the menu a second sitemap to keep in step with the first.
+ */
+export const serviceNav: ServiceNavItem[] = [
+  { id: 'vastu', label: 'v.vastu.name', to: '/services/vastu' },
+  { id: 'jyotisha', label: 'v.jyotisha.name', to: '/services/jyotisha' },
+  { id: 'numerology', label: 'v.numero.name', to: '/services/numerology' },
+  { id: 'spiritual', label: 'v.swara.name', to: '/services/spiritual' },
+  { id: 'training', label: 'mega.training', to: '/training' },
 ];
 
 export interface ProcessStep {

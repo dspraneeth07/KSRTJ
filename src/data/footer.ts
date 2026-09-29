@@ -105,6 +105,13 @@ export const footerCentre = {
   links: [
     { id: 'about', label: { en: 'About', te: 'మా గురించి' }, to: '/about' },
     { id: 'services', label: { en: 'Services', te: 'సేవలు' }, to: '/#signature' },
+    /* The fourth discipline has no column of its own above, so without
+       this the footer would be the only place it cannot be reached. */
+    {
+      id: 'spiritual',
+      label: { en: 'Spiritual Studies & Brahmavidya', te: 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య' },
+      to: '/services/spiritual',
+    },
     { id: 'training', label: { en: 'Training', te: 'శిక్షణ' }, to: '/training' },
     {
       id: 'certificates',

@@ -1,42 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Service vertical pages + the grouped mega-menu column
+   Service vertical pages
    Shared by every vertical; nothing here is Vastu-specific.
    ═══════════════════════════════════════════════════════════════════ */
-
-/* ── Mega menu: the grouped Vastu column ───────────────────────── */
-.mega__blurb {
-  margin: -8px 0 18px;
-  font-size: 12.5px;
-  line-height: 1.6;
-  color: var(--ink-3);
-}
-.mega__group + .mega__group { margin-top: 18px; }
-.mega__groupTitle {
-  font-family: var(--f-latin);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  margin-bottom: 6px;
-}
-html[lang='te'] .mega__groupTitle {
-  font-family: var(--f-telugu);
-  text-transform: none;
-  letter-spacing: 0.02em;
-  font-size: 12px;
-}
-.mega__all {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--orange);
-  border-bottom: 1px solid var(--line-amber);
-  padding-bottom: 2px;
-  transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
-}
-.mega__all:hover { color: var(--amber); border-color: var(--amber); }
 
 /* ── Vertical hero ─────────────────────────────────────────────── */
 .vhero {
@@ -92,6 +57,15 @@ html[lang='te'] .mega__groupTitle {
   text-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
 }
 html[lang='te'] .vhero__title { font-size: clamp(26px, 3.6vw, 46px); }
+/* One line under a title that is only the discipline's name. */
+.vhero__standfirst {
+  margin-top: 14px;
+  max-width: 660px;
+  font-size: clamp(14.5px, 1.1vw, 16.5px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--amber-lit);
+}
 .vhero__lede {
   margin-top: 22px;
   max-width: 660px;
@@ -99,6 +73,7 @@ html[lang='te'] .vhero__title { font-size: clamp(26px, 3.6vw, 46px); }
   line-height: 1.78;
   color: rgba(253, 249, 240, 0.74);
 }
+.vhero__lede + .vhero__lede { margin-top: 16px; }
 
 /* ── Framing band ──────────────────────────────────────────────── */
 .vframe { padding-block: clamp(56px, 7vw, 92px); }
@@ -119,6 +94,7 @@ html[lang='te'] .vhero__title { font-size: clamp(26px, 3.6vw, 46px); }
   color: var(--ink-2);
   max-width: 68ch;
 }
+.vframe__text + .vframe__text { margin-top: 16px; }
 
 /* ── Filter bar ────────────────────────────────────────────────── */
 .vfilter {
@@ -201,6 +177,19 @@ html[lang='te'] .vhero__title { font-size: clamp(26px, 3.6vw, 46px); }
   gap: 16px;
   text-align: left;
   padding: 22px 22px 22px 20px;
+}
+/* A row with no panel: no caret column, and no pointer affordance. */
+.svc--flat .svc__toggle--static {
+  grid-template-columns: 46px minmax(200px, 300px) 1fr;
+  cursor: default;
+}
+.svc--flat:hover { border-color: var(--line); }
+.svc__note {
+  margin: -8px 22px 20px;
+  padding-left: 62px;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: var(--ink-3);
 }
 .svc__num {
   font-size: 12px;
@@ -466,7 +455,9 @@ html[lang='te'] .ftable thead th {
   .vframe__inner { grid-template-columns: 1fr; }
   .bundles { grid-template-columns: 1fr; }
   .svc__toggle { grid-template-columns: 40px 1fr 22px; }
+  .svc--flat .svc__toggle--static { grid-template-columns: 40px 1fr; }
   .svc__def { grid-column: 2 / 3; }
+  .svc__note { padding-left: 56px; }
   .svc__panel { padding-left: 22px; }
   .svc__grid { grid-template-columns: 1fr; gap: 0; }
 }
@@ -476,6 +467,7 @@ html[lang='te'] .ftable thead th {
   .vfilter { align-items: flex-start; }
   .svc__toggle { padding: 18px 16px; gap: 12px; }
   .svc__panel { padding: 0 16px 20px; }
+  .svc__note { margin-inline: 16px; padding-left: 52px; }
   /* Responsible-framing callout — visually distinct from the body copy so it
    is not mistaken for another selling point. */
 .svc__caution {

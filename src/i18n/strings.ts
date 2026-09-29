@@ -30,7 +30,7 @@ export const en = {
   'nav.menu': 'Menu',
   'nav.close': 'Close',
 
-  'cta.book': 'Book a consultation',
+  'cta.book': 'Book a Consultation',
   'cta.readFull': 'Read the full profile',
   'cta.instBrief': 'Get in touch',
   'cta.whatsapp': 'Ask on WhatsApp',
@@ -75,60 +75,12 @@ export const en = {
   'v.numero.name': 'Numerology',
   'v.numero.sub': 'The study of numbers and names',
   'v.swara.name': 'Spiritual Studies & Brahmavidya',
-  'v.swara.sub':
-    'Study, practice and guidance related to meditation, mantra, Swara Shastra, self-knowledge and Brahmavidya',
-
-  's.vastu.1': 'Plot Vastu — direction, shape, slope, road frontage',
-  's.vastu.2': 'House & villa Vastu',
-  's.vastu.3': 'Flat & apartment Vastu',
-  's.vastu.4': 'Main entrance analysis',
-  's.vastu.5': 'Room positioning & zoning',
-  's.vastu.6': 'Water & drainage placement',
-  's.vastu.7': 'Ayadi Ganitham',
-  's.vastu.8': 'Shop & office Vastu',
-  's.vastu.9': 'Commercial Vastu',
-  's.vastu.10': 'Industrial Vastu',
-  's.vastu.11': 'Educational institution Vastu',
-  's.vastu.12': 'Dosha identification',
-  's.vastu.13': 'Non-demolition remedies, where applicable',
-  's.vastu.14': 'New construction planning',
-  's.vastu.15': 'Existing building analysis',
-
-  's.jyo.1': 'Birth chart analysis (Janma Jataka)',
-  's.jyo.2': 'Education & knowledge path',
-  's.jyo.3': 'Career & profession',
-  's.jyo.4': 'Business & financial standing',
-  's.jyo.5': 'Income, property & wealth yogas',
-  's.jyo.6': 'Marriage & married life',
-  's.jyo.7': 'Compatibility (Guna Milan)',
-  's.jyo.8': 'Progeny & children',
-  's.jyo.9': 'Family & relationships',
-  's.jyo.10': 'Health astrology',
-  's.jyo.11': 'Foreign travel & settlement',
-  's.jyo.12': 'Dasha–bhukti & gochara',
-  's.jyo.13': 'Life-event timing',
-  's.jyo.14': 'Prashna Jyotisham',
-  's.jyo.15': 'Muhurtham',
-  's.jyo.16': 'Naming by Nakshatra & Pada',
-  's.jyo.17': 'Remedial measures',
-
-  's.num.1': 'Personal name & spelling correction',
-  's.num.2': 'Child naming',
-  's.num.3': 'Marriage compatibility by number',
-  's.num.4': 'Business name',
-  's.num.5': 'Company & institution name',
-  's.num.6': 'Brand name',
-  's.num.7': 'Mobile number compatibility',
-  's.num.8': 'Vehicle number compatibility',
-  's.num.9': 'House & flat number compatibility',
-  's.num.10': 'Date selection by number',
-  's.num.11': 'Signature analysis',
-
-  's.swa.1': 'Mantra, meditation and swara sadhana',
-  's.swa.2': 'Self-knowledge and related study',
 
 
-  'mega.seeAll': 'See details',
+
+
+
+
   'mega.training': 'Training',
 
   'sig.eyebrow': 'Services',
@@ -301,60 +253,12 @@ export const te: Record<StringKey, string> = {
   'v.numero.name': 'సంఖ్యా శాస్త్రం',
   'v.numero.sub': 'సంఖ్యలు మరియు నామాలకు సంబంధించిన అధ్యయనం',
   'v.swara.name': 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
-  'v.swara.sub':
-    'ధ్యానం, మంత్రం, స్వర శాస్త్రం, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అధ్యయనం, సాధన మరియు మార్గదర్శనం',
-
-  's.vastu.1': 'స్థల వాస్తు — దిక్కు, ఆకారం, వాలు, రహదారి ముఖం',
-  's.vastu.2': 'ఇల్లు, విల్లా వాస్తు',
-  's.vastu.3': 'ఫ్లాట్, అపార్ట్‌మెంట్ వాస్తు',
-  's.vastu.4': 'ముఖ ద్వార పరిశీలన',
-  's.vastu.5': 'గదుల స్థాన నిర్ణయం',
-  's.vastu.6': 'నీరు, మురుగు నీటి స్థానం',
-  's.vastu.7': 'ఆయాది గణితం',
-  's.vastu.8': 'దుకాణం, కార్యాలయ వాస్తు',
-  's.vastu.9': 'వాణిజ్య వాస్తు',
-  's.vastu.10': 'పారిశ్రామిక వాస్తు',
-  's.vastu.11': 'విద్యా సంస్థల వాస్తు',
-  's.vastu.12': 'వాస్తు దోష నిర్ధారణ',
-  's.vastu.13': 'అవకాశమున్న చోట కూల్చివేత లేని పరిహార సూచనలు',
-  's.vastu.14': 'నూతన నిర్మాణ ప్రణాళిక',
-  's.vastu.15': 'ప్రస్తుత భవన విశ్లేషణ',
-
-  's.jyo.1': 'జన్మ జాతక విశ్లేషణ',
-  's.jyo.2': 'విద్య, జ్ఞాన మార్గం',
-  's.jyo.3': 'ఉద్యోగం, వృత్తి',
-  's.jyo.4': 'వ్యాపారం, ఆర్థిక స్థితి',
-  's.jyo.5': 'ఆదాయం, ఆస్తి, ధన యోగాలు',
-  's.jyo.6': 'వివాహం, దాంపత్య జీవితం',
-  's.jyo.7': 'వివాహ అనుకూలత (గుణ మిలన్)',
-  's.jyo.8': 'సంతాన విషయాలు',
-  's.jyo.9': 'కుటుంబం, సంబంధాలు',
-  's.jyo.10': 'ఆరోగ్య జ్యోతిషం',
-  's.jyo.11': 'విదేశ ప్రయాణం, స్థిర నివాసం',
-  's.jyo.12': 'దశ–భుక్తి, గోచారం',
-  's.jyo.13': 'జీవిత సంఘటనల కాల నిర్ణయం',
-  's.jyo.14': 'ప్రశ్న జ్యోతిషం',
-  's.jyo.15': 'ముహూర్త నిర్ణయం',
-  's.jyo.16': 'నక్షత్ర, పాద ఆధారిత నామకరణం',
-  's.jyo.17': 'జ్యోతిష పరిహారాలు',
-
-  's.num.1': 'వ్యక్తిగత పేరు, స్పెల్లింగ్ సవరణ',
-  's.num.2': 'శిశు నామకరణం',
-  's.num.3': 'సంఖ్యల ఆధారంగా వివాహ అనుకూలత',
-  's.num.4': 'వ్యాపార నామం',
-  's.num.5': 'కంపెనీ, సంస్థ నామం',
-  's.num.6': 'బ్రాండ్ నామం',
-  's.num.7': 'మొబైల్ సంఖ్య అనుకూలత',
-  's.num.8': 'వాహన సంఖ్య అనుకూలత',
-  's.num.9': 'ఇల్లు, ఫ్లాట్ సంఖ్య అనుకూలత',
-  's.num.10': 'సంఖ్య ఆధారంగా తేదీ ఎంపిక',
-  's.num.11': 'సంతక విశ్లేషణ',
-
-  's.swa.1': 'మంత్రం, ధ్యానం, స్వర సాధన',
-  's.swa.2': 'ఆత్మజ్ఞానం, సంబంధిత అధ్యయనం',
 
 
-  'mega.seeAll': 'వివరాలు చూడండి',
+
+
+
+
   'mega.training': 'శిక్షణ',
 
   'sig.eyebrow': 'సేవలు',

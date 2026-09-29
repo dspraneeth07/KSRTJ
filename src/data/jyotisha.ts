@@ -31,18 +31,22 @@ export const jyotishaVertical: Vertical = {
     en: 'A chart is an instrument for reading, not a verdict.',
     te: 'జాతకం చదవడానికి ఒక సాధనం, తీర్పు కాదు.',
   },
-  lede: {
-    en: 'Jyotisha works from a calculated position of the planets at your moment of birth. What it offers is a reading of disposition and of timing — where the ground is firm and where it is not. It does not offer certainty, and we do not present it as though it did.',
-    te: 'మీ జనన క్షణంలో గ్రహాల స్థితిని గణించి జ్యోతిషం పని చేస్తుంది. అది ఇచ్చేది స్వభావం, కాలం గురించిన అవగాహన — ఎక్కడ నేల గట్టిగా ఉంది, ఎక్కడ లేదు అనే విషయం. అది నిశ్చయత ఇవ్వదు; ఇస్తుందని మేము చెప్పం.',
-  },
+  lede: [
+    {
+      en: 'Jyotisha works from a calculated position of the planets at your moment of birth. What it offers is a reading of disposition and of timing — where the ground is firm and where it is not. It does not offer certainty, and we do not present it as though it did.',
+      te: 'మీ జనన క్షణంలో గ్రహాల స్థితిని గణించి జ్యోతిషం పని చేస్తుంది. అది ఇచ్చేది స్వభావం, కాలం గురించిన అవగాహన — ఎక్కడ నేల గట్టిగా ఉంది, ఎక్కడ లేదు అనే విషయం. అది నిశ్చయత ఇవ్వదు; ఇస్తుందని మేము చెప్పం.',
+    },
+  ],
   framingTitle: {
     en: 'How a Jyotisha consultation runs here',
     te: 'ఇక్కడ జ్యోతిష సంప్రదింపు ఎలా జరుగుతుంది',
   },
-  framing: {
-    en: 'We need three things: date of birth, time of birth as precisely as it was recorded, and place of birth. The chart is calculated before you arrive, cross-checked against a second ayanamsa, and the divisional charts relevant to your question are prepared in advance — you are never billed for arithmetic done during your own sitting. Where the birth time is uncertain, we rectify it against documented life events first and tell you what confidence we reached. The first service below reads the whole chart; the rest are depth on a single area, and most people who take them have already had that first reading done. Consultations run in Telugu or English, online or in person, and every one ends in writing.',
-    te: 'మాకు మూడు వివరాలు కావాలి: జనన తేదీ, నమోదైనంత ఖచ్చితమైన జనన సమయం, జనన స్థలం. మీరు రాకముందే కుండలి గణించి, రెండో అయనాంశతో సరిపోల్చి, మీ ప్రశ్నకు సంబంధించిన వర్గ కుండలులు ముందుగానే సిద్ధం చేస్తాం — మీ సమావేశ సమయంలో లెక్కలకు వెచ్చించిన సమయానికి మీకు రుసుము ఉండదు. జనన సమయం మీద సందేహం ఉంటే, ధ్రువీకరించిన జీవిత సంఘటనల ఆధారంగా ముందుగా సవరించి, ఎంత నిశ్చయతకు చేరామో చెప్తాం. కింది మొదటి సేవ మొత్తం జాతకాన్ని చదువుతుంది; మిగిలినవి ఒక్కో అంశంపై లోతైన పరిశీలన — వాటిని తీసుకునే చాలామంది ఆ మొదటి పరిశీలన ఇప్పటికే చేయించుకుని ఉంటారు. సంప్రదింపులు తెలుగులో లేదా ఆంగ్లంలో, ఆన్‌లైన్ లేదా ప్రత్యక్షంగా; ప్రతి ఒక్కటీ లిఖిత రూపంలో ముగుస్తుంది.',
-  },
+  framing: [
+    {
+      en: 'We need three things: date of birth, time of birth as precisely as it was recorded, and place of birth. The chart is calculated before you arrive, cross-checked against a second ayanamsa, and the divisional charts relevant to your question are prepared in advance — you are never billed for arithmetic done during your own sitting. Where the birth time is uncertain, we rectify it against documented life events first and tell you what confidence we reached. The first service below reads the whole chart; the rest are depth on a single area, and most people who take them have already had that first reading done. Consultations run in Telugu or English, online or in person, and every one ends in writing.',
+      te: 'మాకు మూడు వివరాలు కావాలి: జనన తేదీ, నమోదైనంత ఖచ్చితమైన జనన సమయం, జనన స్థలం. మీరు రాకముందే కుండలి గణించి, రెండో అయనాంశతో సరిపోల్చి, మీ ప్రశ్నకు సంబంధించిన వర్గ కుండలులు ముందుగానే సిద్ధం చేస్తాం — మీ సమావేశ సమయంలో లెక్కలకు వెచ్చించిన సమయానికి మీకు రుసుము ఉండదు. జనన సమయం మీద సందేహం ఉంటే, ధ్రువీకరించిన జీవిత సంఘటనల ఆధారంగా ముందుగా సవరించి, ఎంత నిశ్చయతకు చేరామో చెప్తాం. కింది మొదటి సేవ మొత్తం జాతకాన్ని చదువుతుంది; మిగిలినవి ఒక్కో అంశంపై లోతైన పరిశీలన — వాటిని తీసుకునే చాలామంది ఆ మొదటి పరిశీలన ఇప్పటికే చేయించుకుని ఉంటారు. సంప్రదింపులు తెలుగులో లేదా ఆంగ్లంలో, ఆన్‌లైన్ లేదా ప్రత్యక్షంగా; ప్రతి ఒక్కటీ లిఖిత రూపంలో ముగుస్తుంది.',
+    },
+  ],
   timingLabel: { en: 'Session', te: 'సమావేశ వ్యవధి' },
   filterAll: { en: 'All services', te: 'అన్ని సేవలు' },
   bundlesTitle: {
@@ -54,10 +58,12 @@ export const jyotishaVertical: Vertical = {
     te: 'ఒకదానికొకటి అవసరమైన పరిశీలనలు. విడిగా తీసుకుంటే పరస్పర విరుద్ధంగా ఉంటాయి; కలిపి తీసుకుంటే మీకు చెప్పేముందే సమన్వయం చేస్తాం.',
   },
   faqTitle: { en: 'Asked before most readings', te: 'చాలా పరిశీలనలకు ముందు అడిగేవి' },
-  feeLede: {
-    en: 'Duration and fees are shared according to the requirement, before the sitting.',
-    te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి సమావేశానికి ముందే తెలియజేయబడతాయి.',
-  },
+  feeLede: [
+    {
+      en: 'Duration and fees are shared according to the requirement, before the sitting.',
+      te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి సమావేశానికి ముందే తెలియజేయబడతాయి.',
+    },
+  ],
   ctaTitle: {
     en: 'Not sure whether you need the whole chart or one area?',
     te: 'మొత్తం జాతకం కావాలా, ఒక అంశం చాలా — తేల్చుకోలేకపోతున్నారా?',
@@ -1016,8 +1022,8 @@ export const jyotishaVertical: Vertical = {
       name: { en: 'New Venture', te: 'నూతన వ్యాపారం' },
       includes: ['business', 'prashna', 'muhurtham'],
       crossVertical: {
-        en: 'with a business name from Numerology and premises checked by the Vastu desk',
-        te: 'సంఖ్యా శాస్త్ర విభాగం నుండి వ్యాపార నామం, వాస్తు విభాగం పరిశీలించిన స్థలంతో కలిపి',
+        en: ['with a business name from Numerology and premises checked by the Vastu desk'],
+        te: ['సంఖ్యా శాస్త్ర విభాగం నుండి వ్యాపార నామం, వాస్తు విభాగం పరిశీలించిన స్థలంతో కలిపి'],
       },
       value: {
         en: 'Enterprise suitability, one pending decision answered on the spot, and the launch date — with the name and the premises checked by the other desks rather than by four unconnected people.',

@@ -38,7 +38,13 @@ export function Footer() {
           <nav className="footer__cols" aria-label="Footer">
             {footerDisciplines.map((col) => (
               <div className="footer__col" key={col.id}>
-                <h4>{b(col.title)}</h4>
+                {/* The heading is a link to the discipline page, exactly as
+                    the same heading is in the Services menu. */}
+                <h4>
+                  <Link className="footer__colLink" to={col.to}>
+                    {b(col.title)}
+                  </Link>
+                </h4>
                 <ul>
                   {/* These are services, not pages — each goes to the
                       discipline page that covers it. */}

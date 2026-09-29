@@ -28,18 +28,22 @@ export const numerologyVertical: Vertical = {
     en: 'Three numbers you cannot change, and one you can.',
     te: 'మార్చలేని మూడు సంఖ్యలు, మార్చగలిగే ఒకటి.',
   },
-  lede: {
-    en: 'Your birth number and destiny number come from a date and are fixed for life. Your name number comes from a spelling — and a spelling can be adjusted. Almost all of this work is the arithmetic of bringing the one that moves into agreement with the two that do not.',
-    te: 'మీ జనన సంఖ్య, భాగ్య సంఖ్య — ఇవి తేదీ నుండి వస్తాయి, జీవితాంతం మారవు. మీ నామ సంఖ్య స్పెల్లింగ్ నుండి వస్తుంది — స్పెల్లింగ్‌ను సవరించవచ్చు. ఈ శాఖలోని పని దాదాపు అంతా, మారగలిగే దాన్ని మారని రెండింటితో సరిపోల్చే లెక్కే.',
-  },
+  lede: [
+    {
+      en: 'Your birth number and destiny number come from a date and are fixed for life. Your name number comes from a spelling — and a spelling can be adjusted. Almost all of this work is the arithmetic of bringing the one that moves into agreement with the two that do not.',
+      te: 'మీ జనన సంఖ్య, భాగ్య సంఖ్య — ఇవి తేదీ నుండి వస్తాయి, జీవితాంతం మారవు. మీ నామ సంఖ్య స్పెల్లింగ్ నుండి వస్తుంది — స్పెల్లింగ్‌ను సవరించవచ్చు. ఈ శాఖలోని పని దాదాపు అంతా, మారగలిగే దాన్ని మారని రెండింటితో సరిపోల్చే లెక్కే.',
+    },
+  ],
   framingTitle: {
     en: 'How a Numerology consultation runs here',
     te: 'ఇక్కడ సంఖ్యా శాస్త్ర సంప్రదింపు ఎలా జరుగుతుంది',
   },
-  framing: {
-    en: 'We need your full date of birth, your name exactly as you write it today — not as it appears on your birth certificate, if the two differ — and whatever specific name, number or date you are deciding about. Calculations use the Chaldean system, which we state plainly because Pythagorean values differ and that is the usual reason two numerologists give two answers. Every recommendation shows its arithmetic, so you can check it rather than take it on trust. Most of this work is time-sensitive: a dealer holds a SIM list for a day, an RTA list for a week, a registrar rejects a company name in a fortnight. Tell us your deadline when you write.',
-    te: 'మాకు మీ పూర్తి జనన తేదీ, ఈ రోజు మీరు రాసే విధంగానే మీ పేరు — జనన ధ్రువీకరణ పత్రంలో ఉన్నదానికి భిన్నంగా ఉంటే, మీరు వాడేదే — అలాగే మీరు నిర్ణయించుకోవాల్సిన నిర్దిష్ట పేరు, సంఖ్య లేదా తేదీ కావాలి. లెక్కలకు కాల్డియన్ విధానం వాడతాం; దీన్ని స్పష్టంగా చెప్తాం, ఎందుకంటే పైథాగరియన్ విలువలు వేరుగా ఉంటాయి — ఇద్దరు సంఖ్యా శాస్త్రవేత్తలు రెండు వేర్వేరు సమాధానాలు ఇవ్వడానికి సాధారణ కారణం అదే. ప్రతి సూచనలోనూ లెక్క చూపిస్తాం; నమ్మకంపై కాక, మీరే సరిచూసుకోగలిగేలా. ఈ పనిలో చాలా భాగం సమయంతో ముడిపడినది: డీలర్ సిమ్ జాబితాను ఒక రోజు, ఆర్టీఏ జాబితాను ఒక వారం ఉంచుతారు; రిజిస్ట్రార్ కంపెనీ పేరును రెండు వారాల్లో తిరస్కరిస్తారు. రాసేటప్పుడు మీ గడువు కూడా చెప్పండి.',
-  },
+  framing: [
+    {
+      en: 'We need your full date of birth, your name exactly as you write it today — not as it appears on your birth certificate, if the two differ — and whatever specific name, number or date you are deciding about. Calculations use the Chaldean system, which we state plainly because Pythagorean values differ and that is the usual reason two numerologists give two answers. Every recommendation shows its arithmetic, so you can check it rather than take it on trust. Most of this work is time-sensitive: a dealer holds a SIM list for a day, an RTA list for a week, a registrar rejects a company name in a fortnight. Tell us your deadline when you write.',
+      te: 'మాకు మీ పూర్తి జనన తేదీ, ఈ రోజు మీరు రాసే విధంగానే మీ పేరు — జనన ధ్రువీకరణ పత్రంలో ఉన్నదానికి భిన్నంగా ఉంటే, మీరు వాడేదే — అలాగే మీరు నిర్ణయించుకోవాల్సిన నిర్దిష్ట పేరు, సంఖ్య లేదా తేదీ కావాలి. లెక్కలకు కాల్డియన్ విధానం వాడతాం; దీన్ని స్పష్టంగా చెప్తాం, ఎందుకంటే పైథాగరియన్ విలువలు వేరుగా ఉంటాయి — ఇద్దరు సంఖ్యా శాస్త్రవేత్తలు రెండు వేర్వేరు సమాధానాలు ఇవ్వడానికి సాధారణ కారణం అదే. ప్రతి సూచనలోనూ లెక్క చూపిస్తాం; నమ్మకంపై కాక, మీరే సరిచూసుకోగలిగేలా. ఈ పనిలో చాలా భాగం సమయంతో ముడిపడినది: డీలర్ సిమ్ జాబితాను ఒక రోజు, ఆర్టీఏ జాబితాను ఒక వారం ఉంచుతారు; రిజిస్ట్రార్ కంపెనీ పేరును రెండు వారాల్లో తిరస్కరిస్తారు. రాసేటప్పుడు మీ గడువు కూడా చెప్పండి.',
+    },
+  ],
   timingLabel: { en: 'Turnaround', te: 'వ్యవధి' },
   filterAll: { en: 'All services', te: 'అన్ని సేవలు' },
   bundlesTitle: {
@@ -51,10 +55,12 @@ export const numerologyVertical: Vertical = {
     te: 'పేరు ఎంపిక తేదీ లేకుండా అరుదుగా జరుగుతుంది; తేదీ స్థలం లేకుండా అరుదుగా. ఒకే సంభాషణగా వచ్చే మూడు కలయికలు ఇవి.',
   },
   faqTitle: { en: 'Asked before most corrections', te: 'చాలా సవరణలకు ముందు అడిగేవి' },
-  feeLede: {
-    en: 'Duration and fees are shared according to the requirement, before any work begins.',
-    te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి.',
-  },
+  feeLede: [
+    {
+      en: 'Duration and fees are shared according to the requirement, before any work begins.',
+      te: 'వ్యవధి, రుసుము అవసరాన్ని బట్టి పని ప్రారంభించే ముందు తెలియజేయబడతాయి.',
+    },
+  ],
   ctaTitle: {
     en: 'Deciding on a name, a number or a date right now?',
     te: 'ఇప్పుడే ఒక పేరు, సంఖ్య లేదా తేదీ నిర్ణయించుకుంటున్నారా?',
@@ -631,8 +637,8 @@ export const numerologyVertical: Vertical = {
       name: { en: 'New Business Launch', te: 'నూతన వ్యాపార ప్రారంభం' },
       includes: ['businessname', 'brandname', 'dateselection'],
       crossVertical: {
-        en: 'with the premises checked by the Vastu desk and the promoter’s chart by Jyotisha',
-        te: 'వాస్తు విభాగం పరిశీలించిన స్థలం, జ్యోతిష విభాగం చూసిన ప్రమోటర్ జాతకంతో కలిపి',
+        en: ['with the premises checked by the Vastu desk and the promoter’s chart by Jyotisha'],
+        te: ['వాస్తు విభాగం పరిశీలించిన స్థలం, జ్యోతిష విభాగం చూసిన ప్రమోటర్ జాతకంతో కలిపి'],
       },
       value: {
         en: 'The registered name, the name customers will actually see, and the opening date — decided together, since changing any one of them afterwards means reprinting all three.',
@@ -644,8 +650,8 @@ export const numerologyVertical: Vertical = {
       name: { en: 'New Baby', te: 'నూతన శిశువు' },
       includes: ['childnaming', 'dateselection'],
       crossVertical: {
-        en: 'with the nakshatra syllables from the Jyotisha desk, so one name satisfies both',
-        te: 'జ్యోతిష విభాగం నుండి నక్షత్ర అక్షరాలతో కలిపి — ఒకే పేరు రెండు నియమాలనూ తీర్చేలా',
+        en: ['with the nakshatra syllables from the Jyotisha desk, so one name satisfies both'],
+        te: ['జ్యోతిష విభాగం నుండి నక్షత్ర అక్షరాలతో కలిపి — ఒకే పేరు రెండు నియమాలనూ తీర్చేలా'],
       },
       value: {
         en: 'The name and the naming-ceremony date settled in one pass, before the birth certificate is drawn up and the spelling becomes something you have to correct later.',
@@ -657,8 +663,8 @@ export const numerologyVertical: Vertical = {
       name: { en: 'New Home', te: 'నూతన గృహం' },
       includes: ['house', 'dateselection'],
       crossVertical: {
-        en: 'with direction and layout from the Vastu desk on the same property',
-        te: 'అదే ఆస్తిపై వాస్తు విభాగం నుండి దిక్కు, ప్రణాళిక పరిశీలనతో కలిపి',
+        en: ['with direction and layout from the Vastu desk on the same property'],
+        te: ['అదే ఆస్తిపై వాస్తు విభాగం నుండి దిక్కు, ప్రణాళిక పరిశీలనతో కలిపి'],
       },
       value: {
         en: 'Which flat to take and when to move into it — one assessment covering the number and the griha pravesh date, rather than two people giving you two answers about the same address.',

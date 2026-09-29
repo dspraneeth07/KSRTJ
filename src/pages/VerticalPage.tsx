@@ -26,13 +26,13 @@ const ui = {
   who: { en: 'Who this is for', te: 'ఇది ఎవరికి' },
   receive: { en: 'What you receive', te: 'మీకు అందేది' },
   mode: { en: 'Mode', te: 'విధానం' },
-  bundlesEyebrow: { en: 'Combined engagements', te: 'కలిపిన సేవలు' },
+  bundlesEyebrow: { en: 'Combined Engagements', te: 'కలిపిన సేవలు' },
   includes: { en: 'Includes', te: 'ఇందులో ఉన్నవి' },
   faqEyebrow: { en: 'Questions', te: 'ప్రశ్నలు' },
   priceEyebrow: { en: 'Terms', te: 'నిబంధనలు' },
-  priceTitle: { en: 'Duration and fees', te: 'వ్యవధి మరియు రుసుము' },
+  priceTitle: { en: 'Duration & Fees', te: 'వ్యవధి & రుసుము' },
   ctaEyebrow: { en: 'Begin', te: 'ప్రారంభం' },
-  book: { en: 'Book a consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
+  book: { en: 'Book a Consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
   ask: { en: 'Ask on WhatsApp', te: 'వాట్సాప్‌లో అడగండి' },
   note: { en: 'Please note', te: 'గమనిక' },
   conducted: {
@@ -54,6 +54,23 @@ function ServiceRow({
 }) {
   const { b, bl } = useBi();
   const panelId = `svc-${service.id}`;
+
+  // A service with no expandable detail is a statement, not a control:
+  // a toggle that opens onto nothing is worse than no toggle.
+  if (!service.examine) {
+    return (
+      <article className="svc svc--flat">
+        <h3 className="svc__head">
+          <span className="svc__toggle svc__toggle--static">
+            <span className="svc__num">{String(service.index).padStart(2, '0')}</span>
+            <span className="svc__name">{b(service.name)}</span>
+            <span className="svc__def">{b(service.definition)}</span>
+          </span>
+        </h3>
+        {service.note && <p className="svc__note">{b(service.note)}</p>}
+      </article>
+    );
+  }
 
   return (
     <article className={`svc ${open ? 'is-open' : ''}`}>
@@ -84,18 +101,28 @@ function ServiceRow({
           </div>
 
           <div className="svc__col">
-            <h4 className="svc__label">{b(ui.who)}</h4>
-            <p className="svc__text">{b(service.who)}</p>
+            {service.who && (
+              <>
+                <h4 className="svc__label">{b(ui.who)}</h4>
+                <p className="svc__text">{b(service.who)}</p>
+              </>
+            )}
 
-            <h4 className="svc__label">{b(ui.receive)}</h4>
-            <p className="svc__text">{b(service.receive)}</p>
+            {service.receive && (
+              <>
+                <h4 className="svc__label">{b(ui.receive)}</h4>
+                <p className="svc__text">{b(service.receive)}</p>
+              </>
+            )}
 
-            <dl className="svc__meta">
-              <div>
-                <dt>{b(ui.mode)}</dt>
-                <dd>{b(modeLabels[service.mode])}</dd>
-              </div>
-            </dl>
+            {service.mode && (
+              <dl className="svc__meta">
+                <div>
+                  <dt>{b(ui.mode)}</dt>
+                  <dd>{b(modeLabels[service.mode])}</dd>
+                </div>
+              </dl>
+            )}
           </div>
         </div>
 
@@ -108,7 +135,7 @@ function ServiceRow({
         )}
 
         <p className="svc__cta">
-          <span>{b(service.cta)}</span>
+          {service.cta && <span>{b(service.cta)}</span>}
           <a className="btn btn--ink btn--sm" href="#book">
             {b(ui.book)}
           </a>
@@ -121,7 +148,7 @@ function ServiceRow({
 /* ── Page ───────────────────────────────────────────────────────── */
 
 export default function VerticalPage({ vertical }: { vertical: Vertical }) {
-  const { b } = useBi();
+  const { b, bl } = useBi();
   const { t } = useLang();
   const [filter, setFilter] = useState<string>('all');
   // Two sets, not one: service ids and FAQ ids share a namespace otherwise,
@@ -146,8 +173,13 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
     return map;
   }, [vertical.services]);
 
+  // Only services that actually have a panel can be expanded, so the
+  // expand-all control counts those and hides itself when there are none.
   const visibleIds = useMemo(
-    () => visibleClusters.flatMap((c) => (byCluster.get(c.id) ?? []).map((s) => s.id)),
+    () =>
+      visibleClusters.flatMap((c) =>
+        (byCluster.get(c.id) ?? []).filter((s) => s.examine).map((s) => s.id),
+      ),
     [byCluster, visibleClusters],
   );
   const allOpen = visibleIds.length > 0 && visibleIds.every((id) => open.has(id));
@@ -181,9 +213,18 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
           <div className="vhero__mark" aria-hidden="true">
             <PillarIcon name={vertical.icon} />
           </div>
-          <p className="eyebrow eyebrow--light">{b(vertical.eyebrow)}</p>
+          {vertical.eyebrow && (
+            <p className="eyebrow eyebrow--light">{b(vertical.eyebrow)}</p>
+          )}
           <h1 className="vhero__title">{b(vertical.title)}</h1>
-          <p className="vhero__lede">{b(vertical.lede)}</p>
+          {vertical.standfirst && (
+            <p className="vhero__standfirst">{b(vertical.standfirst)}</p>
+          )}
+          {vertical.lede.map((para, i) => (
+            <p className="vhero__lede" key={i}>
+              {b(para)}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -194,7 +235,11 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
             <h2 className="vframe__title">{b(vertical.framingTitle)}</h2>
           </Reveal>
           <Reveal className="vframe__col" variant="lift" delay={80}>
-            <p className="vframe__text">{b(vertical.framing)}</p>
+            {vertical.framing.map((para, i) => (
+              <p className="vframe__text" key={i}>
+                {b(para)}
+              </p>
+            ))}
 
             <figure className="byline">
               <Portrait variant="square" className="byline__photo" alt={t('founder.alt')} />
@@ -235,13 +280,15 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
               ))}
             </div>
 
-            <button
-              type="button"
-              className="vfilter__all"
-              onClick={() => setOpen(allOpen ? new Set() : new Set(visibleIds))}
-            >
-              {allOpen ? b(ui.collapseAll) : b(ui.expandAll)}
-            </button>
+            {visibleIds.length > 0 && (
+              <button
+                type="button"
+                className="vfilter__all"
+                onClick={() => setOpen(allOpen ? new Set() : new Set(visibleIds))}
+              >
+                {allOpen ? b(ui.collapseAll) : b(ui.expandAll)}
+              </button>
+            )}
           </div>
 
           {visibleClusters.map((cluster) => (
@@ -289,9 +336,12 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
                         const service = serviceById(id);
                         return service ? <li key={id}>{b(service.name)}</li> : null;
                       })}
-                      {bundle.crossVertical && (
-                        <li className="bundle__cross">{b(bundle.crossVertical)}</li>
-                      )}
+                      {bundle.crossVertical &&
+                        bl(bundle.crossVertical).map((item) => (
+                          <li className="bundle__cross" key={item}>
+                            {item}
+                          </li>
+                        ))}
                     </ul>
                     <a className="link" href="#book">
                       {b(ui.book)}
@@ -342,7 +392,11 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
           <Reveal as="header" className="secthead" variant="lift">
             <p className="eyebrow">{b(ui.priceEyebrow)}</p>
             <h2 className="secthead__title">{b(ui.priceTitle)}</h2>
-            <p className="secthead__lede">{b(vertical.feeLede)}</p>
+            {vertical.feeLede.map((para, i) => (
+              <p className="secthead__lede" key={i}>
+                {b(para)}
+              </p>
+            ))}
           </Reveal>
         </div>
       </section>

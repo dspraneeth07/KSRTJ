@@ -21,6 +21,12 @@
 .utility__link { transition: color 0.3s var(--ease); }
 .utility__link:hover { color: var(--amber-soft); }
 
+/* The number is the one thing on this bar somebody acts on, so it is
+   marked with a handset rather than left as plain text. */
+.utility__call { display: inline-flex; align-items: center; gap: 7px; }
+.utility__callIcon { width: 14px; height: 14px; flex: 0 0 auto; color: var(--amber); }
+.utility__call:hover .utility__callIcon { color: var(--amber-soft); }
+
 .langswitch { display: flex; align-items: center; gap: 10px; }
 .langswitch__btn {
   font-size: 12px;
@@ -116,59 +122,43 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
 .burger[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
 .burger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Mega menu ─────────────────────────────────────────────────── */
-.nav__item--mega { position: static; }
+/* ── Services menu ─────────────────────────────────────────────────
+   Five headings, so this is a panel the width of its longest item, not
+   the full-width sheet the old sub-lists needed. */
+.nav__item--mega { position: relative; }
 
 .mega {
   position: absolute;
   left: 0;
-  right: 0;
-  top: 100%;
+  top: calc(100% + 8px);
+  min-width: 260px;
+  padding: 10px;
   background: var(--paper-3);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 26px 54px rgba(26, 20, 14, 0.12);
-  transform-origin: top center;
-  animation: megaIn 0.32s var(--ease-3d);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(26, 20, 14, 0.14);
+  transform-origin: top left;
+  animation: megaIn 0.26s var(--ease-3d);
 }
 .mega[hidden] { display: none; }
 
 @keyframes megaIn {
-  from { opacity: 0; transform: perspective(1200px) rotateX(-6deg) translateY(-10px); }
+  from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: none; }
 }
 
-.mega__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0 40px;
-  padding-block: 40px 46px;
-}
-.mega__col + .mega__col { border-left: 1px solid var(--line); padding-left: 40px; }
-.mega__title {
-  font-size: 15.5px;
-  font-weight: 600;
-  color: var(--orange);
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line-amber);
-}
-.mega__title--sub { margin-top: 30px; }
 .mega__list a {
   display: block;
-  font-size: 13.5px;
-  color: var(--ink-2);
-  padding: 5px 0;
-  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+  white-space: nowrap;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
 }
-.mega__list a:hover { color: var(--orange); transform: translateX(4px); }
-.mega__note {
-  margin-top: 14px;
-  font-size: 12.5px;
-  line-height: 1.65;
-  color: var(--ink-3);
-  padding-left: 12px;
-  border-left: 1px solid var(--line-amber);
-}
+.mega__list a:hover,
+.mega__list a:focus-visible { color: var(--orange); background: var(--paper-2); }
 
 /* ── Hero ──────────────────────────────────────────────────────── */
 .hero {
@@ -727,6 +717,14 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   transition: color 0.25s var(--ease);
 }
 .footer__col a:hover { color: var(--amber-soft); }
+/* The heading link inherits the heading, not the list item beneath it. */
+.footer__colLink {
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+.footer__col h4 .footer__colLink:hover { color: var(--amber); }
 .footer__bottom {
   margin-top: clamp(42px, 5vw, 64px);
   padding-top: 24px;
@@ -769,8 +767,6 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   .faq__wrap { grid-template-columns: 1fr; }
   .footer__top { grid-template-columns: 1fr; }
   .footer__cols { grid-template-columns: repeat(2, 1fr); }
-  .mega__grid { grid-template-columns: repeat(2, 1fr); gap: 32px 40px; }
-  .mega__col:nth-child(odd) { border-left: 0; padding-left: 0; }
 }
 
 @media (max-width: 900px) {
@@ -795,16 +791,23 @@ html[lang='te'] .brand__tag { text-transform: none; letter-spacing: 0.02em; font
   /* The panel flows inside the drawer instead of dropping from the bar. */
   .mega {
     position: static;
+    min-width: 0;
+    padding: 2px 0 12px;
     box-shadow: none;
     border: 0;
+    border-radius: 0;
     background: transparent;
     animation: none;
   }
-  .mega .wrap { padding-inline: 0; max-width: none; }
-  .mega__grid { grid-template-columns: 1fr; padding: 2px 0 18px; gap: 24px; }
-  .mega__col { border-left: 0 !important; padding-left: 0 !important; }
-  .mega__title { font-size: 14.5px; }
-  .mega__list a { padding: 7px 0; }
+  .mega__list a {
+    white-space: normal;
+    padding: 11px 0 11px 14px;
+    font-size: 15px;
+    border-radius: 0;
+    color: var(--ink-2);
+  }
+  .mega__list a:hover,
+  .mega__list a:focus-visible { background: transparent; }
 
   /* The strapline does not fit beside a burger at phone width, and a
      wrapped brand pushes the header wider than the viewport. */
