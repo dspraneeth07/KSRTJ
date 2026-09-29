@@ -210,23 +210,23 @@ export const en = {
   'courses.cert': 'Course Completion Certificate',
 
 
-  'faq.eyebrow': 'Before you book',
-  'faq.title': 'Common questions',
+  'faq.eyebrow': 'Before Your Consultation',
+  'faq.title': 'Common Questions',
   'faq.1.q': 'Do I need to know my exact birth time?',
   'faq.1.a':
-    'It helps considerably, but it is not a precondition. Where the time is uncertain or unrecorded, we say so, and work within that limitation rather than around it.',
+    'It is helpful if known. If there is uncertainty about the birth time, we will explain in advance the extent to which an assessment can be made based on the available information.',
   'faq.2.q': 'Will you ask me to demolish part of my house?',
   'faq.2.a':
-    'Almost never. Remedies are proposed in ascending order of cost: use and orientation first, then material and placement changes, and structural alteration only where the defect is severe and nothing else will address it.',
+    'In Vastu-related assessments, practical modifications and suggestions are given priority wherever possible.',
   'faq.3.q': 'Is an online consultation as reliable as an in-person one?',
   'faq.3.a':
-    'For Jyotisha, Numerology and Muhurtham, yes — the inputs are documents, not the room. Vastu for an existing building requires a site visit or, at minimum, dimensioned drawings with a verified north.',
-  'faq.4.q': 'Can the consultation and the report be in Telugu?',
+    'The necessary details and relevant information are assessed based on what is available, and the consultation is provided accordingly.',
+  'faq.4.q': 'Can the consultation be in Telugu?',
   'faq.4.a':
-    'Yes. Both the sitting and any written notes are available in Telugu or English. Technical terms are retained in Sanskrit in both.',
+    'Yes. Consultation and available guidance can be provided in Telugu or English, as required.',
   'faq.5.q': 'Do you guarantee outcomes?',
   'faq.5.a':
-    'No. Examination and guidance are offered on the basis of the Jyotisha, Vastu and Numerology traditions. No guarantee is given about future outcomes.',
+    'Assessment and guidance are provided based on the relevant traditional disciplines. No guarantee is given regarding specific outcomes.',
 
   'footer.disciplines':
     'Vastu Shastra | Jyotisha Shastra & Allied Studies | Numerology | Swara Shastra | Spiritual Studies & Brahmavidya',
@@ -441,23 +441,23 @@ export const te: Record<StringKey, string> = {
   'courses.cert': 'Course Completion Certificate',
 
 
-  'faq.eyebrow': 'నమోదుకు ముందు',
+  'faq.eyebrow': 'సంప్రదింపుకు ముందు',
   'faq.title': 'సాధారణ ప్రశ్నలు',
   'faq.1.q': 'జనన సమయం ఖచ్చితంగా తెలిసి ఉండాలా?',
   'faq.1.a':
-    'తెలిస్తే చాలా ఉపయోగం, కానీ అది తప్పనిసరి కాదు. సమయం మీద సందేహం ఉన్నా, నమోదు కాకపోయినా — ఆ విషయాన్ని స్పష్టంగా చెప్పి, ఆ పరిమితిలోనే పరిశీలన చేస్తాం.',
+    'తెలిస్తే ఉపయోగకరంగా ఉంటుంది. జనన సమయం విషయంలో సందేహం ఉంటే, అందుబాటులో ఉన్న వివరాల ఆధారంగా పరిశీలన చేయగలిగే పరిమితిని ముందుగా తెలియజేస్తాం.',
   'faq.2.q': 'ఇల్లు కూల్చమని చెప్తారా?',
   'faq.2.a':
-    'దాదాపు ఎప్పుడూ చెప్పం. పరిహారాలను ఖర్చు క్రమంలో సూచిస్తాం — ముందు వినియోగం, దిక్కులో మార్పు; తర్వాత వస్తువులు, స్థానాల మార్పు; నిర్మాణ మార్పు కేవలం దోషం తీవ్రంగా ఉండి, మరే మార్గమూ పని చేయని చోట మాత్రమే.',
+    'వాస్తు సంబంధిత పరిశీలనలో సాధ్యమైనంతవరకు ఆచరణాత్మక మార్పులు మరియు సూచనలకు ప్రాధాన్యం ఇస్తాం.',
   'faq.3.q': 'ఆన్‌లైన్ సంప్రదింపు ప్రత్యక్ష సంప్రదింపు అంత నమ్మదగినదేనా?',
   'faq.3.a':
-    'జ్యోతిషం, సంఖ్యా శాస్త్రం, ముహూర్తానికి — అవును; ఎందుకంటే వాటికి కావలసినవి పత్రాలు, గది కాదు. ఇప్పటికే ఉన్న భవనానికి వాస్తు మాత్రం స్థల సందర్శన, లేదా కనీసం ఉత్తర దిక్కు ధ్రువీకరించిన కొలతల ప్రణాళిక అవసరం.',
-  'faq.4.q': 'సంప్రదింపు, నివేదిక తెలుగులో ఉండగలవా?',
+    'అవసరమైన వివరాలు మరియు సంబంధిత సమాచారాన్ని అందుబాటులో ఉన్న విధంగా పరిశీలించి, ఆ ఆధారంగా సంప్రదింపు అందించబడుతుంది.',
+  'faq.4.q': 'సంప్రదింపు తెలుగులో ఉండగలదా?',
   'faq.4.a':
-    'అవును. సమావేశం, లిఖిత సూచనలు రెండూ తెలుగులో లేదా ఆంగ్లంలో అందుబాటులో ఉంటాయి. శాస్త్రీయ పదాలను రెండింటిలోనూ సంస్కృతంలోనే ఉంచుతాం.',
+    'అవును. అవసరాన్ని బట్టి తెలుగు లేదా ఆంగ్లంలో సంప్రదింపు మరియు అందుబాటులో ఉన్న సూచనలు అందించవచ్చు.',
   'faq.5.q': 'ఫలితాలకు హామీ ఇస్తారా?',
   'faq.5.a':
-    'ఇవ్వము. జ్యోతిషం, వాస్తు మరియు సంఖ్యా శాస్త్ర సంప్రదాయాల ఆధారంగా పరిశీలన మరియు మార్గదర్శనం అందిస్తాం. భవిష్యత్తు ఫలితాలకు హామీ ఇవ్వము.',
+    'సంబంధిత శాస్త్రాల ఆధారంగా పరిశీలన మరియు మార్గదర్శకత్వం అందించబడుతుంది. నిర్దిష్ట ఫలితాలకు హామీ ఇవ్వబడదు.',
 
   'footer.disciplines':
     'వాస్తు శాస్త్రం | జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు | సంఖ్యా శాస్త్రం | స్వర శాస్త్రం | ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
