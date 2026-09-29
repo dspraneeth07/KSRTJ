@@ -1,364 +1,519 @@
 import type { Bi, BiList } from '../i18n/bi';
 
 /* ═══════════════════════════════════════════════════════════════════
-   Spiritual & Vedic Studies — the fourth vertical.
+   Spiritual Studies & Brahmavidya — the fourth service page.
 
-   Deliberately NOT the shape of the other three. Vastu, Jyotisha and
-   Numerology are defined-scope engagements with a written deliverable
-   and a fee. These two are teacher-guided disciplines with no
-   deliverable, no end date and no booking button, so the page has its
-   own data shape, its own component and its own quieter styling.
+   Not a catalogue of bookable services. Swara Shastra and Brahmavidya
+   are study, practice and personal guidance, so the page is built round
+   how the study progresses rather than round what can be purchased.
 
-   Padding these into a twelve-item bookable menu to match the pattern
-   would misrepresent what they are — and the site's whole argument is
-   that we do not misrepresent things.
-
-   Tone rules enforced in this file: no urgency, no scarcity, no
-   guaranteed outcomes, no claims of diagnostic or miraculous power,
-   and fees are never the first subject.
+   Several fields are arrays of paragraphs rather than single strings:
+   this copy argues rather than labels, and a paragraph break is part of
+   the argument.
    ═══════════════════════════════════════════════════════════════════ */
 
 export interface Stage {
   id: string;
   name: Bi;
-  body: Bi;
+  body: Bi[];
 }
 
 export interface Discipline {
   id: string;
   name: Bi;
-  /** One line, used in the mega menu and as the block standfirst. */
   standfirst: Bi;
-  definition: Bi;
-  /** An honest limit, stated in the discipline's own block. */
-  limit: Bi;
+  definition: Bi[];
+  /** "What it is not" — stated before anything is claimed. */
+  limit: Bi[];
   stagesLabel: Bi;
   stages: Stage[];
-  who: Bi;
-  practice: Bi;
+  who: Bi[];
+  practice: Bi[];
   cta: Bi;
 }
 
 export const swaraPage = {
   path: '/services/spiritual',
 
-  eyebrow: { en: 'Educational Disciplines', te: 'విద్యా విభాగాలు' },
+  eyebrow: { en: 'Educational Areas', te: 'విద్యా విభాగాలు' },
   title: {
-    en: 'Spiritual Studies & Brahmavidya.',
-    te: 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య.',
+    en: 'Spiritual Studies & Brahmavidya',
+    te: 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
   },
   lede: {
-    en: 'Guidance for the systematic study of mantra, meditation, swara sadhana and subjects relating to self-knowledge. This is study taken up over time rather than a single consultation, so it is arranged differently from the other three fields.',
-    te: 'మంత్రం, ధ్యానం, స్వర సాధన మరియు ఆత్మజ్ఞాన సంబంధిత అంశాలను క్రమబద్ధంగా అధ్యయనం చేయడానికి మార్గదర్శనం. ఇది ఒక్క సంప్రదింపు కాదు, కాలక్రమేణా కొనసాగే అధ్యయనం; అందుకే మిగతా మూడు విభాగాల కంటే దీని ఏర్పాటు వేరుగా ఉంటుంది.',
+    en: 'Guidance is provided for the structured study of meditation, mantra practice, Swara Shastra, self-knowledge, and subjects related to Brahmavidya. This is designed not as a one-time consultation, but as a study and practice that may continue over time. Therefore, its approach is different from the other consultation services.',
+    te: 'ధ్యానం, మంత్ర సాధన, స్వర శాస్త్రం, ఆత్మజ్ఞానం మరియు బ్రహ్మవిద్యకు సంబంధించిన అంశాలను క్రమబద్ధంగా అధ్యయనం చేయడానికి మార్గదర్శనం అందించబడుతుంది. ఇది ఒక సాధారణ సంప్రదింపుగా కాకుండా, కాలక్రమేణా కొనసాగగల అధ్యయనం మరియు సాధనగా రూపొందించబడింది. అందువల్ల మిగతా సేవల కంటే దీని విధానం భిన్నంగా ఉంటుంది.',
   },
 
-  framingTitle: { en: 'How this differs from the other three', te: 'ఇది మిగతా మూడింటికి ఎలా భిన్నం' },
-  framing: {
-    en: 'Vastu, Jyotisha and Numerology are applied to a question someone brings — a building, a chart, a name — and the matter closes when it is answered. This field is directed inward, at the student’s own practice, and there is no question to close. It is therefore taken up gradually, at whatever pace suits the person, and is offered as guidance and as a course of study rather than as a single sitting.',
-    te: 'వాస్తు, జ్యోతిషం, సంఖ్యా శాస్త్రం — ఇవి ఎవరో అడిగిన ప్రశ్నకు వర్తిస్తాయి: ఒక భవనం, ఒక జాతకం, ఒక పేరు; సమాధానం వచ్చాక ఆ విషయం ముగుస్తుంది. ఈ విభాగం మాత్రం లోపలికి, సాధకుని సొంత సాధన వైపు మళ్లుతుంది; ఇక్కడ ముగించవలసిన ప్రశ్న ఉండదు. అందువల్ల ఇది వ్యక్తికి అనుకూలమైన వేగంతో క్రమంగా సాగుతుంది; ఒక్క సమావేశంగా కాక మార్గదర్శనంగా, అధ్యయన కోర్సుగా అందించబడుతుంది.',
+  framingTitle: {
+    en: 'How It Differs from Other Services',
+    te: 'ఇది మిగతా సేవలకు ఎలా భిన్నం',
   },
+  framing: [
+    {
+      en: 'Vastu, Jyotisha, and Numerology services are generally provided for a specific need, question, or subject. The consultation is completed after the relevant assessment and guidance are provided.',
+      te: 'వాస్తు, జ్యోతిషం, సంఖ్యా శాస్త్రం వంటి సేవలు సాధారణంగా ఒక నిర్దిష్ట అవసరం, ప్రశ్న లేదా అంశాన్ని పరిశీలించడానికి అందించబడతాయి. అవసరమైన పరిశీలన మరియు మార్గదర్శనం అందించిన తర్వాత ఆ సంప్రదింపు పూర్తవుతుంది.',
+    },
+    {
+      en: 'Spiritual Studies & Brahmavidya, on the other hand, focus on self-study, practice, and inner observation. Therefore, they do not have to be completed in a single consultation. Study and guidance can continue gradually according to the individual’s pace and requirement.',
+      te: 'ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్యలో మాత్రం దృష్టి స్వీయ అధ్యయనం, సాధన మరియు అంతర్ముఖ పరిశీలనపై ఉంటుంది. అందువల్ల దీనికి ఒకే సంప్రదింపుతో ముగిసే నిర్దిష్ట పరిధి ఉండదు. వ్యక్తికి అనుకూలమైన వేగంతో క్రమంగా అధ్యయనం మరియు మార్గదర్శనం కొనసాగుతుంది.',
+    },
+  ] satisfies Bi[],
+
   expectations: {
     en: [
-      'A first conversation comes before anything else, to understand what you are looking for. It carries no fee.',
-      'Study proceeds gradually and at the pace the student can genuinely sustain.',
-      'Guidance is available online or in person, in Telugu or English.',
-      'Where a structured course suits you better than individual guidance, we will say so.',
+      'An initial conversation to understand your interest and present study requirement.',
+      'Study progressing at a pace that the student can realistically maintain.',
+      'Guidance available online or in person, in Telugu or English.',
+      'Individual guidance or a structured study program, depending on the requirement.',
+      'Importance given to personal discipline in study and practice.',
     ],
     te: [
-      'మీరు ఏమి కోరుకుంటున్నారో తెలుసుకోవడానికి ముందుగా ఒక సంభాషణ. దానికి రుసుము ఉండదు.',
-      'విద్యార్థి నిజంగా కొనసాగించగలిగే వేగంతో అధ్యయనం క్రమంగా సాగుతుంది.',
+      'మీరు ఏమి కోరుకుంటున్నారో మరియు ప్రస్తుతం మీకు ఏ విధమైన అధ్యయనం అవసరమో తెలుసుకోవడానికి ముందుగా ఒక సంభాషణ ఉంటుంది.',
+      'అధ్యయనం విద్యార్థి వాస్తవంగా కొనసాగించగలిగే వేగంతో క్రమంగా సాగుతుంది.',
       'మార్గదర్శనం ఆన్‌లైన్ లేదా ప్రత్యక్షంగా, తెలుగులో లేదా ఆంగ్లంలో అందుబాటులో ఉంటుంది.',
-      'వ్యక్తిగత మార్గదర్శనం కంటే క్రమబద్ధమైన కోర్సు మీకు అనుకూలమైతే, అది చెప్తాం.',
+      'వ్యక్తిగత మార్గదర్శనం లేదా క్రమబద్ధమైన అధ్యయన కార్యక్రమం — మీ అవసరానికి ఏది అనుకూలమో దానికి అనుగుణంగా విధానం నిర్ణయించబడుతుంది.',
+      'అధ్యయనం మరియు సాధనలో వ్యక్తిగత క్రమశిక్షణకు ప్రాధాన్యం ఉంటుంది.',
     ],
   } satisfies BiList,
 
   disciplines: [
-    /* ── Swarashastra ──────────────────────────────────────────── */
+    /* ── Swara Shastra ────────────────────────────────────────── */
     {
       id: 'swarashastra',
-      name: { en: 'Swarashastra', te: 'స్వర శాస్త్రం' },
+      name: { en: 'Swara Shastra', te: 'స్వర శాస్త్రం' },
       standfirst: {
-        en: 'The observation of breath, and what it is traditionally held to indicate.',
-        te: 'శ్వాస పరిశీలన, దాని ద్వారా సాంప్రదాయంగా తెలుసుకునేవి.',
+        en: 'Study of Breath Observation and Traditional Applications',
+        te: 'శ్వాస పరిశీలన మరియు దాని ద్వారా సంప్రదాయంగా తెలుసుకునే అంశాల అధ్యయనం',
       },
-      definition: {
-        en: 'Swarashastra is the traditional study of the swara — which nostril the breath is predominantly flowing through at a given moment, and the elemental tattva held to be carried within it. It is set out in texts such as the Shiva Svarodaya, and is used to observe one’s own state, to consider the timing of action, and as a support to sadhana. Before it is anything else it is a discipline of attention: it rests entirely on sustained, honest self-observation kept up over months.',
-        te: 'స్వర శాస్త్రం అంటే స్వర అధ్యయనం — ఒక క్షణంలో శ్వాస ప్రధానంగా ఏ నాసికా రంధ్రం ద్వారా ప్రవహిస్తోంది, అందులో ఉన్నట్టు సాంప్రదాయంగా చెప్పే తత్త్వం ఏమిటి. ఇది శివ స్వరోదయం వంటి గ్రంథాల్లో వివరించబడింది; స్వీయ స్థితిని గమనించడానికి, కార్య సమయాన్ని ఆలోచించడానికి, సాధనకు తోడ్పాటుగా వాడతారు. అన్నిటికంటే ముందు ఇది అవధాన సాధన: నెలల తరబడి నిజాయితీగా, నిరంతరం చేసే స్వీయ పరిశీలనపైనే ఇది పూర్తిగా ఆధారపడుతుంది.',
-      },
-      limit: {
-        en: 'It is not a medical diagnostic system and is no substitute for one. It also depends entirely on regular practice — it is not a technique that can be picked up quickly and applied to a decision.',
-        te: 'ఇది వైద్య నిర్ధారణ విధానం కాదు, దానికి ప్రత్యామ్నాయమూ కాదు. ఇది పూర్తిగా క్రమమైన సాధనపై ఆధారపడి ఉంటుంది — త్వరగా నేర్చుకుని ఒక నిర్ణయానికి వాడే పద్ధతి కాదు.',
-      },
-      stagesLabel: { en: 'How the study is structured', te: 'అధ్యయనం ఎలా సాగుతుంది' },
+      definition: [
+        {
+          en: 'Swara Shastra is the study of Swara — including observation of which nostril is predominantly carrying the breath at a particular time and how related aspects are traditionally observed.',
+          te: 'స్వర శాస్త్రం అంటే స్వర అధ్యయనం — ఒక నిర్దిష్ట సమయంలో శ్వాస ప్రధానంగా ఏ నాసికా రంధ్రం ద్వారా ప్రవహిస్తోంది, దానితో సంబంధం ఉన్న అంశాలను సంప్రదాయంగా ఎలా పరిశీలిస్తారనే విషయాల అధ్యయనం.',
+        },
+        {
+          en: 'It is traditionally used for observing one’s own state, considering the timing of activities, and supporting personal practice. Above all, it involves continuous awareness and observation. Its study requires regular self-observation and recording over time.',
+          te: 'స్వీయ స్థితిని గమనించడం, కార్య సమయాన్ని పరిశీలించడం మరియు సాధనకు తోడ్పడే విధంగా దీనిని సంప్రదాయంలో ఉపయోగిస్తారు. అన్నిటికంటే ముందు ఇది నిరంతర అవధాన సాధన. దీని అధ్యయనం క్రమమైన స్వీయ పరిశీలన మరియు నమోదు ఆధారంగా కొనసాగుతుంది.',
+        },
+      ],
+      limit: [
+        {
+          en: 'It is not a method of medical diagnosis and is not a substitute for medical care.',
+          te: 'ఇది వైద్య నిర్ధారణ విధానం కాదు మరియు వైద్యానికి ప్రత్యామ్నాయం కాదు.',
+        },
+        {
+          en: 'Swara Shastra requires regular observation and practice. It is not taught as a method to be learned quickly and then used alone for major life decisions.',
+          te: 'స్వర శాస్త్రం క్రమమైన పరిశీలన మరియు సాధనపై ఆధారపడి ఉంటుంది. త్వరగా నేర్చుకుని వెంటనే ముఖ్యమైన నిర్ణయాలకు ఉపయోగించే పద్ధతిగా దీనిని బోధించము.',
+        },
+      ],
+      stagesLabel: { en: 'How the Study Progresses', te: 'అధ్యయనం ఎలా సాగుతుంది' },
       stages: [
         {
           id: 'foundation',
-          name: { en: 'Foundation and observation', te: 'పునాది, పరిశీలన' },
-          body: {
-            en: 'What the swara actually is — ida, pingala and sushumna; the tattvas and the signs traditionally associated with each; and the discipline of recording your own breath at fixed times every day. For the first several months you observe and record, and are asked to draw no conclusions at all. Most of what a beginner concludes early turns out to be their expectation rather than their breath.',
-            te: 'స్వరం అంటే నిజంగా ఏమిటి — ఇడ, పింగళ, సుషుమ్న; తత్త్వాలు, ఒక్కొక్క దానికి సాంప్రదాయంగా చెప్పే లక్షణాలు; ప్రతిరోజూ నిర్ణీత సమయాల్లో మీ శ్వాసను నమోదు చేసుకునే క్రమశిక్షణ. మొదటి కొన్ని నెలలు మీరు గమనించి, నమోదు చేయాలి; ఎలాంటి నిర్ణయాలకూ రావద్దని కోరతాం. ప్రారంభంలో ఒక సాధకుడు తీసుకునే నిర్ణయాల్లో చాలావరకు అతని అంచనాయే తప్ప అతని శ్వాస కాదు.',
-          },
+          name: { en: 'Foundation and Observation', te: 'పునాది, పరిశీలన' },
+          body: [
+            {
+              en: 'The initial stage introduces basic subjects such as Swara, Ida, Pingala, Sushumna, the traditional understanding of the elements, and related observations.',
+              te: 'స్వరం, ఇడ, పింగళ, సుషుమ్న, తత్త్వాలు మరియు వాటికి సంప్రదాయంగా చెప్పబడే లక్షణాలు వంటి ప్రాథమిక అంశాలను నేర్చుకుంటారు. ప్రతిరోజూ నిర్ణీత సమయాల్లో శ్వాసను గమనించి నమోదు చేసుకునే క్రమశిక్షణకు ప్రాధాన్యం ఉంటుంది.',
+            },
+            {
+              en: 'Students are encouraged to observe and record first rather than make quick conclusions.',
+              te: 'మొదటి దశలో సాధకుడు ప్రధానంగా గమనించి, నమోదు చేయాలి; తొందరగా నిర్ణయాలకు రాకూడదు.',
+            },
+          ],
         },
         {
-          id: 'reading',
-          name: { en: 'Reading your own state', te: 'స్వీయ స్థితిని చదవడం' },
-          body: {
-            en: 'Once there is a record long enough to be worth reading, the correlation between the swara and your own condition: energy, appetite, sleep, temper, the tasks that went easily and those that did not. This is where a student learns to tell a pattern from a coincidence — largely by getting it wrong under supervision, which is the only way it is learnt.',
-            te: 'చదవదగినంత దీర్ఘమైన నమోదు తయారయ్యాక, స్వరానికీ మీ స్థితికీ ఉన్న సంబంధం: శక్తి, ఆకలి, నిద్ర, మనోభావం, సులభంగా జరిగిన పనులు, జరగని పనులు. ఒక సరళికీ, యాదృచ్ఛికతకూ మధ్య తేడాను సాధకుడు నేర్చుకునేది ఇక్కడే — గురువు పర్యవేక్షణలో తప్పులు చేస్తూనే; నేర్చుకునే మార్గం అదొక్కటే.',
-          },
+          id: 'state',
+          name: { en: 'Observing One’s Own State', te: 'స్వీయ స్థితిని గమనించడం' },
+          body: [
+            {
+              en: 'After sufficient observation and recording, students examine possible relationships between Swara and their own state.',
+              te: 'తగినంత కాలం పరిశీలన మరియు నమోదు జరిగిన తర్వాత, స్వరానికి మరియు స్వీయ స్థితికి మధ్య కనిపించే సంబంధాలను పరిశీలిస్తారు.',
+            },
+            {
+              en: 'Energy, appetite, sleep, mood, activities that felt easier, and activities that felt difficult may be observed.',
+              te: 'శక్తి, ఆకలి, నిద్ర, మనోభావం, సులభంగా జరిగిన పనులు మరియు కష్టంగా అనిపించిన పనులు వంటి అంశాలను గమనించవచ్చు.',
+            },
+            {
+              en: 'Guidance is provided to distinguish recurring patterns from isolated events.',
+              te: 'పునరావృతమయ్యే సరళి మరియు యాదృచ్ఛిక సంఘటన మధ్య తేడాను గుర్తించడానికి మార్గదర్శనం అందించబడుతుంది.',
+            },
+          ],
         },
         {
           id: 'application',
-          name: { en: 'Application to timing and action', te: 'కాలం, కార్యానికి అనువర్తనం' },
-          body: {
-            en: 'The traditional applications: which swara is held to support which kind of undertaking, what is said of the moments of transition, and the practices for changing the flow. This is applied first to small and reversible decisions, and never to consequential ones while a student is still learning. A student who begins timing significant matters in the first year is asked to stop.',
-            te: 'సాంప్రదాయ అనువర్తనాలు: ఏ స్వరం ఏ రకమైన కార్యానికి అనుకూలమని చెప్తారు, స్వర మార్పు క్షణాల గురించి ఏమి చెప్పబడింది, ప్రవాహాన్ని మార్చే అభ్యాసాలు ఏవి. వీటిని ముందు చిన్న, వెనక్కి తీసుకోగల నిర్ణయాలకే వర్తింపజేస్తారు; నేర్చుకుంటున్నంత కాలం ముఖ్యమైన నిర్ణయాలకు ఎప్పుడూ కాదు. మొదటి ఏడాదిలోనే ముఖ్య విషయాలకు దీన్ని వాడటం మొదలుపెట్టిన సాధకుడిని ఆపమని చెప్తాం.',
-          },
+          name: { en: 'Time and Application', te: 'కాలం, కార్యానికి అనువర్తనం' },
+          body: [
+            {
+              en: 'Traditional applications related to Swara are examined at this stage, including traditional observations regarding different Swaras, activities, and changes in the flow of breath.',
+              te: 'స్వరానికి సంబంధించిన సంప్రదాయ అనువర్తనాలను ఈ దశలో పరిశీలిస్తారు — ఏ స్వరం ఏ రకమైన కార్యానికి అనుకూలంగా చెప్పబడింది, స్వర మార్పు సమయాల గురించి సంప్రదాయ గ్రంథాలు ఏమి చెబుతున్నాయి వంటి అంశాలు.',
+            },
+            {
+              en: 'These are first considered in ordinary and relatively low-impact situations. Important life decisions should not be based solely on these observations.',
+              te: 'వాటిని ముందుగా సాధారణ మరియు తక్కువ ప్రభావం ఉన్న సందర్భాల్లో పరిశీలించడం ద్వారా అవగాహన పెంచుకుంటారు. ముఖ్యమైన జీవిత నిర్ణయాలకు వీటిపై మాత్రమే ఆధారపడకుండా ఉండాలని సూచిస్తారు.',
+            },
+          ],
         },
         {
-          id: 'sustained',
-          name: { en: 'Sustained practice', te: 'నిరంతర సాధన' },
-          body: {
-            en: 'The point at which observation stops being an exercise. Guidance thins out, sessions become occasional, and the student maintains the record independently — arriving with questions rather than waiting for lessons. Most people do not reach this stage, and that is neither hidden from them nor held against them.',
-            te: 'పరిశీలన ఒక అభ్యాసంగా కాక సహజంగా మారే దశ. మార్గదర్శనం తగ్గుతుంది, సమావేశాలు అప్పుడప్పుడే జరుగుతాయి; సాధకుడు స్వతంత్రంగా నమోదు కొనసాగిస్తూ, పాఠాల కోసం ఎదురుచూడకుండా ప్రశ్నలతో వస్తారు. చాలామంది ఈ దశకు చేరరు; అది వారి నుండి దాచమూ, దాన్ని తప్పుగా చూడమూ.',
-          },
+          id: 'continuing',
+          name: { en: 'Continuing Practice', te: 'నిరంతర సాధన' },
+          body: [
+            {
+              en: 'With continued practice, observation can become a more natural part of daily awareness.',
+              te: 'పరిశీలన క్రమంగా సహజమైన అభ్యాసంగా మారే దశ ఇది. ఈ దశలో మార్గదర్శనం అవసరాన్ని బట్టి కొనసాగుతుంది.',
+            },
+            {
+              en: 'The student continues personal observation and recording and seeks guidance when questions arise.',
+              te: 'సాధకుడు స్వతంత్రంగా తన పరిశీలన మరియు నమోదు కొనసాగిస్తూ, అవసరమైనప్పుడు ప్రశ్నలతో మార్గదర్శనం పొందుతాడు.',
+            },
+          ],
         },
       ],
-      who: {
-        en: 'Anyone who keeps, or is willing to build, a regular daily practice and wants to add structured observation to it. What it asks for is consistency rather than prior knowledge.',
-        te: 'క్రమమైన దైనందిన సాధన ఉన్నవారికి, లేదా దాన్ని ఏర్పరచుకోవాలనుకునేవారికి — దానికి క్రమబద్ధ పరిశీలన జోడించాలనుకునేవారికి. ఇక్కడ కావలసినది ముందస్తు జ్ఞానం కాదు, నిలకడ.',
-      },
-      practice: {
-        en: 'One to one, beginning with a conversation rather than an enrolment. Sessions are arranged at a frequency that suits the student, and are built around what their own observation actually shows rather than around a fixed syllabus. Keeping the daily record between sessions is what makes the study work.',
-        te: 'ఒకరితో ఒకరు; చేరిక కాదు, సంభాషణతో ప్రారంభం. విద్యార్థికి అనుకూలమైన వ్యవధిలో సమావేశాలు ఏర్పాటు చేస్తాం; నిర్ణీత పాఠ్య ప్రణాళిక చుట్టూ కాక, వారి స్వంత పరిశీలన చూపిస్తున్న దాని చుట్టూ. సమావేశాల మధ్య దైనందిన నమోదు కొనసాగించడమే ఈ అధ్యయనాన్ని ఫలవంతం చేస్తుంది.',
-      },
-      cta: {
-        en: 'Enquire about this study',
-        te: 'ఈ అధ్యయనం గురించి విచారించండి',
-      },
+      who: [
+        {
+          en: 'This study is suitable for those who already maintain a regular daily practice or wish to develop such a discipline.',
+          te: 'క్రమమైన దైనందిన సాధన ఉన్నవారికి, లేదా అలాంటి క్రమాన్ని ఏర్పరచుకోవాలనుకునేవారికి ఈ అధ్యయనం అనుకూలంగా ఉంటుంది.',
+        },
+        {
+          en: 'More than prior knowledge, consistency and systematic observation are important.',
+          te: 'ఇక్కడ ప్రధానంగా అవసరమైనది ముందస్తు జ్ఞానం కంటే నిలకడ మరియు క్రమబద్ధమైన పరిశీలన.',
+        },
+      ],
+      practice: [
+        {
+          en: 'The process begins with a personal conversation. Meetings are arranged in a manner suitable for the student.',
+          te: 'వ్యక్తిగత సంభాషణతో ప్రారంభమవుతుంది. విద్యార్థికి అనుకూలమైన విధంగా సమావేశాలు ఏర్పాటు చేస్తారు.',
+        },
+        {
+          en: 'Guidance is not limited to following a fixed syllabus; it can also respond to questions arising from the student’s own observation and study.',
+          te: 'మార్గదర్శనం కేవలం నిర్ణీత పాఠ్య ప్రణాళికను అనుసరించడం కాకుండా, విద్యార్థి చేస్తున్న స్వీయ పరిశీలన మరియు అధ్యయనంలో ఎదురయ్యే ప్రశ్నలకు అనుగుణంగా కొనసాగుతుంది.',
+        },
+        {
+          en: 'Daily observation and recording between meetings form an important part of the study.',
+          te: 'సమావేశాల మధ్య దైనందిన పరిశీలన మరియు నమోదు కొనసాగించడం ఈ అధ్యయనంలో ముఖ్యమైన భాగం.',
+        },
+      ],
+      cta: { en: 'Enquire About This Study', te: 'ఈ అధ్యయనం గురించి విచారించండి' },
     },
 
-    /* ── Brahmavidya ───────────────────────────────────────────── */
+    /* ── Brahmavidya ──────────────────────────────────────────── */
     {
       id: 'brahmavidya',
       name: { en: 'Brahmavidya', te: 'బ్రహ్మవిద్య' },
       standfirst: {
-        en: 'Study of the texts on the nature of the self, with practice, under a teacher.',
-        te: 'ఆత్మ స్వరూపాన్ని గురించిన గ్రంథ అధ్యయనం, సాధన — గురువు వద్ద.',
+        en: 'Study of the Self, Traditional Texts, Reflection and Practice',
+        te: 'ఆత్మ స్వరూపాన్ని గురించిన గ్రంథ అధ్యయనం, మననం మరియు సాధన',
       },
-      definition: {
-        en: 'The traditional field of knowledge concerning the nature of the self, studied through the Upanishads, the Bhagavad Gita and related texts, alongside sustained contemplative practice. It is not therapy, self-improvement, or a collection of techniques. What is offered here is study and practice under guidance, at whatever pace a student’s life permits.',
-        te: 'ఆత్మ స్వరూపాన్ని గురించిన సాంప్రదాయ జ్ఞాన శాఖ — ఉపనిషత్తులు, భగవద్గీత మరియు సంబంధిత గ్రంథాల అధ్యయనం; దానితో పాటు నిరంతర మననం. ఇది చికిత్స కాదు, ఆత్మాభివృద్ధి శిక్షణ కాదు, పద్ధతుల సముదాయమూ కాదు. ఇక్కడ ఇచ్చేది మార్గదర్శనంలో అధ్యయనం, సాధన — సాధకుని జీవితం అనుమతించే వేగంతో.',
-      },
-      limit: {
-        en: 'No outcome is promised, because none can honestly be promised. Study of this kind does not reliably produce calm, resolve difficulties, or improve circumstances, and a teacher who offers those things is offering something else under this name.',
-        te: 'ఎలాంటి ఫలితమూ వాగ్దానం చేయం; నిజాయితీగా చేయగలిగేది ఏదీ లేదు కాబట్టి. ఈ అధ్యయనం ప్రశాంతతను కలిగిస్తుందని, కష్టాలను తీరుస్తుందని, పరిస్థితులను మెరుగుపరుస్తుందని నమ్మకంగా చెప్పలేం. అవి ఇస్తానని చెప్పే గురువు ఈ పేరుతో వేరే దేన్నో ఇస్తున్నారు.',
-      },
-      stagesLabel: { en: 'How the study is structured', te: 'అధ్యయనం ఎలా సాగుతుంది' },
+      definition: [
+        {
+          en: 'Brahmavidya is a traditional field of knowledge concerned with the nature of the Self. Guidance is provided for the study of relevant traditional texts along with systematic reflection and practice.',
+          te: 'బ్రహ్మవిద్య అనేది ఆత్మ స్వరూపాన్ని గురించిన సంప్రదాయ జ్ఞాన అధ్యయనం. సంబంధిత సంప్రదాయ గ్రంథాల అధ్యయనంతో పాటు, వాటిపై క్రమబద్ధమైన మననం మరియు సాధనకు మార్గదర్శనం అందించబడుతుంది.',
+        },
+        {
+          en: 'It is not therapy, not a medical method, and does not promise specific results. It is a structured path of study involving texts, reflection, and practice.',
+          te: 'ఇది చికిత్స కాదు, వైద్య విధానం కాదు మరియు నిర్దిష్ట ఫలితాలను అందిస్తామని చెప్పే పద్ధతి కాదు. ఇది గ్రంథ అధ్యయనం, మననం మరియు సాధనతో కూడిన క్రమబద్ధమైన అధ్యయన మార్గం.',
+        },
+      ],
+      limit: [
+        {
+          en: 'No specific result is guaranteed.',
+          te: 'ఎలాంటి నిర్దిష్ట ఫలితాన్నీ హామీ ఇవ్వము.',
+        },
+        {
+          en: 'This study does not promise that it will necessarily create peace, remove life difficulties, or improve particular circumstances.',
+          te: 'ఈ అధ్యయనం తప్పనిసరిగా ప్రశాంతతను కలిగిస్తుందని, జీవితంలోని కష్టాలను తొలగిస్తుందని లేదా పరిస్థితులను మెరుగుపరుస్తుందని హామీ ఇవ్వము.',
+        },
+        {
+          en: 'The emphasis is on study, reflection, and practice rather than promises of specific material or personal outcomes.',
+          te: 'బ్రహ్మవిద్యలో ప్రధానంగా అధ్యయనం, మననం మరియు సాధనకు ప్రాధాన్యం ఉంటుంది; నిర్దిష్ట భౌతిక లేదా వ్యక్తిగత ఫలితాల వాగ్దానానికి కాదు.',
+        },
+      ],
+      stagesLabel: { en: 'How the Study Progresses', te: 'అధ్యయనం ఎలా సాగుతుంది' },
       stages: [
         {
-          id: 'qualification',
-          name: { en: 'Preparation and fitness', te: 'సన్నద్ధత, అధికారం' },
-          body: {
-            en: 'The traditional sadhana-chatushtaya — discrimination, dispassion, the six disciplines, and the wish for liberation — discussed openly at the outset, not as a barrier but so that the study rests on something.',
-            te: 'సాంప్రదాయ సాధన చతుష్టయం — వివేకం, వైరాగ్యం, షట్‌సంపత్తి, ముముక్షుత్వం — మొదటే బహిరంగంగా చర్చిస్తాం. ఇది అడ్డంకిగా కాదు; అధ్యయనం ఒక పునాదిపై నిలబడటానికి.',
-          },
+          id: 'preparation',
+          name: { en: 'Preparation', te: 'సన్నద్ధత' },
+          body: [
+            {
+              en: 'The initial stage considers basic subjects that support the study. Depending on the requirement, topics such as discernment, detachment, discipline of the mind and senses, and interest in self-knowledge may be discussed.',
+              te: 'అధ్యయనానికి అవసరమైన ప్రాథమిక అంశాల గురించి ప్రారంభ దశలో చర్చిస్తారు. వివేకం, వైరాగ్యం, మనస్సు మరియు ఇంద్రియ నియమం, ఆత్మజ్ఞానంపై ఆసక్తి వంటి అంశాలను అవసరాన్ని బట్టి పరిశీలిస్తారు.',
+            },
+            {
+              en: 'These are treated as supportive foundations for the study.',
+              te: 'ఇది ఒక అడ్డంకిగా కాకుండా, అధ్యయనం సరైన పునాదిపై కొనసాగడానికి ఉపయోగపడే అంశంగా పరిగణించబడుతుంది.',
+            },
+          ],
         },
         {
           id: 'texts',
-          name: { en: 'Textual grounding', te: 'గ్రంథ అధ్యయనం' },
-          body: {
-            en: 'Reading in sequence: the principal Upanishads with a traditional commentary, then the Gita, and further for those who wish to go on. Sanskrit is a considerable help and is not a requirement to begin — where it is absent we work through translation and simply take longer.',
-            te: 'క్రమంలో అధ్యయనం: ప్రధాన ఉపనిషత్తులు సాంప్రదాయ భాష్యంతో, ఆ తర్వాత గీత, అంతవరకు వెళ్లేవారికి బ్రహ్మ సూత్రాలు. సంస్కృతం ఎంతో ఉపయోగపడుతుంది, కానీ ప్రారంభించడానికి తప్పనిసరి కాదు — అది లేని చోట అనువాదం ద్వారా సాగుతూ ఎక్కువ సమయం తీసుకుంటాం; ఇది అడ్డదారి కాదు, నిజాయితీ గల మార్పిడి.',
-          },
+          name: { en: 'Textual Study', te: 'గ్రంథ అధ్యయనం' },
+          body: [
+            {
+              en: 'Relevant traditional texts are studied in a structured manner. Translations and explanatory works may be used where appropriate.',
+              te: 'సంబంధిత సంప్రదాయ గ్రంథాలను క్రమబద్ధంగా అధ్యయనం చేస్తారు. అవసరాన్ని బట్టి అనువాదాలు మరియు వివరణాత్మక గ్రంథాల సహాయంతో అధ్యయనం కొనసాగించవచ్చు.',
+            },
+            {
+              en: 'Knowledge of Sanskrit can be useful, but it is not compulsory for beginning the study.',
+              te: 'సంస్కృత పరిజ్ఞానం ఉపయోగకరంగా ఉంటుంది; అయితే ప్రారంభించడానికి అది తప్పనిసరి కాదు.',
+            },
+          ],
         },
         {
           id: 'sadhana',
-          name: { en: 'Practice under guidance', te: 'మార్గదర్శనంలో సాధన' },
-          body: {
-            en: 'Shravana, manana and nididhyasana taken as an actual sequence rather than as three words recited together. The practice is fitted to the person: what they can genuinely sustain each day, what their household and work allow, and what the text currently in front of them is asking of them.',
-            te: 'శ్రవణం, మననం, నిదిధ్యాసనం — కలిపి చెప్పే మూడు పదాలుగా కాక, నిజమైన క్రమంగా. సాధనను వ్యక్తికి తగ్గట్టు సర్దుతాం: రోజూ నిజంగా ఎంత కొనసాగించగలరు, ఇల్లు–ఉద్యోగం ఎంత అనుమతిస్తాయి, ప్రస్తుతం చదువుతున్న గ్రంథం వారి నుండి ఏమి కోరుతోంది.',
-          },
+          name: { en: 'Guided Practice', te: 'మార్గదర్శనంలో సాధన' },
+          body: [
+            {
+              en: 'Traditional approaches such as listening to the teaching, reflection, and contemplative practice are examined systematically.',
+              te: 'శ్రవణం, మననం మరియు నిదిధ్యాసనం వంటి సంప్రదాయ అధ్యయన–సాధనా విధానాలను క్రమబద్ధంగా పరిశీలిస్తారు.',
+            },
+            {
+              en: 'Practice is considered according to the individual’s actual circumstances, including the time available for daily study and personal responsibilities.',
+              te: 'సాధనను వ్యక్తి యొక్క వాస్తవ పరిస్థితులకు అనుగుణంగా కొనసాగిస్తారు — రోజువారీగా ఎంత సమయం కేటాయించగలరు, కుటుంబం మరియు ఉద్యోగ పరిస్థితులు ఎంతవరకు అనుమతిస్తాయి వంటి అంశాలను పరిగణనలోకి తీసుకుంటారు.',
+            },
+          ],
         },
         {
           id: 'continuing',
-          name: { en: 'A continuing relationship', te: 'కొనసాగే సంబంధం' },
-          body: {
-            en: 'For those who stay, the relationship continues without a defined end. Some study for two years and stop; some continue for decades. Neither is treated as a failure, and no one is asked to declare in advance which they intend to be.',
-            te: 'కొనసాగేవారికి ఈ సంబంధానికి నిర్దిష్టమైన ముగింపు ఉండదు. కొందరు రెండేళ్లు చదివి ఆగిపోతారు; కొందరు దశాబ్దాల పాటు కొనసాగుతారు. రెండింటినీ వైఫల్యంగా చూడం; ఎవరినీ ముందుగానే ఏది ఎంచుకుంటారో చెప్పమని అడగం.',
-          },
+          name: { en: 'Continuing Study', te: 'కొనసాగుతున్న అధ్యయనం' },
+          body: [
+            {
+              en: 'There is no single fixed completion period for everyone. Some may study for a period and take a break, while others may continue for a longer period.',
+              te: 'ఈ అధ్యయనానికి అందరికీ ఒకే విధమైన ముగింపు కాలం ఉండదు. కొందరు కొంతకాలం అధ్యయనం చేసి విరామం తీసుకోవచ్చు; మరికొందరు దీర్ఘకాలం కొనసాగవచ్చు.',
+            },
+            {
+              en: 'The study progresses according to the individual’s interest, circumstances, and ability to continue.',
+              te: 'అధ్యయనం వ్యక్తి యొక్క ఆసక్తి, పరిస్థితి మరియు కొనసాగించే సామర్థ్యానికి అనుగుణంగా సాగుతుంది.',
+            },
+          ],
         },
       ],
-      who: {
-        en: 'Anyone who wishes to study these texts seriously — whether they have read something of the material already, or are beginning with an interest and the willingness to keep at it.',
-        te: 'ఈ గ్రంథాలను క్రమబద్ధంగా అధ్యయనం చేయాలనుకునే ఎవరికైనా — ఇప్పటికే కొంత చదివిన వారికైనా, ఆసక్తితో, పట్టుదలతో ఇప్పుడే ప్రారంభించేవారికైనా.',
-      },
-      practice: {
-        en: 'It begins with a conversation about what you have read and what you are looking for. Study then proceeds in a small group where one is running and one to one where it is not, at a fixed hour each week. Attendance is expected to be regular, because the reading is sequential.',
-        te: 'మీరు ఏమి చదివారు, ఏమి కోరుకుంటున్నారు — దీని గురించిన సంభాషణతో ప్రారంభం. ఆ తర్వాత ఒక చిన్న బృందం నడుస్తుంటే అందులో, లేకుంటే ఒకరితో ఒకరు — వారానికొక నిర్ణీత సమయంలో అధ్యయనం సాగుతుంది. అధ్యయనం వరుసగా సాగుతుంది కాబట్టి హాజరు క్రమం తప్పకుండా ఉండాలి.',
-      },
-      cta: {
-        en: 'Enquire about this study',
-        te: 'ఈ అధ్యయనం గురించి విచారించండి',
-      },
+      who: [
+        {
+          en: 'The study is open to those who wish to study these subjects systematically, including both those who have already studied to some extent and those beginning with sincere interest and commitment.',
+          te: 'ఈ విషయాలను క్రమబద్ధంగా అధ్యయనం చేయాలనుకునే ఎవరికైనా — ఇప్పటికే కొంత చదివిన వారికైనా, ఆసక్తి మరియు పట్టుదలతో ఇప్పుడే ప్రారంభించేవారికైనా ఈ అధ్యయనం అందుబాటులో ఉంటుంది.',
+        },
+        {
+          en: 'Prior knowledge is less important than the willingness to study honestly and continue consistently.',
+          te: 'ముందస్తు జ్ఞానం కంటే నిజాయితీగా అధ్యయనం చేయాలనే ఆసక్తి మరియు క్రమంగా కొనసాగించే సిద్ధతకు ప్రాధాన్యం ఉంటుంది.',
+        },
+      ],
+      practice: [
+        {
+          en: 'The process begins with a conversation about what you have studied, what you wish to understand, and what kind of study may be suitable for you.',
+          te: 'మీరు ఇంతవరకు ఏమి చదివారు, ఏమి తెలుసుకోవాలనుకుంటున్నారు, మీకు ఎలాంటి అధ్యయనం అవసరం అనే విషయంపై సంభాషణతో ప్రారంభమవుతుంది.',
+        },
+        {
+          en: 'Depending on the requirement, the study may continue individually or in a small group.',
+          te: 'అవసరాన్ని బట్టి ఒకరితో ఒకరు లేదా చిన్న బృందంగా అధ్యయనం కొనసాగించవచ్చు.',
+        },
+        {
+          en: 'Since the study progresses gradually, regular participation and personal study are encouraged as far as practical.',
+          te: 'అధ్యయనం క్రమంగా కొనసాగుతుంది కాబట్టి, సాధ్యమైనంతవరకు క్రమబద్ధమైన హాజరు మరియు వ్యక్తిగత అధ్యయనానికి ప్రాధాన్యం ఉంటుంది.',
+        },
+      ],
+      cta: { en: 'Enquire About This Study', te: 'ఈ అధ్యయనం గురించి విచారించండి' },
     },
   ] satisfies Discipline[],
 
   /* ── Explicit comparison, so nobody expects a booking flow ───── */
   comparison: {
     title: {
-      en: 'How this differs from the rest of the site',
-      te: 'ఇది సైట్‌లోని మిగతా వాటికి ఎలా భిన్నం',
+      en: 'How This Differs from Other Services',
+      te: 'ఇది సైట్‌లోని మిగతా సేవలకు ఎలా భిన్నం',
     },
-    lede: {
-      en: 'Stated plainly, because a visitor arriving from the other three verticals reasonably expects to choose a service, see a fee and pick a slot. None of that applies here.',
-      te: 'స్పష్టంగా చెప్తున్నాం — మిగతా మూడు శాఖల నుండి వచ్చిన సందర్శకులు సేవను ఎంచుకోవడం, రుసుము చూడటం, సమయం ఎంచుకోవడం సహజంగానే ఆశిస్తారు. ఇక్కడ అవేవీ వర్తించవు.',
-    },
+    lede: [
+      {
+        en: 'Vastu, Jyotisha, and Numerology services are generally provided for a specific need or question.',
+        te: 'వాస్తు, జ్యోతిషం మరియు సంఖ్యా శాస్త్రానికి సంబంధించిన సేవలు సాధారణంగా ఒక నిర్దిష్ట అవసరం లేదా ప్రశ్న ఆధారంగా అందించబడతాయి.',
+      },
+      {
+        en: 'Swara Shastra and Brahmavidya are study, practice, and personal guidance programs. Therefore, they do not necessarily have a single meeting, fixed service duration, or fixed completion point.',
+        te: 'స్వర శాస్త్రం మరియు బ్రహ్మవిద్య మాత్రం అధ్యయనం, సాధన మరియు వ్యక్తిగత మార్గదర్శనానికి సంబంధించిన కార్యక్రమాలు. అందువల్ల వీటికి మిగతా సేవల మాదిరిగా ఒకే సమావేశం, ఒకే సేవా వ్యవధి లేదా ఒకే ముగింపు విధానం ఉండదు.',
+      },
+    ] satisfies Bi[],
+    label: { en: 'Aspect', te: 'అంశం' },
     colA: { en: 'Vastu · Jyotisha · Numerology', te: 'వాస్తు · జ్యోతిషం · సంఖ్యా శాస్త్రం' },
-    colB: { en: 'Swarashastra · Brahmavidya', te: 'స్వర శాస్త్రం · బ్రహ్మవిద్య' },
+    colB: { en: 'Swara Shastra · Brahmavidya', te: 'స్వర శాస్త్రం · బ్రహ్మవిద్య' },
     rows: [
       {
         id: 'nature',
         label: { en: 'What it is', te: 'ఇది ఏమిటి' },
-        a: { en: 'A defined engagement with a fixed scope', te: 'నిర్దిష్ట పరిధి గల సేవ' },
-        b: { en: 'A teaching relationship with no fixed scope', te: 'నిర్దిష్ట పరిధి లేని బోధనా సంబంధం' },
+        a: { en: 'Specific consultation service', te: 'నిర్దిష్ట పరిధి గల సంప్రదింపు సేవ' },
+        b: {
+          en: 'Continuing study, practice, and guidance',
+          te: 'కొనసాగగల అధ్యయనం, సాధన మరియు మార్గదర్శనం',
+        },
       },
       {
         id: 'start',
-        label: { en: 'How it starts', te: 'ఎలా ప్రారంభమవుతుంది' },
-        a: { en: 'Choose the service, book a time', te: 'సేవను ఎంచుకుని, సమయం నమోదు చేయడం' },
+        label: { en: 'How it begins', te: 'ఎలా ప్రారంభమవుతుంది' },
+        a: {
+          en: 'Select a service and arrange a consultation',
+          te: 'సేవను ఎంచుకుని సంప్రదింపు సమయం నిర్ణయించడం',
+        },
         b: {
-          en: 'A conversation about whether to begin at all',
-          te: 'అసలు ప్రారంభించాలా వద్దా అనే సంభాషణ',
+          en: 'Initial conversation to understand the requirement',
+          te: 'ముందుగా సంభాషణ మరియు అవసరాన్ని అర్థం చేసుకోవడం',
         },
       },
       {
         id: 'output',
         label: { en: 'What you receive', te: 'మీకు అందేది' },
-        a: { en: 'A written report, and a follow-up sitting', te: 'లిఖిత నివేదిక, ఒక సమీక్ష సమావేశం' },
-        b: { en: 'Guidance over time. There is no deliverable', te: 'కాలక్రమేణా మార్గదర్శనం. అందించే పత్రం ఉండదు' },
+        a: {
+          en: 'Assessment and guidance on the relevant subject',
+          te: 'సంబంధిత అంశంపై పరిశీలన మరియు మార్గదర్శనం',
+        },
+        b: {
+          en: 'Personal study and guidance over time',
+          te: 'కాలక్రమేణా వ్యక్తిగత అధ్యయనం మరియు మార్గదర్శనం',
+        },
       },
       {
         id: 'duration',
-        label: { en: 'How long', te: 'ఎంత కాలం' },
-        a: { en: 'A sitting, with follow-up as needed', te: 'ఒక సమావేశం; అవసరాన్ని బట్టి అనుసరణ' },
-        b: { en: 'Months at minimum. Frequently years', te: 'కనీసం నెలలు. తరచుగా ఏళ్లు' },
+        label: { en: 'Duration', te: 'ఎంత కాలం' },
+        a: { en: 'According to the nature of the service', te: 'సేవ స్వభావాన్ని బట్టి' },
+        b: {
+          en: 'According to the individual and nature of study',
+          te: 'వ్యక్తి మరియు అధ్యయన స్వభావాన్ని బట్టి',
+        },
       },
       {
         id: 'fee',
-        label: { en: 'Fees', te: 'రుసుము' },
-        a: { en: 'Quoted per engagement, confirmed in writing', te: 'ప్రతి సేవకూ విడిగా, లిఖితపూర్వకంగా' },
+        label: { en: 'Fee', te: 'రుసుము' },
+        a: {
+          en: 'Communicated in advance according to the service and scope',
+          te: 'సేవ స్వభావం మరియు పని పరిధిని బట్టి ముందుగా తెలియజేయబడుతుంది',
+        },
         b: {
-          en: 'Discussed personally, and never as the first subject',
-          te: 'వ్యక్తిగతంగా చర్చిస్తాం; అది మొదటి విషయం ఎప్పుడూ కాదు',
+          en: 'Communicated in advance according to the study arrangement',
+          te: 'అధ్యయన విధానం మరియు వ్యక్తిగత మార్గదర్శనాన్ని బట్టి ముందుగా తెలియజేయబడుతుంది',
         },
       },
       {
         id: 'end',
-        label: { en: 'How it ends', te: 'ఎలా ముగుస్తుంది' },
-        a: { en: 'The report closes the engagement', te: 'నివేదికతో సేవ ముగుస్తుంది' },
-        b: { en: 'No fixed end. You may stop at any point', te: 'నిర్దిష్ట ముగింపు లేదు. ఎప్పుడైనా ఆపవచ్చు' },
+        label: { en: 'How it concludes', te: 'ఎలా ముగుస్తుంది' },
+        a: {
+          en: 'When the relevant consultation is completed',
+          te: 'సంబంధిత సంప్రదింపు పూర్తయినప్పుడు',
+        },
+        b: {
+          en: 'May continue or be paused according to the requirement',
+          te: 'అవసరాన్ని బట్టి కొనసాగించవచ్చు లేదా విరామం తీసుకోవచ్చు',
+        },
       },
     ],
   },
 
   /* ── Enquiry flow, in place of a fee table ───────────────────── */
   flow: {
-    title: { en: 'Enquiry and guidance conversation', te: 'విచారణ, మార్గదర్శన సంభాషణ' },
+    title: {
+      en: 'Enquiry and Guidance Conversation',
+      te: 'విచారణ, మార్గదర్శన సంభాషణ',
+    },
     lede: {
-      en: 'There is no form with required fields, and no calendar with open slots. The sequence is deliberately slow.',
-      te: 'తప్పనిసరి ఖాళీలున్న ఫారం లేదు, ఖాళీ సమయాలున్న క్యాలెండర్ లేదు. ఈ క్రమం ఉద్దేశపూర్వకంగానే నెమ్మదిగా ఉంటుంది.',
+      en: 'There is no requirement to complete a lengthy form or select a time slot in advance. The initial process is intentionally calm and personal.',
+      te: 'తప్పనిసరిగా నింపాల్సిన పెద్ద ఫారం లేదా ముందుగా ఖాళీ సమయాలను ఎంచుకోవాల్సిన విధానం ఉండదు. ప్రారంభ ప్రక్రియ ప్రశాంతంగా మరియు వ్యక్తిగతంగా ఉంటుంది.',
     },
     steps: [
       {
         id: 'write',
-        name: { en: 'You write', te: 'మీరు రాస్తారు' },
+        name: { en: 'You Write', te: 'మీరు రాస్తారు' },
         body: {
-          en: 'A short note in your own words: your background, what practice you keep if any, what you have read, and what brings you to this. Two paragraphs is enough.',
-          te: 'మీ మాటల్లో ఒక చిన్న లేఖ: మీ నేపథ్యం, ఏదైనా సాధన ఉంటే అది, మీరు చదివినవి, మిమ్మల్ని ఇటు నడిపించినది ఏమిటి. రెండు పేరాలు చాలు.',
+          en: 'Send a short message in your own words about your background, any existing practice, what you have studied, and what has brought you towards this study. Two paragraphs are enough.',
+          te: 'మీ మాటల్లో ఒక చిన్న సందేశం పంపండి: మీ నేపథ్యం, ఏదైనా సాధన ఉంటే అది, మీరు చదివినవి మరియు మిమ్మల్ని ఈ అధ్యయనం వైపు తీసుకువచ్చిన కారణం. రెండు పేరాలు సరిపోతాయి.',
         },
       },
       {
         id: 'reply',
-        name: { en: 'A personal reply', te: 'వ్యక్తిగత సమాధానం' },
+        name: { en: 'Personal Response', te: 'వ్యక్తిగత సమాధానం' },
         body: {
-          en: 'Within a week, from the person who would actually be guiding you. Sometimes the reply is a question rather than an answer.',
-          te: 'ఒక వారంలోపు — నిజంగా మీకు మార్గదర్శనం చేసే వ్యక్తి నుండే. కొన్నిసార్లు ఆ సమాధానం ఒక ప్రశ్నగా ఉంటుంది.',
+          en: 'Your message will be reviewed and a response will be provided. Where necessary, a few preliminary questions may also be asked.',
+          te: 'మీ సందేశాన్ని పరిశీలించి సమాధానం ఇస్తాం. అవసరమైతే ముందుగా కొన్ని ప్రశ్నలు కూడా అడగవచ్చు.',
         },
       },
       {
         id: 'conversation',
-        name: { en: 'A conversation', te: 'ఒక సంభాషణ' },
+        name: { en: 'A Conversation', te: 'ఒక సంభాషణ' },
         body: {
-          en: 'Unhurried, without obligation on either side, and without a fee. Its purpose is to establish whether this is the right thing for you now — and the honest answer is often not yet.',
-          te: 'తొందర లేకుండా, ఇరువైపులా బాధ్యత లేకుండా, రుసుము లేకుండా. ఇది ఇప్పుడు మీకు సరైనదా అని నిర్ధారించడమే దీని ఉద్దేశం — నిజాయితీ గల సమాధానం తరచుగా “ఇంకా కాదు” అనే ఉంటుంది.',
+          en: 'An initial conversation is held. Its purpose is to understand whether this study is suitable for you at present, and how it may be begun.',
+          te: 'ఒక ప్రారంభ సంభాషణ నిర్వహిస్తాం. దీని ఉద్దేశం ఈ అధ్యయనం ప్రస్తుతం మీకు అనుకూలమా, ఏ విధంగా ప్రారంభించాలి అనే విషయాన్ని అర్థం చేసుకోవడం.',
         },
       },
       {
         id: 'begin',
-        name: { en: 'If both sides agree', te: 'ఇరువురూ అంగీకరిస్తే' },
+        name: { en: 'If Both Sides Agree', te: 'ఇరువైపులా అంగీకారం ఉంటే' },
         body: {
-          en: 'A beginning is arranged, with its shape and rhythm settled between you. Fees, where they apply at all, are discussed at this point and not before.',
-          te: 'ప్రారంభం ఏర్పాటు చేస్తాం; దాని రూపం, క్రమం మీ ఇద్దరి మధ్యే నిర్ణయమవుతాయి. రుసుము వర్తించే చోట, అది ఈ దశలోనే చర్చిస్తాం — అంతకుముందు కాదు.',
+          en: 'The manner of beginning the study, the pattern of meetings, and other necessary arrangements are decided mutually. Where a fee applies, it is also clearly communicated in advance.',
+          te: 'అధ్యయనం ప్రారంభించే విధానం, సమావేశాల క్రమం మరియు అవసరమైన ఇతర అంశాలను పరస్పరం నిర్ణయించుకుంటాం. రుసుము వర్తించే చోట, అది కూడా ముందుగా స్పష్టంగా తెలియజేయబడుతుంది.',
         },
       },
     ],
-    note: {
-      en: 'If we think you would be better served by one of the consultation services, or by a teacher elsewhere, we will tell you that instead.',
-      te: 'సంప్రదింపు సేవల్లో ఏదైనా మీకు ఎక్కువ ఉపయోగమని, లేదా వేరే గురువు దగ్గర మీకు మెరుగైన మార్గదర్శనం లభిస్తుందని అనిపిస్తే — అదే చెప్తాం.',
-    },
     cta: { en: 'Write to us', te: 'మాకు రాయండి' },
   },
 
   faqs: [
     {
       id: 'beginners',
-      q: { en: 'Is this open to complete beginners?', te: 'పూర్తిగా కొత్తవారికి ఇది అందుబాటులో ఉందా?' },
-      a: {
-        en: 'For Swarashastra, a beginner with a settled daily routine can start; what is needed is consistency rather than prior knowledge. For Brahmavidya it is harder to say yes honestly. Someone who has read nothing and practises nothing usually finds the first year unrewarding, not because the material is withheld but because the questions have not yet formed. In that case we generally suggest reading on your own for a period and writing again afterwards.',
-        te: 'స్వర శాస్త్రానికి — స్థిరమైన దైనందిన క్రమం ఉన్న కొత్తవారు ప్రారంభించవచ్చు; ఇక్కడ కావలసినది ముందస్తు జ్ఞానం కాదు, నిలకడ. బ్రహ్మవిద్యకు నిజాయితీగా అవును అనడం కష్టం. ఏమీ చదవని, ఏ సాధనా లేని వ్యక్తికి మొదటి సంవత్సరం సాధారణంగా నిష్ఫలంగా అనిపిస్తుంది — విషయాన్ని దాచడం వల్ల కాదు, ప్రశ్నలు ఇంకా రూపుదిద్దుకోకపోవడం వల్ల. అలాంటప్పుడు కొంతకాలం మీ స్వంతంగా చదివి, తర్వాత మళ్లీ రాయమని సూచిస్తాం.',
+      q: {
+        en: 'Is this available for complete beginners?',
+        te: 'పూర్తిగా కొత్తవారికి ఇది అందుబాటులో ఉందా?',
       },
+      a: [
+        {
+          en: 'For Swara Shastra: Beginners who wish to develop a regular daily practice may begin. Consistency and systematic observation are more important than prior knowledge.',
+          te: 'స్వర శాస్త్రానికి: స్థిరమైన దైనందిన క్రమాన్ని ఏర్పరచుకోవాలనుకునే కొత్తవారు ప్రారంభించవచ్చు. ముందస్తు జ్ఞానం కంటే నిలకడ మరియు క్రమబద్ధమైన పరిశీలనకు ప్రాధాన్యం ఉంటుంది.',
+        },
+        {
+          en: 'For Brahmavidya: Those who have not studied previously may also begin. However, willingness to devote time to textual study and reflection is important.',
+          te: 'బ్రహ్మవిద్యకు: ముందుగా ఏమీ చదవని వారు కూడా ప్రారంభించవచ్చు. అయితే గ్రంథ అధ్యయనం మరియు మననానికి సమయం కేటాయించే సిద్ధత అవసరం.',
+        },
+      ],
     },
     {
       id: 'cost',
-      q: {
-        en: 'Is there a cost, and how is it structured compared with the other consultations?',
-        te: 'రుసుము ఉంటుందా? మిగతా సంప్రదింపులతో పోలిస్తే అది ఎలా ఉంటుంది?',
-      },
-      a: {
-        en: 'Not in the same way. The consultation services are quoted per engagement against a defined scope, because there is a scope to define. Here there is not — the relationship has no fixed length and no deliverable, so it cannot honestly be priced like one. What applies is discussed personally once both sides have decided to begin, and it is never the first thing raised. The enquiry and the guidance conversation carry no fee at all.',
-        te: 'అదే విధంగా కాదు. సంప్రదింపు సేవలకు నిర్దిష్ట పరిధి ఉంటుంది కాబట్టి, ప్రతి సేవకూ విడిగా రుసుము నిర్ణయిస్తాం. ఇక్కడ అలాంటి పరిధి లేదు — ఈ సంబంధానికి నిర్ణీత కాలం లేదు, అందించే పత్రం లేదు; కాబట్టి దానికి అలా ధర నిర్ణయించడం నిజాయితీ కాదు. వర్తించేది ఏదైనా ఉంటే, ఇరువురూ ప్రారంభించాలని నిర్ణయించుకున్న తర్వాత వ్యక్తిగతంగా చర్చిస్తాం; అది ఎప్పుడూ మొదటి విషయం కాదు. విచారణకు, మార్గదర్శన సంభాషణకు ఎలాంటి రుసుమూ లేదు.',
-      },
+      q: { en: 'Is there a fee?', te: 'రుసుము ఉంటుందా?' },
+      a: [
+        {
+          en: 'The initial conversation helps us understand your requirement and whether this study is suitable for you. Before beginning the study, the applicable fee and arrangement will be clearly communicated.',
+          te: 'ప్రారంభ సంభాషణలో మీ అవసరం మరియు ఈ అధ్యయనం మీకు అనుకూలమా అనే విషయాన్ని అర్థం చేసుకుంటాం. అధ్యయనం ప్రారంభించే ముందు వర్తించే రుసుము మరియు విధానాన్ని స్పష్టంగా తెలియజేస్తాం.',
+        },
+      ],
     },
     {
       id: 'separate',
       q: {
-        en: 'Can I study Swarashastra without pursuing Brahmavidya, or are the two connected?',
-        te: 'బ్రహ్మవిద్య లేకుండా స్వర శాస్త్రం మాత్రమే చదవవచ్చా, లేక ఈ రెండూ ముడిపడి ఉన్నాయా?',
+        en: 'Can I study Swara Shastra without studying Brahmavidya?',
+        te: 'బ్రహ్మవిద్య లేకుండా స్వర శాస్త్రం మాత్రమే చదవవచ్చా?',
       },
-      a: {
-        en: 'They are separate and are taught separately. Swarashastra can be studied entirely on its own, and most people who take it do exactly that. It is grouped with Brahmavidya on this page because both are inward disciplines rather than client-facing sciences, not because one leads to the other. Some students do move from one to the other in time; nobody is expected to.',
-        te: 'ఇవి వేర్వేరు; వేర్వేరుగానే బోధిస్తాం. స్వర శాస్త్రాన్ని పూర్తిగా విడిగా అధ్యయనం చేయవచ్చు; దాన్ని తీసుకునే చాలామంది అలాగే చేస్తారు. ఈ పేజీలో బ్రహ్మవిద్యతో కలిపి ఉంచడానికి కారణం — రెండూ బయటివారి కోసం కాక అంతర్ముఖ సాధనలు కావడం; ఒకటి రెండోదానికి దారి తీస్తుందని కాదు. కొందరు కాలక్రమేణా ఒకదాని నుండి మరొకదానికి వెళ్తారు; అలా వెళ్లాలని ఎవరినీ ఆశించం.',
-      },
+      a: [
+        {
+          en: 'Yes. Swara Shastra and Brahmavidya can be studied as two independent areas of study. Where relevant, related subjects may also be considered according to the individual’s interest and practice.',
+          te: 'అవును. స్వర శాస్త్రం మరియు బ్రహ్మవిద్యను రెండు స్వతంత్ర అధ్యయన విభాగాలుగా చదవవచ్చు. వ్యక్తి యొక్క ఆసక్తి మరియు సాధనకు అనుగుణంగా కొన్ని సందర్భాల్లో సంబంధిత అంశాలను కూడా పరిశీలించవచ్చు.',
+        },
+      ],
     },
     {
       id: 'ready',
-      q: { en: 'How do I know whether I am ready to begin?', te: 'ప్రారంభించడానికి నేను సిద్ధమేనా అని ఎలా తెలుసుకోవాలి?' },
-      a: {
-        en: 'You largely do not, and that is what the conversation is for. A useful private test is whether you have kept any voluntary daily discipline for six months without anyone knowing or checking. Both of these ask for that before they ask for anything else. If the answer is no, it is worth building that first — and it can be built anywhere, not necessarily here.',
-        te: 'చాలావరకు మీకు తెలియదు; ఆ సంభాషణ ఉద్దేశం అదే. ఒక ఉపయోగకరమైన స్వీయ పరీక్ష: ఎవరికీ తెలియకుండా, ఎవరూ తనిఖీ చేయకుండా, ఆరు నెలల పాటు మీరు స్వచ్ఛందంగా ఏదైనా దైనందిన క్రమాన్ని కొనసాగించారా. ఈ రెండూ మిగతా దేని కంటే ముందు అదే కోరతాయి. సమాధానం కాదు అయితే, ముందు అది ఏర్పరచుకోవడం విలువైనది — అది ఇక్కడే కానక్కర్లేదు, ఎక్కడైనా చేయవచ్చు.',
+      q: {
+        en: 'How do I know whether I am ready to begin?',
+        te: 'ప్రారంభించడానికి నేను సిద్ధమేనా అని ఎలా తెలుసుకోవాలి?',
       },
+      a: [
+        {
+          en: 'The initial conversation considers your interest, present practice, available study time, and purpose. Guidance can then be provided regarding whether it is suitable to begin or whether some preparation would be useful first.',
+          te: 'ప్రారంభ సంభాషణలో మీకు ఉన్న ఆసక్తి, ప్రస్తుతం ఉన్న సాధన, అధ్యయనానికి కేటాయించగల సమయం మరియు మీ ఉద్దేశాన్ని చర్చిస్తాం. దాని ఆధారంగా ప్రారంభించడం అనుకూలమా అనే విషయంపై మార్గదర్శనం అందిస్తాం.',
+        },
+      ],
     },
     {
       id: 'online',
-      q: {
-        en: 'Can this be done online, and is anything recorded?',
-        te: 'ఇది ఆన్‌లైన్‌లో సాధ్యమా? ఏదైనా రికార్డు చేస్తారా?',
-      },
-      a: {
-        en: 'Online is workable and a good number of students are at a distance. Nothing is recorded, in either discipline — not the sessions, not the discussions, not for internal use. Study of this kind depends on a student being able to say something imprecise and be corrected without it existing afterwards as a file.',
-        te: 'ఆన్‌లైన్ సాధ్యమే; చాలామంది సాధకులు దూర ప్రాంతాల్లోనే ఉన్నారు. రెండు శాఖల్లోనూ ఏదీ రికార్డు చేయబడదు — సమావేశాలు కాదు, చర్చలు కాదు, అంతర్గత అవసరాలకూ కాదు. ఈ తరహా అధ్యయనం నిలబడేది — సాధకుడు ఏదైనా అస్పష్టంగా చెప్పి, దాన్ని సరిదిద్దుకోగలగడంపైనే; ఆ మాట తర్వాత ఒక ఫైలుగా మిగిలిపోకూడదు.',
-      },
+      q: { en: 'Is it possible to study online?', te: 'ఇది ఆన్‌లైన్‌లో సాధ్యమా?' },
+      a: [
+        {
+          en: 'Yes. Study and guidance can also be provided online where appropriate. Any recording of meetings can be decided by mutual agreement in advance.',
+          te: 'అవును. అవసరాన్ని బట్టి ఆన్‌లైన్‌లో కూడా అధ్యయనం మరియు మార్గదర్శనం అందించవచ్చు. సమావేశాల రికార్డింగ్ గురించి ముందుగానే పరస్పర అంగీకారం ప్రకారం నిర్ణయించుకోవచ్చు.',
+        },
+      ],
     },
   ],
 };

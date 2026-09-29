@@ -130,6 +130,7 @@ html[lang='te'] .qdisc__name { line-height: 1.44; }
   line-height: 1.84;
   color: var(--ink-2);
 }
+.qlimit p + p { margin-top: 12px; }
 
 /* ── Stages: hairline rules, never boxes ───────────────────────── */
 .qstages { border-top: 1px solid var(--line); }
@@ -164,6 +165,7 @@ html[lang='te'] .qdisc__name { line-height: 1.44; }
 
 .qpair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 52px); }
 .qpair .qbody { margin-top: 0; font-size: 15.5px; }
+.qpair .qbody + .qbody { margin-top: 14px; }
 
 /* ── CTA: a text link, never a button ──────────────────────────── */
 .qcta {

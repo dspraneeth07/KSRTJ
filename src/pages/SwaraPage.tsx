@@ -20,14 +20,14 @@ import { Portrait } from '../components/Portrait';
 const ui = {
   breadcrumbHome: { en: 'Home', te: 'ముఖపేజీ' },
   breadcrumbServices: { en: 'Services', te: 'సేవలు' },
-  expectations: { en: 'What to expect', te: 'ఏమి ఆశించవచ్చు' },
-  who: { en: 'Who this is for', te: 'ఇది ఎవరికి' },
-  practice: { en: 'What guidance looks like', te: 'మార్గదర్శనం ఎలా ఉంటుంది' },
-  limit: { en: 'What it is not', te: 'ఇది ఏమి కాదు' },
-  faqTitle: { en: 'Before you write', te: 'రాసేముందు' },
+  expectations: { en: 'What You Can Expect', te: 'ఏమి ఆశించవచ్చు' },
+  who: { en: 'Who Is It For?', te: 'ఇది ఎవరికి' },
+  practice: { en: 'How Guidance Works', te: 'మార్గదర్శనం ఎలా ఉంటుంది' },
+  limit: { en: 'What It Is Not', te: 'ఇది ఏమి కాదు' },
+  faqTitle: { en: 'Before You Begin', te: 'రాసేముందు' },
   guidedBy: {
-    en: 'Guidance in both disciplines is given personally.',
-    te: 'ఈ రెండు శాఖల్లోనూ మార్గదర్శనం వ్యక్తిగతంగానే ఇవ్వబడుతుంది.',
+    en: 'Guidance in Swara Shastra and Brahmavidya is provided personally.',
+    te: 'స్వర శాస్త్రం మరియు బ్రహ్మవిద్య — ఈ రెండు అధ్యయన విభాగాల్లోనూ మార్గదర్శనం వ్యక్తిగతంగా అందించబడుతుంది.',
   },
 } satisfies Record<string, Bi>;
 
@@ -65,7 +65,11 @@ export default function SwaraPage() {
         <div className="wrap qcol">
           <Reveal variant="lift">
             <h2 className="qh2">{b(swaraPage.framingTitle)}</h2>
-            <p className="qbody">{b(swaraPage.framing)}</p>
+            {swaraPage.framing.map((para, i) => (
+              <p className="qbody" key={i}>
+                {b(para)}
+              </p>
+            ))}
           </Reveal>
 
           <Reveal variant="lift" delay={90}>
@@ -95,11 +99,17 @@ export default function SwaraPage() {
             <Reveal variant="lift">
               <h2 className="qdisc__name">{b(discipline.name)}</h2>
               <p className="qdisc__standfirst">{b(discipline.standfirst)}</p>
-              <p className="qbody qbody--lead">{b(discipline.definition)}</p>
+              {discipline.definition.map((para, i) => (
+                <p className={`qbody ${i === 0 ? 'qbody--lead' : ''}`} key={i}>
+                  {b(para)}
+                </p>
+              ))}
 
               <div className="qlimit">
                 <h3 className="qlabel">{b(ui.limit)}</h3>
-                <p>{b(discipline.limit)}</p>
+                {discipline.limit.map((para, i) => (
+                  <p key={i}>{b(para)}</p>
+                ))}
               </div>
             </Reveal>
 
@@ -111,7 +121,9 @@ export default function SwaraPage() {
                     <span className="qstage__num">{String(i + 1).padStart(2, '0')}</span>
                     <div className="qstage__body">
                       <h4 className="qstage__name">{b(stage.name)}</h4>
-                      <p>{b(stage.body)}</p>
+                      {stage.body.map((para, j) => (
+                        <p key={j}>{b(para)}</p>
+                      ))}
                     </div>
                   </li>
                 ))}
@@ -122,11 +134,19 @@ export default function SwaraPage() {
               <div className="qpair">
                 <div>
                   <h3 className="qlabel">{b(ui.who)}</h3>
-                  <p className="qbody">{b(discipline.who)}</p>
+                  {discipline.who.map((para, i) => (
+                    <p className="qbody" key={i}>
+                      {b(para)}
+                    </p>
+                  ))}
                 </div>
                 <div>
                   <h3 className="qlabel">{b(ui.practice)}</h3>
-                  <p className="qbody">{b(discipline.practice)}</p>
+                  {discipline.practice.map((para, i) => (
+                    <p className="qbody" key={i}>
+                      {b(para)}
+                    </p>
+                  ))}
                 </div>
               </div>
 
@@ -145,7 +165,11 @@ export default function SwaraPage() {
         <div className="wrap qcol">
           <Reveal variant="lift">
             <h2 className="qh2">{b(swaraPage.comparison.title)}</h2>
-            <p className="qbody">{b(swaraPage.comparison.lede)}</p>
+            {swaraPage.comparison.lede.map((para, i) => (
+              <p className="qbody" key={i}>
+                {b(para)}
+              </p>
+            ))}
           </Reveal>
 
           <Reveal variant="lift" delay={80}>
@@ -153,7 +177,7 @@ export default function SwaraPage() {
               <table className="qtable">
                 <thead>
                   <tr>
-                    <th scope="col" />
+                    <th scope="col">{b(swaraPage.comparison.label)}</th>
                     <th scope="col">{b(swaraPage.comparison.colA)}</th>
                     <th scope="col">{b(swaraPage.comparison.colB)}</th>
                   </tr>
@@ -195,7 +219,9 @@ export default function SwaraPage() {
                     <span className={`faq__sign ${isOpen ? 'is-open' : ''}`} aria-hidden="true" />
                   </button>
                   <div className="faq__a" id={`sfaq-${item.id}`} hidden={!isOpen}>
-                    <p>{b(item.a)}</p>
+                    {item.a.map((para, j) => (
+                      <p key={j}>{b(para)}</p>
+                    ))}
                   </div>
                 </Reveal>
               );
@@ -224,8 +250,6 @@ export default function SwaraPage() {
                 </li>
               ))}
             </ol>
-
-            <p className="qnote">{b(swaraPage.flow.note)}</p>
 
             <a className="qcta qcta--final" href="mailto:enquiries@example.org">
               {b(swaraPage.flow.cta)}
