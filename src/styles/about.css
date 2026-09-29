@@ -267,3 +267,51 @@ html[lang='te'] .nf__title { line-height: 1.4; }
   gap: 13px;
 }
 .nf__links .link { font-size: 15px; }
+
+/* A heading that follows a paragraph rather than opening a section, so
+   it needs space above it and almost none below. */
+.ah2--tight { margin-top: clamp(30px, 3.4vw, 44px); }
+
+/* ── Training programmes, listed ───────────────────────────────── */
+.aprog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(22px, 3vw, 40px);
+  margin-top: 22px;
+}
+.aprog__label {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-amber);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.aprog__list {
+  margin-top: 12px;
+  list-style: none;
+  padding: 0;
+}
+.aprog__list li {
+  position: relative;
+  padding-left: 16px;
+  padding-block: 6px;
+  font-size: 15px;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+.aprog__list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.95em;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--amber-ink);
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .aprog { grid-template-columns: 1fr; }
+}

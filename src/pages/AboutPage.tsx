@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useBi, type Bi } from '../i18n/bi';
 import { useLang } from '../i18n/LanguageProvider';
 import { about } from '../data/about';
+import { contact, PHONE_TEL, WHATSAPP_URL } from '../data/contact';
+import { training } from '../data/training';
 import { Reveal } from '../components/Reveal';
 import { Portrait } from '../components/Portrait';
 
@@ -11,14 +13,14 @@ import { Portrait } from '../components/Portrait';
  * Deliberately editorial rather than modular: a split hero carrying the
  * photograph at size, then a single narrow column of prose broken by
  * hairline-ruled sections. No cards and no tilt — this page is a person,
- * not a catalogue, and the homepage founder block already does the
- * summary version.
+ * not a catalogue.
  */
 
 const ui = {
   home: { en: 'Home', te: 'ముఖపేజీ' },
-  book: { en: 'Book a consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
-  disciplines: { en: 'See the four disciplines', te: 'నాలుగు శాస్త్రాలు చూడండి' },
+  about: { en: 'About Us', te: 'మా గురించి' },
+  book: { en: 'Book a Consultation', te: 'సంప్రదింపును బుక్ చేసుకోండి' },
+  whatsapp: { en: 'WhatsApp', te: 'వాట్సాప్' },
 } satisfies Record<string, Bi>;
 
 export default function AboutPage() {
@@ -34,7 +36,7 @@ export default function AboutPage() {
             <nav className="crumbs" aria-label="Breadcrumb">
               <Link to="/">{b(ui.home)}</Link>
               <span aria-hidden="true">/</span>
-              <span className="crumbs__here">{t('nav.about')}</span>
+              <span className="crumbs__here">{b(ui.about)}</span>
             </nav>
 
             <p className="eyebrow eyebrow--light">{b(about.eyebrow)}</p>
@@ -50,25 +52,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Opening statement ───────────────────────────────────── */}
+      {/* ── How the practice is conducted, then qualifications ──── */}
       <section className="asection">
         <div className="wrap acol">
           <Reveal variant="lift">
-            <h2 className="ah2">{b(about.opening.label)}</h2>
             {about.opening.paras.map((para, i) => (
-              <p className={`abody ${i === 0 ? 'abody--lead' : ''}`} key={i}>
+              <p className="abody abody--lead" key={i}>
                 {b(para)}
               </p>
             ))}
           </Reveal>
-        </div>
-      </section>
 
-      {/* ── Qualifications ──────────────────────────────────────── */}
-      <section className="asection asection--rule">
-        <div className="wrap acol">
-          <Reveal variant="lift">
-            <h2 className="ah2">{b(about.qualifications.label)}</h2>
+          <Reveal variant="lift" delay={80}>
+            <h2 className="ah2 ah2--tight">{b(about.opening.label)}</h2>
             <ul className="acreds">
               <li>{t('founder.cred1')}</li>
               <li>{t('founder.cred2')}</li>
@@ -78,7 +74,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Method ──────────────────────────────────────────────── */}
+      {/* ── Our Approach ────────────────────────────────────────── */}
       <section className="asection asection--tint" id="method">
         <div className="wrap acol">
           <Reveal variant="lift">
@@ -102,7 +98,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── The record ──────────────────────────────────────────── */}
+      {/* ── Practice and teaching ───────────────────────────────── */}
       <section className="asection">
         <div className="wrap acol">
           <Reveal variant="lift">
@@ -116,12 +112,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Boundaries ──────────────────────────────────────────── */}
+      {/* ── What we do not do ───────────────────────────────────── */}
       <section className="asection asection--rule" id="boundaries">
         <div className="wrap acol">
           <Reveal variant="lift">
             <h2 className="ah2">{b(about.boundaries.label)}</h2>
-            <p className="abody">{b(about.boundaries.lede)}</p>
           </Reveal>
 
           <Reveal variant="lift" delay={80}>
@@ -135,21 +130,54 @@ export default function AboutPage() {
       </section>
 
       {/* ── Teaching ────────────────────────────────────────────── */}
-      <section className="asection asection--tint">
+      <section className="asection asection--tint" id="teaching">
         <div className="wrap acol">
           <Reveal variant="lift">
             <h2 className="ah2">{b(about.teaching.label)}</h2>
-            {about.teaching.paras.map((para, i) => (
-              <p className="abody" key={i}>
-                {b(para)}
-              </p>
-            ))}
+            <p className="abody abody--lead">{b(about.teaching.certPara)}</p>
+          </Reveal>
+
+          <Reveal variant="lift" delay={80}>
+            <dl className="awhere">
+              {about.teaching.rows.map((row) => (
+                <div className="awhere__row" key={row.id}>
+                  <dt>{b(row.k)}</dt>
+                  <dd>{b(row.v)}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+
+          <Reveal variant="lift" delay={120}>
+            <h3 className="alabel">{b(about.teaching.studyLabel)}</h3>
+            <p className="abody">{b(about.teaching.studyPara)}</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Training & Educational Programs ─────────────────────── */}
+      <section className="asection">
+        <div className="wrap acol">
+          <Reveal variant="lift">
+            <h2 className="ah2">{b(about.programmes.label)}</h2>
+          </Reveal>
+
+          <Reveal variant="lift" delay={80}>
+            <div className="aprog">
+              {about.programmes.groups.map((group) => (
+                <div className="aprog__group" key={group.id}>
+                  <h3 className="aprog__label">{b(group.label)}</h3>
+                  <ul className="aprog__list">
+                    {bl(group.items).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
             <p className="alinks">
-              <Link className="link" to="/training">
-                {b(about.teaching.courseLink)}
-              </Link>
-              <Link className="link" to="/services/spiritual">
-                {b(about.teaching.swaraLink)}
+              <Link className="link" to={training.path}>
+                {b(about.programmes.link)}
               </Link>
             </p>
           </Reveal>
@@ -157,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Where and how ───────────────────────────────────────── */}
-      <section className="asection">
+      <section className="asection asection--rule">
         <div className="wrap acol">
           <Reveal variant="lift">
             <h2 className="ah2">{b(about.where.label)}</h2>
@@ -182,14 +210,21 @@ export default function AboutPage() {
           <h2 className="cta__title">{b(about.cta.title)}</h2>
           <p className="cta__lede">{b(about.cta.lede)}</p>
           <div className="cta__actions">
-            <a className="btn btn--amber btn--lg" href="#book">
+            <Link className="btn btn--amber btn--lg" to={contact.path}>
               {b(ui.book)}
-            </a>
-            <Link className="btn btn--ghost btn--lg" to="/#pillars">
-              {b(ui.disciplines)}
             </Link>
+            <a
+              className="btn btn--ghost btn--lg"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {b(ui.whatsapp)}
+            </a>
           </div>
-          <p className="cta__foot">{t('cta.foot')}</p>
+          <p className="cta__foot">
+            <a href={PHONE_TEL}>{t('utility.call')}</a>
+          </p>
         </Reveal>
       </section>
     </div>

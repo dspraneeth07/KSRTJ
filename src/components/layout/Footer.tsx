@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useLang } from '../../i18n/LanguageProvider';
-import { footerColumns, footerLinkTargets } from '../../data/content';
+import { useBi } from '../../i18n/bi';
+import { footerCentre, footerDisciplines } from '../../data/footer';
+import { PHONE_TEL } from '../../data/contact';
 import { BrandMark } from '../Icons';
 
 export function Footer() {
   const { t } = useLang();
+  const { b, bl } = useBi();
 
   return (
     <footer className="footer">
@@ -16,7 +19,7 @@ export function Footer() {
             </span>
             <p className="footer__name">{t('brand.name')}</p>
             <p className="footer__disciplines">{t('footer.disciplines')}</p>
-            <p className="footer__blurb">{t('footer.blurb')}</p>
+            <p className="footer__blurb">{t('hero.lede')}</p>
 
             <dl className="footer__meta">
               <div>
@@ -26,27 +29,38 @@ export function Footer() {
               <div>
                 <dt>{t('footer.reach')}</dt>
                 <dd>
-                  <a href="tel:+918309096407">{t('utility.call')}</a>
+                  <a href={PHONE_TEL}>{t('utility.call')}</a>
                 </dd>
               </div>
             </dl>
           </div>
 
           <nav className="footer__cols" aria-label="Footer">
-            {footerColumns.map((col) => (
+            {footerDisciplines.map((col) => (
               <div className="footer__col" key={col.id}>
-                <h4>{t(col.title)}</h4>
+                <h4>{b(col.title)}</h4>
                 <ul>
-                  {col.items.map((item) => (
+                  {/* These are services, not pages — each goes to the
+                      discipline page that covers it. */}
+                  {bl(col.items).map((item) => (
                     <li key={item}>
-                      {/* Service names have no page of their own, so they
-                          go to the contact page rather than nowhere. */}
-                      <Link to={footerLinkTargets[item] ?? '/contact'}>{t(item)}</Link>
+                      <Link to={col.to}>{item}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
+
+            <div className="footer__col">
+              <h4>{b(footerCentre.title)}</h4>
+              <ul>
+                {footerCentre.links.map((link) => (
+                  <li key={link.id}>
+                    <Link to={link.to}>{b(link.label)}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
         </div>
 

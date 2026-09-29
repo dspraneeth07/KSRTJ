@@ -25,7 +25,6 @@ export const en = {
     'Vastu Shastra · Jyotisha Shastra & Allied Studies · Numerology · Swara Shastra · Spiritual Studies & Brahmavidya',
 
   'nav.services': 'Services',
-  'nav.process': 'Process',
   'nav.courses': 'Training',
   'nav.about': 'About',
   'nav.menu': 'Menu',
@@ -167,8 +166,8 @@ export const en = {
   'founder.p2':
     'Consultations and classes are conducted in person, and are also available online where required. Each discipline is considered according to its own principles and methods — examined on its own, or, where the need calls for it, with the relevant disciplines considered together.',
   'founder.cred1': 'M.A. (Jyotisha Shastra)',
-  'founder.cred2': 'P.G. Diploma in Jyotirvastu',
-  'founder.cred3': 'Ph.D. research in Vastu Shastra — ongoing',
+  'founder.cred2': 'P.G. Diploma in Jyotir Vastu',
+  'founder.cred3': 'Ph.D. Research in Vastu Shastra — Ongoing',
   'founder.credLabel': 'Qualifications',
   'founder.alt': 'Sri K. Sreenivasa Reddy at his desk',
 
@@ -230,11 +229,8 @@ export const en = {
 
   'footer.disciplines':
     'Vastu Shastra | Jyotisha Shastra & Allied Studies | Numerology | Swara Shastra | Spiritual Studies & Brahmavidya',
-  'footer.blurb':
-    'A centre for the study, practice and teaching of the Vedic disciplines.',
   'footer.location': 'Location',
   'footer.reach': 'Contact',
-  'footer.practice': 'The centre',
   'footer.faq': 'Questions',
   'footer.contact': 'Contact',
   'footer.addr': 'KDR Nagar · Wanaparthy · Telangana, India',
@@ -255,7 +251,6 @@ export const te: Record<StringKey, string> = {
     'వాస్తు శాస్త్రం · జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు · సంఖ్యా శాస్త్రం · స్వర శాస్త్రం · ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
 
   'nav.services': 'సేవలు',
-  'nav.process': 'ప్రక్రియ',
   'nav.courses': 'శిక్షణ',
   'nav.about': 'మా గురించి',
   'nav.menu': 'మెనూ',
@@ -461,11 +456,8 @@ export const te: Record<StringKey, string> = {
 
   'footer.disciplines':
     'వాస్తు శాస్త్రం | జ్యోతిష శాస్త్రం & అనుబంధ విద్యలు | సంఖ్యా శాస్త్రం | స్వర శాస్త్రం | ఆధ్యాత్మిక విద్యలు & బ్రహ్మవిద్య',
-  'footer.blurb':
-    'వేద విద్యల అధ్యయనం, ఆచరణ మరియు బోధన కోసం ఒక కేంద్రం.',
   'footer.location': 'చిరునామా',
   'footer.reach': 'సంప్రదింపు',
-  'footer.practice': 'కేంద్రం',
   'footer.faq': 'ప్రశ్నలు',
   'footer.contact': 'సంప్రదించండి',
   'footer.addr': 'కేడీఆర్ నగర్ · వనపర్తి · తెలంగాణ, భారతదేశం',
